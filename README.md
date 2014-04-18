@@ -8,6 +8,12 @@ Morphology (Word Segmentation & PoS Tagging)
 
 https://github.com/mhagiwara/paper-reviews/blob/master/morph.md
 
+Named Entity Recognition
+------------------------
+
+https://github.com/mhagiwara/paper-reviews/blob/master/ner.md
+
+
 Machine Translation
 -------------------
 
