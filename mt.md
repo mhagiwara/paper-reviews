@@ -16,3 +16,11 @@ Bilingual Term Extraction
     - Create word vector of context words considering relative positions (window size of 3), used log likelihood ratio for weighting, and city-block (Manhattan distance) as the similarity measure
     - Experiment: finding English translations for an English input word, from two unrelated corpora of news articles
     - Achieved top1 accuracy of 72%. Ambiguity (e.g., "weiß" for "know" and "white") is an issue. 
+
+Optimization
+------------
+
+* Franz Och. Minimum Error Rate Training in Statistical Machine Translation. ACL 2003. http://acl.ldc.upenn.edu/acl2003/main/pdfs/Och.pdf
+    - Optimize weights of log-linear models so that it directly maximize translation quality criteria (WER, BLEU, etc.)
+    - Powells algorithm combined with a grid-based line optimization method. Efficient update achieved on the optimization on a piecewise linear function merged over all sentences in the corpus
+    - BLEU ~ +6 point improvement over MMI if trained on BLEU (Chinese to English standard phrase-based SMT system)
