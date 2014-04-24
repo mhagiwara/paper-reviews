@@ -17,6 +17,14 @@ Bilingual Term Extraction
     - Experiment: finding English translations for an English input word, from two unrelated corpora of news articles
     - Achieved top1 accuracy of 72%. Ambiguity (e.g., "weiß" for "know" and "white") is an issue. 
 
+Pivot Approaches
+----------------
+* Hua Wu and Haifeng Wang. Pivot Language Approach for Phrase-Based Statistical Machine Translation. ACL 2007. http://acl.ldc.upenn.edu/P/P07/P07-1108.pdf
+    - Improve (or build from scratch) Lf-Le translation model using language pairs Lf-Lp and Lp-Le, where bilingual corpora exist
+    - Calculate phrase translation prob. of Lf-Le from Lf-Lp and Lp-Le by summing over possible p. Lexical weight from induced alignment between Lf-Le and co-occurrence counts in phrases.
+    - Interpolate phrase translation prob. and lexical weights. 
+    - 22.13% BLEU improvement over standard model with 5K parallel sentences, when using two pivots (En+De). (Lf-En, En-Le, Lf-De, De-Le each has ~700K sents)
+
 Optimization
 ------------
 
