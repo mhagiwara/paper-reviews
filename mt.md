@@ -25,6 +25,12 @@ Pivot Approaches
     - Interpolate phrase translation prob. and lexical weights. 
     - 22.13% BLEU improvement over standard model with 5K parallel sentences, when using two pivots (En+De). (Lf-En, En-Le, Lf-De, De-Le each has ~700K sents)
 
+* Masao Utiyama and Hitoshi Isahara. A Comparison of Pivot Methods for Phrase-based Statistical Machine Translation. NAACL 2007. http://acl.ldc.upenn.edu/N/N07/N07-1061.pdf
+    - Phrase translation: similar to (Wu and Wang 2007), convolution (summing over) common pivot phrase e, lexical translation prob. = defined by the average of maximum likelihood estimation (aligned counts)
+    - Sentence translation: translate source to n pivot sentences and then translate each to n target sentences, choose the one with the highest score (based on MERT weights)
+    - Experiment on Europarl (Es, De, Fr): Direct > PhraseTrans > SntTrans15 (with n = 15) ~ SntTrans1
+    - Phrase table size of PhraseTrans x10 times bigger than Direct, recall of phrases is more important
+
 Optimization
 ------------
 
