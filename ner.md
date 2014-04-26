@@ -11,3 +11,7 @@ Named Entity Recognition
     - Wiki-tagger: Built local and global taggers based on article categorization (as in Richman and Schone 2008)
     - Mapping-based taggger: a ranking (log-linear) model from English entities to foreign entity spans (Feng et al. 2004), trained on 100 parallel sentences with NEs and alignments
     - Combination of these two via semi-Markov CRF (Sarawagi, Cohen 2005) outperforms individual models (~91% F-value in Korean and Bulgarian)
+
+* D Nadeau et al. Unsupervised Named-Entity Recognition: Generating Gazetteers and Resolving Ambiguity. 2006. http://brown.cl.uni-heidelberg.de/~sourjiko/NER_Literatur/NER_Turney.pdf
+    - Named entity extraction (generating gazetteers), then disambiguation
+    - Wrapper based set expansion from few seeds, repeat retrieving Web pages and applying Web wrapper
