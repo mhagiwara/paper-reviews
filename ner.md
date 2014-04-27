@@ -13,5 +13,8 @@ Named Entity Recognition
     - Combination of these two via semi-Markov CRF (Sarawagi, Cohen 2005) outperforms individual models (~91% F-value in Korean and Bulgarian)
 
 * D Nadeau et al. Unsupervised Named-Entity Recognition: Generating Gazetteers and Resolving Ambiguity. 2006. http://brown.cl.uni-heidelberg.de/~sourjiko/NER_Literatur/NER_Turney.pdf
-    - Named entity extraction (generating gazetteers), then disambiguation
-    - Wrapper based set expansion from few seeds, repeat retrieving Web pages and applying Web wrapper
+    - Extraction (generating gazetteers): Wrapper based set expansion from few seeds, repeat retrieving Web pages and applying Web wrapper
+    - Disambiguation: entity-noun ambiguity (capitalization heuristics), entity boundary detection (longest match, merge consecutive entries), entity type ambiguity (use clues in the same document, alias clues)
+    - MUC 7 evaluation: Generated lists provide higher recall but lower precision.
+    - Car brand evaluation: generated a list of 5,701 brands and recognition F ~ 86 
+    
