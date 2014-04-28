@@ -1,6 +1,13 @@
 Named Entity Recognition
 ========================
 
+Set Expansion
+-------------
+
+* Richard C. Wang. Language-Independent Class Instance Extraction Using the Web. Ph.D. Thesis 2009. http://www.cs.cmu.edu/~rcwang/papers/phd-thesis.pdf
+    - Bilingual SEAL: Iteratively run two instances of iSEAL alternating source/target languages, checking if the new seed's translation exists in the other language set
+    - Named entity translation: find frequently co-occurring chunks in the search engine snippet in the target language, ranked by snippet/excerpt frequency and inverse distance.
+
 Multilingual
 ------------
 
@@ -21,6 +28,7 @@ Unsupervised
     - Learn typical syntax/semantic context from a corpus to expand gazetteers
     - Syntactic info: elementary syntactic link (esl): Subject-Object, Noun-Preposition-Noun, etc.
     - Unknown proper noun classification: to the maximum evidence, defined by the relative plausibility of each detected esl., augmented by WordNet similarity
+    - Test on Italian (Sole 24Ore) corpus and WSJ corpus: Prec and Recall both up by ~10%, 5 point increase on F-measure by WordNet context generalization
 
 * D Nadeau et al. Unsupervised Named-Entity Recognition: Generating Gazetteers and Resolving Ambiguity. 2006. http://brown.cl.uni-heidelberg.de/~sourjiko/NER_Literatur/NER_Turney.pdf
     - Extraction (generating gazetteers): Wrapper based set expansion from few seeds, repeat retrieving Web pages and applying Web wrapper
