@@ -44,3 +44,10 @@ Unsupervised
     - MUC 7 evaluation: Generated lists provide higher recall but lower precision.
     - Car brand evaluation: generated a list of 5,701 brands and recognition F ~ 86 
     
+Product Information Extraction
+------------------------------
+
+* K. Mauge et al. Structuring E-Commerce Inventory. ACL 2012. http://aclweb.org/anthology//P/P12/P12-1085.pdf
+    - Pattern-based property extraction (e.g., color : light blue)
+    - Synonym discovery: supervised (maximum entropy) classifier over defined features with popularity (defined by # of sellers which use the attribute) and graph partitioning
+    - Experiment: one-year worth (several billion) desc. of eBay listings. Prec = almost 100% up to rank 18, then drops. Synonym discovery: Prec. = 91.8% and Recall = 51%.
