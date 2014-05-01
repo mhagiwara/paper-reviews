@@ -47,7 +47,7 @@ Unsupervised NER
 Product Information Extraction
 ------------------------------
 
-* D. Putthividhya and J. Hu. Bootstrapped Named Entity Recognition for Product Attribute Extraction. 
+* D. Putthividhya and J. Hu. Bootstrapped Named Entity Recognition for Product Attribute Extraction. EMNLP 2011. http://aclweb.org/anthology//D/D11/D11-1144.pdf
     - Attribute extraction from listing titles (long, little grammatical structure, errors, lack of context) by NER
     - Clothing and shoes listings from eBay, brand, garment, type/style, size, color
     - Supervised (SVM, MaxEnt) and sequential labeling by HMM (1,000 annotated items, 93.35% label classification accuracy with CRF)

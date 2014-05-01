@@ -38,3 +38,13 @@ Optimization
     - Optimize weights of log-linear models so that it directly maximize translation quality criteria (WER, BLEU, etc.)
     - Powells algorithm combined with a grid-based line optimization method. Efficient update achieved on the optimization on a piecewise linear function merged over all sentences in the corpus
     - BLEU ~ +6 point improvement over MMI if trained on BLEU (Chinese to English standard phrase-based SMT system)
+
+Confidence Estimation
+---------------------
+
+* John Blatz, et al. Confidence Estimation for Machine Translation, 2004. http://web.eecs.umich.edu/~kulesza/pubs/confest_report04.pdf
+    - Confidence Estimation (CE) - binary classification problem of assessing the correctness of output y, given input x
+    - Strong/weak CE, separate or not from system, sentence/subsentence. Use CE to combine multiple systems (even a system is not statistical)
+    - "Correct" -> better than a given threshould on an evaluation metric
+
+    
