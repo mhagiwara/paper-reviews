@@ -45,6 +45,14 @@ Confidence Estimation
 * John Blatz, et al. Confidence Estimation for Machine Translation, 2004. http://web.eecs.umich.edu/~kulesza/pubs/confest_report04.pdf
     - Confidence Estimation (CE) - binary classification problem of assessing the correctness of output y, given input x
     - Strong/weak CE, separate or not from system, sentence/subsentence. Use CE to combine multiple systems (even a system is not statistical)
-    - "Correct" -> better than a given threshould on an evaluation metric
+    - "Correct" -> better than a given threshould on an automatic evaluation metric (e.g., WERg, NIST), because a sentence rarely match a reference
+    - Corpus: 2001/2002 NIST competition, LDC corpus
+    - Sentence-level CE features: base model, Nbest, search, length, source LM, target LM, center hypothesis, syntax, ...
+    - Application -> rescoring (no significant improvement)
+    - Word-level CE: semantic similarity (e,f), parenthesis, occurrences, IBM model 1, etc.
 
+* Nicola Ueffing and Hermann Ney. Word-Level Conﬁdence Estimation for Machine Translation using Phrase-Based Translation Models. HLT/EMNLP 2005. http://acl.ldc.upenn.edu/H/H05/H05-1096.pdf
+    - Word-level CE: possible application: post-editing, interactive translation, system combination
+    - Based on phrase-based SMT model, but does not rely on system output (N-best, word graph)
+    - System based: word graph, N-best
     
