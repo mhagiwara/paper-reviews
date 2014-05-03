@@ -58,4 +58,14 @@ Confidence Estimation
     - Experiment: technical manural corpora, Fr-En Es-En De-En, CER (classification error rate): phrase-based < word-based < IBM-1
 
 * Simona Gandrabur et al. Conﬁdence Estimation for NLP Applications. ACM Transactions on Speech and Language Processing, 2006. http://www.iro.umontreal.ca/~foster/papers/ce-acmtlsp06.pdf
+    - NLP tasks are inherently difficult! Confidence measure for "rejection" and "reranking"
+    - Confidence measure: given input x, output y, extra knowledge k, and returns i, confidence
+    - Machine learning approach: neural nets (multi-layer perceptrons)
+    - CE for MT: Proposed in the context of interactive translation tool TransType [Gandrabur and Foster 2003]
+    - Correctness probability over predicted n-grams (n = 1 to 4). Features: intrinsic difficulty of source sentence s, how hard s is to translate, how hard s is to translate for the current model
 
+* Radu Soricut, Abdessamad Echihabi. TrustRank: Inducing Trust in Automatic Translations via Ranking. ACL 2010. http://aclweb.org/anthology//P/P10/P10-1063.pdf
+    - Example: TripAdvisor review MT: set the quality threshould and adjust the trade-off between quality and coverage
+    - Document level, regression model (using Weka, e.g., M5P regression trees) using evaluation measure (BLEU) scores as training labels, rank translations such that the top one is better than the average?
+    - Features: no model internal features. text-based (length), LM-based, Pseudo-reference-based (reference from different systems, reverse translation), example-based (using source similarity), training-data-based
+    - PBSMT, WMT 09 data, En-Es: rAcc (ranking accuracy) = 45%, BLUE change = +5.9
