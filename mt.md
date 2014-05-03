@@ -54,5 +54,8 @@ Confidence Estimation
 * Nicola Ueffing and Hermann Ney. Word-Level Conﬁdence Estimation for Machine Translation using Phrase-Based Translation Models. HLT/EMNLP 2005. http://acl.ldc.upenn.edu/H/H05/H05-1096.pdf
     - Word-level CE: possible application: post-editing, interactive translation, system combination
     - Based on phrase-based SMT model, but does not rely on system output (N-best, word graph)
-    - System based: word graph, N-best
-    
+    - System based: word graph, N-best, Phrase based: LM + phrase pair score (phrase penalty and word lexcon model score)
+    - Experiment: technical manural corpora, Fr-En Es-En De-En, CER (classification error rate): phrase-based < word-based < IBM-1
+
+* Simona Gandrabur et al. Conﬁdence Estimation for NLP Applications. ACM Transactions on Speech and Language Processing, 2006. http://www.iro.umontreal.ca/~foster/papers/ce-acmtlsp06.pdf
+
