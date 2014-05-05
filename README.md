@@ -17,3 +17,8 @@ Machine Translation
 -------------------
 
 https://github.com/mhagiwara/paper-reviews/blob/master/mt.md
+
+Machine Learning
+----------------
+
+https://github.com/mhagiwara/paper-reviews/blob/master/ml.md
