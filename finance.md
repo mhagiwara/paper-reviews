@@ -10,3 +10,10 @@ Finance
     - Financial market drops are preceded by periods of invester concern, i.e., Internet search for market information
     - Used weekly relative search volume change, sell DJIA if the change is positive and cloase the position one week later. Buy otherwise.
     - Strategy using the term "debt" -> 326% return (2.31 std. dev. of random strategy), "stocks" (2.21 std. dev.), portfolio (1.69) (mean of delta = 1..6 weeks to average). The more finacially related, the better the performance (compared with relative frequency to Financial Times)
+
+* Clinton P. McCully et al. Comparing the Consumer Price Index and the Personal Consumption Expenditures Price Index. 2007. http://www.bea.gov/scb/pdf/2007/11%20November/1107_cpipce.pdf
+    - Comparison of CPI (by BLS - Bureau of Labor Statistics) and PCE (by BEA - Bureau of Economic Analysis). CPI grew 0.4 point / year than PCE
+    - Formula effect: CPI (modified Laspeyres formula) vs PCE (Fisher-Ideal formula)
+    - Weight effect: CPI (based on household survey) vs PCE (business survey)
+    - Scope effect: Difference in scope items: CPI (out-of-pocket expenditures of all urban households) vs PCE (services purchased by households and nonprofit institutions)
+    - Other effect
