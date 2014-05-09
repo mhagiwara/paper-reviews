@@ -9,6 +9,14 @@ General (Translation Model)
     - phrase-based decoder - keep track of nodes translated, use the length of the shortest path between nodes for distortion models
     - Experiments on Chinese (NIST MT06), and Arabic (NIST MT 08) both improved BLEU scores
 
+Transliteration
+---------------
+
+* Tarek Sherif and Grzegorz Kondrak. Substring-Based Transliteration. ACL 2007. http://aclweb.org/anthology//P/P07/P07-1119.pdf
+    - Apply phrase-based translation methods to transliteration
+    - Two searches 1) Viterbi dynamic programming approach (monotone decoding) and 2) substring-based transducer (can incorporate word unigram model)
+    - Evaluation: seen (test set in the LM) and unseen (not in the LM). Substring trans. good for seen test set (70% top-1 accuracy) while Viterbi substring good for unseen test sets
+
 Bilingual Term Extraction
 -------------------------
 
