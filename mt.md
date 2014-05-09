@@ -1,6 +1,14 @@
 Machine Translation
 ===================
 
+General (Translation Model)
+---------------------------
+* Christopher Dyer, et al. Generalizing Word Lattice Translation. ACL 2008. http://aclweb.org/anthology//P/P08/P08-1115.pdf
+    - Word lattice on the source side (e.g., morph analysis for Arabic, word segmentation for Chinese) and decode through noisier channel (maximum entropy model over (e, f', o))
+    - SCFG based decoder - parser over word lattice on deductive proof system
+    - phrase-based decoder - keep track of nodes translated, use the length of the shortest path between nodes for distortion models
+    - Experiments on Chinese (NIST MT06), and Arabic (NIST MT 08) both improved BLEU scores
+
 Bilingual Term Extraction
 -------------------------
 
