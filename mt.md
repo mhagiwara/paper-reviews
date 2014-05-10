@@ -17,6 +17,13 @@ Transliteration
     - Two searches 1) Viterbi dynamic programming approach (monotone decoding) and 2) substring-based transducer (can incorporate word unigram model)
     - Evaluation: seen (test set in the LM) and unseen (not in the LM). Substring trans. good for seen test set (70% top-1 accuracy) while Viterbi substring good for unseen test sets
 
+* Ulf Hermjakob et al. Name Translation in Statistical Machine Translation Learning When to Transliterate. ACL 2008. http://aclweb.org/anthology//P/P08/P08-1045.pdf
+    - "BLEU do not encourage researchers to improve name translation ... names are vastly outnumbered by prepositions, articles, adjectives, common nouns etc."
+    - NEWA (named entity weak accuracy): what percentage of source-language named entities are translated correctly? -> Result: even better than some human translation
+    - Transliteration model: find in an English candidate list based on scoring. (include "style flags" for e.g., French words
+    - Train "transliterate-me" tagger by word alignment and transliteration detection (Prec 92%, Rec 96%)
+
+
 Bilingual Term Extraction
 -------------------------
 
