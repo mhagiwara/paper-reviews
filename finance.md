@@ -17,3 +17,11 @@ Finance
     - Weight effect: CPI (based on household survey) vs PCE (business survey)
     - Scope effect: Difference in scope items: CPI (out-of-pocket expenditures of all urban households) vs PCE (services purchased by households and nonprofit institutions)
     - Other effect
+
+* Hyunyoung Choi and Hal Varian. Predicting the Present with Google Trends. 2009. http://static.googleusercontent.com/media/www.google.com/en/us/googleblogs/pdfs/google_predicting_the_present.pdf
+    - Predict the present (metrics which have delays until announcements) using Google Trends (Index: percentage deviation from January 1 2004)
+    - Ford sales: seasonal autoregressive (AR) model, including the sales 12 months ago, with query index for 'Ford.' -> MAE reduction 3%
+    - Automotive sales: included Google trends category index, makes
+    - Home sales: "Real Estate Agencies" -> best predictor of house sales
+    - Travel: Visits to Hong Kong from other countreis, based on 'Hong Kong' subcategory under Vacation Destinations. A dummy variable to explain Beijing Olympics negative effect.
+    
