@@ -53,6 +53,12 @@ Product Information Extraction
     - Precision (fully correct: around 30 to 50 percent, partially correct: more than 90 percent), recall (75% by co-EM)
     - Applications: recommender systems, copywriters marketing, store profiling & assortment comparison
 
+* Anton Bakalov and Ariel Fuxman. SCAD: Collective Discovery of Attribute Values. WWW 2011. http://talukdar.net/papers/scad_www2011.pdf
+    - Tag attribute values from a) schema, b) a small set of seed entities + attribute/values c) Web pages 
+    - Density estimation from ground truth attributes
+    - Global optimization for decoding, including entity-level consensus (one attribute constraint, no value conflict, etc.), category-level constraints (Gaussian kernel density of the value from the ground truth values)
+    - Local model (assigning snippets to attributes): logistic regression using attribute names, words, etc.
+
 * D. Putthividhya and J. Hu. Bootstrapped Named Entity Recognition for Product Attribute Extraction. EMNLP 2011. http://aclweb.org/anthology//D/D11/D11-1144.pdf
     - Attribute extraction from listing titles (long, little grammatical structure, errors, lack of context) by NER
     - Clothing and shoes listings from eBay, brand, garment, type/style, size, color
