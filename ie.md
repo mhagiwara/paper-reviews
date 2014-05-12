@@ -47,6 +47,12 @@ Unsupervised NER
 Product Information Extraction
 ------------------------------
 
+* Rayid Ghani et al. Text Mining for Product Attribute Extraction. SIGKDD 2006. http://www.accenturehighperformancedelivered.com/SiteCollectionDocuments/PDF/sigkdd06.pdf
+    - Implicit semantic attributes: manually define semantic attributes (e.g., age group, functionality, price point, etc.) and build supervised/semi-supervised text classifier
+    - Explicit attributes (color, size, etc.): generate seeds (by a PMI-like cooccurrence measure), classify phrases into attribute/values/neither, then link them by dependencies
+    - Precision (fully correct: around 30 to 50 percent, partially correct: more than 90 percent), recall (75% by co-EM)
+    - Applications: recommender systems, copywriters marketing, store profiling & assortment comparison
+
 * D. Putthividhya and J. Hu. Bootstrapped Named Entity Recognition for Product Attribute Extraction. EMNLP 2011. http://aclweb.org/anthology//D/D11/D11-1144.pdf
     - Attribute extraction from listing titles (long, little grammatical structure, errors, lack of context) by NER
     - Clothing and shoes listings from eBay, brand, garment, type/style, size, color
