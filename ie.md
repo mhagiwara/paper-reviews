@@ -1,6 +1,14 @@
 Information Extraction
 ======================
 
+General
+-------
+
+* Dayne Freitag et al. Information Extraction with HMMs and Shrinkage. AAAI 1999. http://people.cs.umass.edu/~mccallum/papers/ieshrink-aaaiws99.pdf
+    - Build each HMM to extract just one type of fileds (e.g., purchasing price)
+    - Shrinkage: build a HMM node hierarchy (sth like fallback e.g., suffix -> context -> uniform), estimate the interpolation weight by an EM-like algorithm
+    - Experiments: seminar announcements and corporate acquisitions. "Global" shrinkage model performs the best (50% to 90%, depending on NE types)
+
 Set Expansion
 -------------
 
