@@ -21,6 +21,12 @@ Word Segmentation
     - Algorithm: greedy split until the probability converges
     - Evaluation: percentage of (aligned in the training data) recognized morphemes: approx. 40% in Finnish and 45% in English (approx. linear vs log of corpus size)
 
+* Sharon Goldwater et al. Contextual Dependencies in Unsupervised Word Segmentation. ACL-COLING 2006. http://cocosci.berkeley.edu/tom/papers/wordseg1.pdf
+    - Comparison with MBDP (Model-Based Dynamic Programming; Brent 1999) and NGS (n-gram Seggmentation; Venkataraman 2001)
+    - Unigram: Dirichlet process with \alpha_0 (acts like the parameter of an infinite-dimensional symetric Dirichlet distribution) and P_0 (base distribution; unigram phoneme dist.) + Gibbs sampling + annealing (raising the probabilities of h1 and h2 to the power of 1/\gamma)
+    - Bigram: hierarchical Dirichlet process, where each word w is associated with its own restaurant, which represents the distribution over words that follow w.
+    - Experiments unigram -> lexicon accuracy higher but token F (~ 53.8) lower. bigram: both lexicon and token accuracy are higher than unigram (esp. tokens, F ~ 76.6)
+
 PoS Tagging
 -----------
 
