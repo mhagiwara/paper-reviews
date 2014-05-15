@@ -27,6 +27,12 @@ Word Segmentation
     - Bigram: hierarchical Dirichlet process, where each word w is associated with its own restaurant, which represents the distribution over words that follow w.
     - Experiments unigram -> lexicon accuracy higher but token F (~ 53.8) lower. bigram: both lexicon and token accuracy are higher than unigram (esp. tokens, F ~ 76.6)
 
+* Teemu Ruokolainen et al. Painless Semi-Supervised Morphological Segmentation using Conditional Random Fields. EACL 2014. http://aclweb.org/anthology//E/E14/E14-4017.pdf
+    - Linear chain CRF, IOB2 model on characters, with standard emission and transition features
+    - Feature set augmentation, utilizing unsupervised segmentation algorithms: 1) Morfessor model (Creutz and Lagus 2007, see above), 2) LSV (letter successor variery, Coltekin 2007)
+    - Experiments: Morph Challenge 2009/2010, English, Finnish, Turkish. F - upper 80s (CRF + Morphessor CatMAP+Harris) or even 90s (with 1,000 training instances)
+
+
 PoS Tagging
 -----------
 
