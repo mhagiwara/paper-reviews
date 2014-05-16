@@ -24,4 +24,7 @@ Finance
     - Automotive sales: included Google trends category index, makes
     - Home sales: "Real Estate Agencies" -> best predictor of house sales
     - Travel: Visits to Hong Kong from other countreis, based on 'Hong Kong' subcategory under Vacation Destinations. A dummy variable to explain Beijing Olympics negative effect.
-    
+
+* Steven L. Scott, Hal Varian. Bayesian Variable Selection for Nowcasting Economic Time Series. 2012. http://people.ischool.berkeley.edu/~hal/Papers/2012/fat.pdf
+    - "Fat regressio" - the number of possible predictors exceeds the number of observations
+    - Kalman filter for time-series prediction: "Log-linear trend model with regression" (level + trend + regressors + error)
