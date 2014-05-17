@@ -28,3 +28,5 @@ Finance
 * Steven L. Scott, Hal Varian. Bayesian Variable Selection for Nowcasting Economic Time Series. 2012. http://people.ischool.berkeley.edu/~hal/Papers/2012/fat.pdf
     - "Fat regressio" - the number of possible predictors exceeds the number of observations
     - Kalman filter for time-series prediction: "Log-linear trend model with regression" (level + trend + regressors + error)
+    - Spike and slab variable selection (for the details, better to follow George and McCulloch 1997: http://www3.stat.sinica.edu.tw/statistica/oldpdf/A7n26.pdf) + Bayesian model averaging
+    - Experiments: Nowcasting consumer sentiment based on 151 Google Search Insights (inclusion prob. Financial.Planning, Investing, etc.), one step ahead prediction MAE = 4.5% + gun sales
