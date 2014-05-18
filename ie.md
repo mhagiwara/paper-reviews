@@ -17,6 +17,13 @@ Set Expansion
     - Named entity translation: find frequently co-occurring chunks in the search engine snippet in the target language, ranked by snippet/excerpt frequency and inverse distance.
     - Relational SEAL: seed = pairs, wrappers = (left, middle, right), with a "reverse" flag, can be used for translation pair extraction, ~80% mean average precision
 
+NER
+---
+
+* Jenny Rose Finkel, et al. Incorporating Non-local Information into Information Extraction Systems by Gibbs Sampling. ACL 2005. http://nlp.stanford.edu/manning/papers/gibbscrf3.pdf
+    - Enforce (non-local) label consistency in NER
+    - Gibbs sampling on CRF (markov network with transition cliques) with simulated annealing
+
 
 Multilingual NER
 ----------------
