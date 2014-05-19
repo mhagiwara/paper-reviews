@@ -17,12 +17,14 @@ Set Expansion
     - Named entity translation: find frequently co-occurring chunks in the search engine snippet in the target language, ranked by snippet/excerpt frequency and inverse distance.
     - Relational SEAL: seed = pairs, wrappers = (left, middle, right), with a "reverse" flag, can be used for translation pair extraction, ~80% mean average precision
 
-NER
----
+Named Entity Recognition (General) 
+----------------------------------
 
 * Jenny Rose Finkel, et al. Incorporating Non-local Information into Information Extraction Systems by Gibbs Sampling. ACL 2005. http://nlp.stanford.edu/manning/papers/gibbscrf3.pdf
     - Enforce (non-local) label consistency in NER
     - Gibbs sampling on CRF (markov network with transition cliques) with simulated annealing
+    - Penalty model: penalty weight ^ # of violation, combined with the baseline model
+    - CoNLL consistency model: penalize consistent entities with empirical bayes estimates from the training data. Seminar announcement: inconsistency of start/end time and speaker
 
 
 Multilingual NER
