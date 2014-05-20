@@ -40,6 +40,16 @@ Multilingual NER
     - Mapping-based taggger: a ranking (log-linear) model from English entities to foreign entity spans (Feng et al. 2004), trained on 100 parallel sentences with NEs and alignments
     - Combination of these two via semi-Markov CRF (Sarawagi, Cohen 2005) outperforms individual models (~91% F-value in Korean and Bulgarian)
 
+* Oscar Täckström et al. Cross-lingual Word Clusters for Direct Transfer of Linguistic Structure. NAACL 2012 http://soda.swedish-ict.se/5251/1/paper.pdf
+    - Use of word cluster features (Uszkoreit and Brants 2008) for (monolingual, non-transfer) parsing and NER
+    - Delexicalized direct transfer method (McDonald et al. 2011 and Zeman and Resnik 2008): trained on the source language without lexicalization (but de-lexicalization degraded performance for NER)
+    - NER performance (F-value) on CoNLL 2002/2003 test set: baseline: 39.1, with X-LINGUAL clusters: 52.7
+
+* Kareem Darwish. Named Entity Recognition using Cross-lingual Resources: Arabic as an Example. ACL 2013. http://aclweb.org/anthology//P/P13/P13-1153.pdf
+    - Positive effect of cross-lingual features (especially on recall)
+    - 1. cross-lingual capitalization (through true-cased phrase table), 2. transliteration (surrogate of capitalization since transliteration is a strong clue for transliteration), 3. DBpedia classification (e.g., B-Organization) via interwiki links
+    - Overall, 20.5% F-value increase on the TWEETS data
+
 Unsupervised NER
 ----------------
 
