@@ -50,6 +50,12 @@ Multilingual NER
     - 1. cross-lingual capitalization (through true-cased phrase table), 2. transliteration (surrogate of capitalization since transliteration is a strong clue for transliteration), 3. DBpedia classification (e.g., B-Organization) via interwiki links
     - Overall, 20.5% F-value increase on the TWEETS data
 
+* David Burkett et al. Learning Better Monolingual Models with Unannotated Bilingual Text. CoNLL 2010. http://www.cs.berkeley.edu/~dburkett/papers/burkett10-bilingual_multiview.pdf
+    - Supervised monolingual models -> improve using bilingual parallel corpus
+    - Multiview bilingual model: parametrize using one-to-one matching between nodes (named entities, node in parse tree). Example: ambiguous PP attachement in EN but not in ZH
+    - Introduce the output of deliberately weakened monolingual models as features in the bilingual view
+    - Retrain monolingual model -> useful when lacking anotated data but bitexts are plentiful
+
 Unsupervised NER
 ----------------
 
