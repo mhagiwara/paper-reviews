@@ -26,6 +26,10 @@ Named Entity Recognition (General)
     - Penalty model: penalty weight ^ # of violation, combined with the baseline model
     - CoNLL consistency model: penalize consistent entities with empirical bayes estimates from the training data. Seminar announcement: inconsistency of start/end time and speaker
 
+* Andrew Arnold, et al. Exploiting Feature Hierarchy for Transfer Learning in Named Entity Recognition. ACL 2008. http://www.cs.cmu.edu/~wcohen/postscript/acl-2008.pdf
+    - Significance of some generalized classes of features retain their importance across domains (Minkov et al. 2005)
+    - Two subproblems of transfer learning: domain adaptation and multi-task learning.
+    - CRF with Gaussian priors
 
 Multilingual NER
 ----------------
