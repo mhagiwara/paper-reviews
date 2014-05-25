@@ -29,7 +29,10 @@ Named Entity Recognition (General)
 * Andrew Arnold, et al. Exploiting Feature Hierarchy for Transfer Learning in Named Entity Recognition. ACL 2008. http://www.cs.cmu.edu/~wcohen/postscript/acl-2008.pdf
     - Significance of some generalized classes of features retain their importance across domains (Minkov et al. 2005)
     - Two subproblems of transfer learning: domain adaptation and multi-task learning.
-    - CRF with Gaussian priors
+    - CRF with Gaussian priors (mu's and sigma's for each feature) to regularize it towards the source domain (Celba and Acero, 2004), fallback to N(0, 1)
+    - HIER: Fallback to the parent node, sharing a same tree T across different domains, with hyperparameters shared by the parent nodes
+    - Approximate model: Back-off in the tree until we had a large enough sample of prior data (M, number of subtrees)
+
 
 Multilingual NER
 ----------------
