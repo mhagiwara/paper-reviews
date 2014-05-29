@@ -19,3 +19,12 @@ Machine Learning
     - Time update: update covariance prediction, and state prediction
     - Measurement update: Compute Kalman gain K_t, estimate a posteriori state, update error covariance
     - Parameter estimation via EM-like algorithm
+
+* Sinno Jialin Pan and Qiang Yang. A Survey on Transfer Learning. IEEE Transactions on Knowledge and Data Engineering. http://www1.i2r.a-star.edu.sg/~jspan/publications/TLsurvey_0822.pdf
+    - Transfer learning allows the domains, tasks, and distributions used in training and testing to be different
+    - Different domains implies either the feature space (e.g., document classification written in different languages) or the distribution is different
+    - Inductive TL = the same domains, different tasks
+    - Transductive TL = different domains, the same tasks
+    - What to transfer: relational-knowledge-transfer: some relationship among the data in the source and target domains is similar
+    
+    
