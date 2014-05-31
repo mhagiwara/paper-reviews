@@ -37,6 +37,10 @@ Named Entity Recognition (General)
 Multilingual NER
 ----------------
 
+* Fei Huang and Stephan Vogel. Improved Named Entity Translation and Bilingual Named Entity Extraction. http://isl.anthropomatik.kit.edu/downloads/icmi2002_huang.pdf
+    - Translation prob. of NE pair = IBM model1. Sentence level NE alignment = minimum of the sum of the translation cost of aligned NEs (using competitive linking algorithm)
+
+
 * Alexander E. Richman and Patrick Schone. Mining Wiki Resources for Multilingual Named Entity Recognition, ACL 2008. http://www.mt-archive.info/ACL-2008-Richman.pdf
     - Use categories to classifiy English pages, and map NE types via interwiki links. Use this as the type of a wikilink (intra-language link to another article). Foreign language knowledge is not requried.
     - If a foreign page doesn't have a link to its English translation, use cateogory translation to classify types
