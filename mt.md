@@ -33,6 +33,13 @@ Bilingual Term Extraction
     - Used tf.idf and confidence (rank in a lexicon) weighting and cosine-like and Dice coefficient similarity measures for ranking translation candidates
     - High precision in the top ranked candidates. Similarity combination (Cosine times weighted Dice) performed the best
 
+* Robert C. Moore. Learning Translations of Named-Entity Phrases from Parallel Corpora. EACL 2003. http://www.aclweb.org/anthology-new/E/E03/E03-1035.pdf
+    - Learning translations of multiword phrases (phrases already identified in the source side)
+    - Heuristic: exploit exactly the same phrases in the target language -> 17% identical (En-Fr)
+    - Model 1: log-likelihood-ratio of sentence-level co-occurrence, and combination of inside + ouside scores, supplemented with capitalization scores
+    - Model 2: whole-phrase-based inside scores, interpolated with word-based ones
+    - Model 3: counting co-occurrence of the source phrase and its highest scoring candidate translation in a sentence
+    - Result: over 80% up to 99% coverage
 
 * Reinhard Rapp. Automatic identification of word translations from unrelated English and German corpora, ACL 1999. http://acl.ldc.upenn.edu/P/P99/P99-1067.pdf
     - Assumption ``If, in a text of one language two words A and B co-occur more often than expected by chance, then in a text of another language those words that are translations of A and B should also co-occur more frequently than expected.``
