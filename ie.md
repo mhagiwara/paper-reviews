@@ -37,8 +37,12 @@ Named Entity Recognition (General)
 Multilingual NER
 ----------------
 
-* Fei Huang and Stephan Vogel. Improved Named Entity Translation and Bilingual Named Entity Extraction. http://isl.anthropomatik.kit.edu/downloads/icmi2002_huang.pdf
+* Fei Huang and Stephan Vogel. Improved Named Entity Translation and Bilingual Named Entity Extraction. 2002. http://isl.anthropomatik.kit.edu/downloads/icmi2002_huang.pdf
+    - Iteration between NE alignment and NE dictionary updates
     - Translation prob. of NE pair = IBM model1. Sentence level NE alignment = minimum of the sum of the translation cost of aligned NEs (using competitive linking algorithm)
+    - NE dictionary probability = normalized alignment frequencies over a corpus
+    - Augmented NE alignment cost = linear interpolation between translation probl and alignment prob.
+    - F-value (and the NE dictionary) improved over iterations
 
 
 * Alexander E. Richman and Patrick Schone. Mining Wiki Resources for Multilingual Named Entity Recognition, ACL 2008. http://www.mt-archive.info/ACL-2008-Richman.pdf
