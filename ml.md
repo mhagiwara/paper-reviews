@@ -27,4 +27,12 @@ Machine Learning
     - Transductive TL = different domains, the same tasks
     - What to transfer: relational-knowledge-transfer: some relationship among the data in the source and target domains is similar
     
-    
+Clustering
+----------
+
+* Moses Charikar et al. Incremental Clustering and Dynamic Information Retrieval. STOC 1997. http://www.mathcs.emory.edu/~cheung/Courses/584-StreamDB/Syllabus/papers/Clustering/1997-Incremental-clustering.pdf
+    - Incremental clustering: a sequence of points from a metric space is presented: maintain a clustering so as to minimize the maximum cluster diameter (maximum inter-point distance)
+    - Doubling algorithm: Step1 merge: build a t-threshold graph and merge a node with its neighbors. Step2 update: assign a new point in one of the current clusters, or to a new cluster
+    - Clique Partition algorithm: Step1 merge: build a d-threshold graph and compute minimum clique partition. Step2 update.
+    - Dual clustering problem: for a sequence of points, cover each point with a unit ball so as to minimize the number of balls.
+
