@@ -33,6 +33,10 @@ Named Entity Recognition (General)
     - HIER: Fallback to the parent node, sharing a same tree T across different domains, with hyperparameters shared by the parent nodes
     - Approximate model: Back-off in the tree until we had a large enough sample of prior data (M, number of subtrees)
 
+* Scott Miller, et al. Name Tagging with Word Clusters and Discriminative Training. NAACL 2004. http://oldsite.aclweb.org/anthology-new/N/N04/N04-1043.pdf
+    - Use discriminative model (averaged perceptron) to use statistically-correlated hierarchical word clusters
+    - Add Brown clustering hierarchical IDs (up to leaf levels, where each word is a cluster)
+
 
 Multilingual NER
 ----------------

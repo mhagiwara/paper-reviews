@@ -36,3 +36,9 @@ Clustering
     - Clique Partition algorithm: Step1 merge: build a d-threshold graph and compute minimum clique partition. Step2 update.
     - Dual clustering problem: for a sequence of points, cover each point with a unit ball so as to minimize the number of balls.
 
+* Martin Ester, et al. Incremental Clustering for Mining in a Data Warehousing Environment. VLDB 1998 http://pdf.aminer.org/000/302/472/online_hierarchical_clustering_in_a_data_warehouse_environment.pdf
+    - "A data warehouse is a collection of data from multiple sources, integrated into a common repository and extended by summary information (such as aggregate views) for the purpose of analysis"
+    - a cluster: density-connected objects which is maximal wrt. density-reachability. noise: objects not contained in any cluster
+    - DBSCAN: starts with an arbitrary object p and retrieve all objects density-reachable from p, create a cluster. then visit the next object
+    - Incremental DBSCAN: affected objects: Eps-neighborhood and all the objects density reachable from objects in the neighborhood
+    - It is sufficient to reapply DBSCAN to the set of affected objects
