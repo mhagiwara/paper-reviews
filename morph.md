@@ -43,6 +43,12 @@ PoS Tagging
     - Experiment: used 8 Indo-European languages from Europarl and ODS UN dataset
     - Full model achieved 10.4 point increase from the state-of-the art and 16.7% from vanilla HMM
 
+* Shay B. Cohen, et al. Unsupervised Structure Prediction with Non-Parallel Multilingual Guidance. EMNLP 2011. http://www.cs.columbia.edu/~scohen/emnlp11multilingual.pdf
+    - Learn models of the target language using annotated data from helper languages, without any form of parallel data.
+    - Probabilisitc models based on ultinomial distributions, such as HMM and DMV (dependency model with valence)
+    - Use helper languages for initialization, then unsupervised learning to learn the each contribution
+
+
 Multi-Word Expressions
 ----------------------
 
