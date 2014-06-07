@@ -37,6 +37,13 @@ Named Entity Recognition (General)
     - Use discriminative model (averaged perceptron) to use statistically-correlated hierarchical word clusters
     - Add Brown clustering hierarchical IDs (up to leaf levels, where each word is a cluster)
 
+* Arvind Neelakantan and Michael Collins. Learning Dictionaries for Named Entity Recognition using Minimal Supervision. EACL 2014. https://people.cs.umass.edu/~arvind/eacl_final.pdf
+    - Construction of NER dictionaries using seeds (positive + negative) and large amounts of unlabeled data
+    - Learning a classifier (binary SVM for NE / not NE) using the lower dimensional, real-valued CCA
+    - Obtained high recall, low precision candidate phrases by simple patterns and noun phrases
+    - Dictionary based NER (gazeteers) F-value increased over candidate list and co-training
+    - CRF-based NER: CCA (proposed) F-value increase larger when there are fewer labeled sentences to train
+
 
 Multilingual NER
 ----------------
