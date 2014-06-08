@@ -26,7 +26,11 @@ Machine Learning
     - Inductive TL = the same domains, different tasks
     - Transductive TL = different domains, the same tasks
     - What to transfer: relational-knowledge-transfer: some relationship among the data in the source and target domains is similar
-    
+
+* Hal Daumé III. Frastratingly Easy Domain Adaptation. ACL 2007.  http://aclweb.org/anthology//P/P07/P07-1033.pdf
+    - Fully supervised setting: large source domain annotation and small target domain annotation.
+    - Baselines: SrcOnly, TgtOnly, All, Weighted, Pred (use source prediction as a feature in target), LinInt (Linear interpolation). Strong ones: Prior (Chela and Acero 2004) and EM (Daume III and Marcu 2006) which learns three separate models (source specific, target specific, and general)
+
 Clustering
 ----------
 
