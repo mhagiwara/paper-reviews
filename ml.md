@@ -30,6 +30,8 @@ Machine Learning
 * Hal Daumé III. Frastratingly Easy Domain Adaptation. ACL 2007.  http://aclweb.org/anthology//P/P07/P07-1033.pdf
     - Fully supervised setting: large source domain annotation and small target domain annotation.
     - Baselines: SrcOnly, TgtOnly, All, Weighted, Pred (use source prediction as a feature in target), LinInt (Linear interpolation). Strong ones: Prior (Chela and Acero 2004) and EM (Daume III and Marcu 2006) which learns three separate models (source specific, target specific, and general)
+    - Augment features: src_map(x) = <x, x, 0>, tgt_map(x) = <x, 0, x> + kernelized version
+    - Experiments in sequence labelins tasks: Outperformed baselines all but brown corpus domain, where SrcOnly wins TgtOnly
 
 Clustering
 ----------
