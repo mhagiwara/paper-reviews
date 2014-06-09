@@ -45,9 +45,10 @@ PoS Tagging
 
 * Shay B. Cohen, et al. Unsupervised Structure Prediction with Non-Parallel Multilingual Guidance. EMNLP 2011. http://www.cs.columbia.edu/~scohen/emnlp11multilingual.pdf
     - Learn models of the target language using annotated data from helper languages, without any form of parallel data.
-    - Probabilisitc models based on ultinomial distributions, such as HMM and DMV (dependency model with valence)
+    - Probabilisitc models based on multinomial distributions (maximum likelihood in each helper language), such as HMM and DMV (dependency model with valence)
     - Use helper languages for initialization, then unsupervised learning to learn the each contribution
-
+    - Mixture coefficient \beta learnd via EM algorithm
+    - Re-parametrize \theta by feature-rich unsupervised model (Berg-Kirkpatrick et al. 2011) and beta (to ignore simplex constaints)
 
 Multi-Word Expressions
 ----------------------
