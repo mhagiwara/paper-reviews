@@ -44,6 +44,11 @@ Named Entity Recognition (General)
     - Dictionary based NER (gazeteers) F-value increased over candidate list and co-training
     - CRF-based NER: CCA (proposed) F-value increase larger when there are fewer labeled sentences to train
 
+* Charles Sutton and Andrew McCallum. Collective Segmentation and Labeling of Distant Entities in Information Extraction. 2004. http://homepages.inf.ed.ac.uk/csutton/publications/tr-04-49.pdf
+    - Skip-chain CRF - connect labels of pairs of similar (identical capitalized) words
+    - Approximate inference using loopy belief propagation called tree reparameterization (TRP)
+    - Features for skip chan: combine information from the neighborhood of both words
+
 
 Multilingual NER
 ----------------
