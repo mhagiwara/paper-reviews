@@ -46,8 +46,9 @@ Named Entity Recognition (General)
 
 * Charles Sutton and Andrew McCallum. Collective Segmentation and Labeling of Distant Entities in Information Extraction. 2004. http://homepages.inf.ed.ac.uk/csutton/publications/tr-04-49.pdf
     - Skip-chain CRF - connect labels of pairs of similar (identical capitalized) words
-    - Approximate inference using loopy belief propagation called tree reparameterization (TRP)
-    - Features for skip chan: combine information from the neighborhood of both words
+    - Exact inference intractable: Approximate inference using loopy belief propagation called tree reparameterization (TRP). Parameter learning by L-BFGS
+    - Features for skip chan: combine information (disjunction/or) from the neighborhood of both words
+    - Experiments on CMU seminar announcement data. Dramatic decrease in inconsistently mislabeled tokens from 30.2 to 4.8 on the "speaker" field (but no improvement on other fields)
 
 
 Multilingual NER
