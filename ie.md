@@ -20,6 +20,12 @@ Set Expansion
 Named Entity Recognition (General) 
 ----------------------------------
 
+* Maksim Tkachenko and Andrey Simanovsky. Named Entity Recognition: Exploring Features. KONVENS 2012. http://www.oegai.at/konvens2012/proceedings/17_tkachenko12o/17_tkachenko12o.pdf
+    - Comparison of various features for supervised NER
+    - Local knowledge: large context window led to worse F1 measure
+    - External knowledge: PoS tags (even high-quality POS tags lead to decreased F1), word/phrase clustering, Encyclopedic knowledge (Wikipedia/DBPedia are still useful, especially with disambiguation info.)
+    
+
 * Jenny Rose Finkel, et al. Incorporating Non-local Information into Information Extraction Systems by Gibbs Sampling. ACL 2005. http://nlp.stanford.edu/manning/papers/gibbscrf3.pdf
     - Enforce (non-local) label consistency in NER
     - Gibbs sampling on CRF (markov network with transition cliques) with simulated annealing
