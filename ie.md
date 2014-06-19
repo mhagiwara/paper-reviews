@@ -20,6 +20,12 @@ Set Expansion
 Named Entity Recognition (General) 
 ----------------------------------
 
+* Chris Manning. Doing Named Entity Recognition? Don't optimize for F1. http://nlpers.blogspot.com/2006/08/doing-named-entity-recognition-dont.html
+    - Error types: tps and tns + false negatives (fn), false positives (fp) + labeling error (le), boundary error (be), label-boundary error (lbe)
+    - First 4 types -> 1 demerit (either prec or recall). Other three -> 2 demerits (both prec an recall)
+    - F1 encourages not tagging at all rather than making these three errors, which are actually not as bad in practice
+
+
 * Maksim Tkachenko and Andrey Simanovsky. Named Entity Recognition: Exploring Features. KONVENS 2012. http://www.oegai.at/konvens2012/proceedings/17_tkachenko12o/17_tkachenko12o.pdf
     - Comparison of various features for supervised NER
     - Local knowledge: large context window led to worse F1 measure
