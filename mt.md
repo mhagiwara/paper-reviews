@@ -69,6 +69,16 @@ Optimization
     - Powells algorithm combined with a grid-based line optimization method. Efficient update achieved on the optimization on a piecewise linear function merged over all sentences in the corpus
     - BLEU ~ +6 point improvement over MMI if trained on BLEU (Chinese to English standard phrase-based SMT system)
 
+Post Editing
+------------
+
+* Michael Denkowski et al. Learning from Post-Editing: Online Model Adaptation for Statistical Machine Translation. EACL 2014 http://anthology.aclweb.org//E/E14/E14-1042.pdf
+    - ``human translators are more productive and accurate when post-editing MT output than when translating from scratch
+    - Difficulty: update MT models after every sentence corrected -> can't wait for the full model udpate
+    - Simulated post-editing: use pre-generated reference as a stand-in for actual post editing.
+    - Grammar Adaptation: Lopez 2008's sampling-based pattern match grammar extraction
+    
+
 Confidence Estimation
 ---------------------
 
