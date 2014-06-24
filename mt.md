@@ -76,8 +76,10 @@ Post Editing
     - ``human translators are more productive and accurate when post-editing MT output than when translating from scratch
     - Difficulty: update MT models after every sentence corrected -> can't wait for the full model udpate
     - Simulated post-editing: use pre-generated reference as a stand-in for actual post editing.
-    - Grammar Adaptation: Lopez 2008's sampling-based pattern match grammar extraction
-    
+    - Grammar Adaptation: Lopez 2008's sampling-based pattern match grammar extraction, after forced alignment
+    - Language model adaptation: hierarchical Pitman-Yor process priors ("Chinese restaurant franchise")
+    - Online learning of feature weights by MIRA
+
 
 Confidence Estimation
 ---------------------

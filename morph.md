@@ -65,3 +65,11 @@ Multi-Word Expressions
     - Variant aggregation: symbolic variants, compounding variants, inflectional variants, misspelling variants, abbreviations
     - Ranking based on term domain-specificity and term cohesion
     - Many domain specific terms in Top300 and less in Bottom300, compared to LLR and MI
+
+Word Embeddings
+---------------
+
+Karl Moritz Hermann and Phil Blunson. Multilingual Models for Compositional Distributed Semantics. ACL 2014. http://arxiv.org/pdf/1404.4641.pdf
+    - Only requires sentence aligned parallel corpus (no word alignment)
+    - CVM (compositional vector model): compute semantic representations of sentences and documents. Vector Addition (ADD) and bigram (BI), recursive application to documents
+    - Minimize the difference between aligned sentences while ensures the margins between non-aligned sentences
