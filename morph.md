@@ -73,3 +73,5 @@ Karl Moritz Hermann and Phil Blunson. Multilingual Models for Compositional Dist
     - Only requires sentence aligned parallel corpus (no word alignment)
     - CVM (compositional vector model): compute semantic representations of sentences and documents. Vector Addition (ADD) and bigram (BI), recursive application to documents
     - Minimize the difference between aligned sentences while ensures the margins between non-aligned sentences
+    - Trained on Europerl corpus v7 and TED corpus for IWSLT 2013, evaluated for multilingual document classification using Reuters corpora
+    - Compared with MT baseline (slightly better), BI performing better than ADD
