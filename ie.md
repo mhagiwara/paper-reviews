@@ -17,7 +17,7 @@ Set Expansion
     - Named entity translation: find frequently co-occurring chunks in the search engine snippet in the target language, ranked by snippet/excerpt frequency and inverse distance.
     - Relational SEAL: seed = pairs, wrappers = (left, middle, right), with a "reverse" flag, can be used for translation pair extraction, ~80% mean average precision
 
-Named Entity Recognition (General) 
+Named Entity Recognition (General)
 ----------------------------------
 
 * Chris Manning. Doing Named Entity Recognition? Don't optimize for F1. http://nlpers.blogspot.com/2006/08/doing-named-entity-recognition-dont.html
@@ -30,7 +30,7 @@ Named Entity Recognition (General)
     - Comparison of various features for supervised NER
     - Local knowledge: large context window led to worse F1 measure
     - External knowledge: PoS tags (even high-quality POS tags lead to decreased F1), word/phrase clustering, Encyclopedic knowledge (Wikipedia/DBPedia are still useful, especially with disambiguation info.)
-    
+
 
 * Jenny Rose Finkel, et al. Incorporating Non-local Information into Information Extraction Systems by Gibbs Sampling. ACL 2005. http://nlp.stanford.edu/manning/papers/gibbscrf3.pdf
     - Enforce (non-local) label consistency in NER
@@ -65,6 +65,14 @@ Named Entity Recognition (General)
 
 Multilingual NER
 ----------------
+
+* Mengqiu Wang and Christopher D. Manning. Cross-lingual Projected Expectation Regularization for Weakly Supervised Learning. TACL 2013. http://www-nlp.stanford.edu/mengqiu/publication/tacl13.pdf
+    - Project expectation (marginalized posterior) over labels (not explicit labels), work as soft constraints (loss function = difference between expectation and constraints, optimized by L-BFGS)
+    - "It is more efficient to label features than examples when the budget is limited (Druck et al 2009)"
+    - Projected (hard) labels can be too noisy to be used as directly used as training signals
+    - Source side noise model by confusion matrix
+    - Outperforms project-then-train CRF training scheme. F1 of 60-64% without training data.
+
 
 * Fei Huang and Stephan Vogel. Improved Named Entity Translation and Bilingual Named Entity Extraction. 2002. http://isl.anthropomatik.kit.edu/downloads/icmi2002_huang.pdf
     - Iteration between NE alignment and NE dictionary updates
@@ -119,8 +127,8 @@ Unsupervised NER
     - Extraction (generating gazetteers): Wrapper based set expansion from few seeds, repeat retrieving Web pages and applying Web wrapper
     - Disambiguation: entity-noun ambiguity (capitalization heuristics), entity boundary detection (longest match, merge consecutive entries), entity type ambiguity (use clues in the same document, alias clues)
     - MUC 7 evaluation: Generated lists provide higher recall but lower precision.
-    - Car brand evaluation: generated a list of 5,701 brands and recognition F ~ 86 
-    
+    - Car brand evaluation: generated a list of 5,701 brands and recognition F ~ 86
+
 Product Information Extraction
 ------------------------------
 
@@ -131,7 +139,7 @@ Product Information Extraction
     - Applications: recommender systems, copywriters marketing, store profiling & assortment comparison
 
 * Anton Bakalov and Ariel Fuxman. SCAD: Collective Discovery of Attribute Values. WWW 2011. http://talukdar.net/papers/scad_www2011.pdf
-    - Tag attribute values from a) schema, b) a small set of seed entities + attribute/values c) Web pages 
+    - Tag attribute values from a) schema, b) a small set of seed entities + attribute/values c) Web pages
     - Density estimation from ground truth attributes
     - Global optimization for decoding, including entity-level consensus (one attribute constraint, no value conflict, etc.), category-level constraints (Gaussian kernel density of the value from the ground truth values)
     - Local model (assigning snippets to attributes): logistic regression using attribute names, words, etc.
@@ -152,4 +160,3 @@ Product Information Extraction
     - Attribute synonym discovery: pairs sharing popular values and never appear in the same structured data
     - Annotate product pages using KB (from the same genre) values, calculate the ratio MF (in desc.) and MF (in structured data) and removed high score sents.
     - Correct attribute labels = 77.6%, synonym detection purity/inv. purity = 0.920 and 0.813, extraction model (CRF) micro-averaged F = 58.15%
-
