@@ -69,6 +69,12 @@ Multi-Word Expressions
 Word Embeddings
 ---------------
 
+Alexandre Klementiev and et al. Inducing Crosslingual Distributed Representations of Words. COLING 2012. http://ivan-titov.org/papers/coling12distr.pdf
+    - Treat as a multitask learning problem (Cavallanti et al. 2010) where each task corresponds to a single word, with prior knowledge encoded in matrix A
+    - Neural language models of Bengio et al. (2003) predicting P(w | history), trained by maximizing likelihood by stochasitc gradient descent.
+    - Document classification between English-German. Beat baselines (glossing, MT). 70-80 classification accuracy.
+
+
 Karl Moritz Hermann and Phil Blunson. Multilingual Models for Compositional Distributed Semantics. ACL 2014. http://arxiv.org/pdf/1404.4641.pdf
     - Only requires sentence aligned parallel corpus (no word alignment)
     - CVM (compositional vector model): compute semantic representations of sentences and documents. Vector Addition (ADD) and bigram (BI), recursive application to documents
