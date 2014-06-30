@@ -71,7 +71,7 @@ Multilingual NER
     - "It is more efficient to label features than examples when the budget is limited (Druck et al 2009)"
     - Projected (hard) labels can be too noisy to be used as directly used as training signals
     - Source side noise model by confusion matrix
-    - Outperforms project-then-train CRF training scheme. F1 of 60-64% without training data.
+    - Outperforms project-then-train CRF training scheme. F1 of 60-64% without training data (equivalent to 12K labeled sentences).
 
 
 * Fei Huang and Stephan Vogel. Improved Named Entity Translation and Bilingual Named Entity Extraction. 2002. http://isl.anthropomatik.kit.edu/downloads/icmi2002_huang.pdf

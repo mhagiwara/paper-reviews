@@ -23,7 +23,11 @@ Machine Learning
 Domain Adaptation & Transfer Learning
 -------------------------------------
 
-* Mikhail Kozhevnikov and Ivan Titov. Cross-lingual Model Transfer Using Feature Representation Projection. 
+* Mikhail Kozhevnikov and Ivan Titov. Cross-lingual Model Transfer Using Feature Representation Projection. ACL 2014 http://ivan-titov.org/papers/acl14.pdf
+    - Learn compact feature representations in either language, then learn mapping (e.g., mapping from prepositions to morphological suffix) from bitext
+    - Word representation (Mikolov et al., 2013a), trained by word2vec. Mapping & classifiers learned by PyLearn2 (Goodfellow et al. 2013)
+    - Baseline: direct transfer (Universal POS tags and cross-lingual word clusters) and annotation projection
+    - Experiments: CONLL 2009 semantic role labeling English->French, English->Czech, result competitive with annotation projection and direct transfer
 
 * Sinno Jialin Pan and Qiang Yang. A Survey on Transfer Learning. IEEE Transactions on Knowledge and Data Engineering. http://www1.i2r.a-star.edu.sg/~jspan/publications/TLsurvey_0822.pdf
     - Transfer learning allows the domains, tasks, and distributions used in training and testing to be different
