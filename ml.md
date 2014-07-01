@@ -23,6 +23,12 @@ Machine Learning
 Domain Adaptation & Transfer Learning
 -------------------------------------
 
+* Bollegala et al. Learning to Predict Distributions of Words Across Domains. ACL 2014. http://cgi.csc.liv.ac.uk/~danushka/papers/ACL_2014.pdf
+    - Predict distributional representation of words in the target domain
+    - Compute SVD lower dimension representation in each domain
+    - Compute the mapping (matrix) using Partial Least Squares Regression (PLSR), using "pivots" --- words appearing in the both domains
+    - Note: Positive Pointwise Mutual Information (PPMI) (Lin, 1998, Bullinaria and Levy, 2007)
+
 * Mikhail Kozhevnikov and Ivan Titov. Cross-lingual Model Transfer Using Feature Representation Projection. ACL 2014 http://ivan-titov.org/papers/acl14.pdf
     - Learn compact feature representations in either language, then learn mapping (e.g., mapping from prepositions to morphological suffix) from bitext
     - Word representation (Mikolov et al., 2013a), trained by word2vec. Mapping & classifiers learned by PyLearn2 (Goodfellow et al. 2013)

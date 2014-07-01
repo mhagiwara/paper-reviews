@@ -27,6 +27,13 @@ Transliteration
 Bilingual Term Extraction
 -------------------------
 
+* Haghighi et al. Learning Bilingual Lexicons from Monolingual Corpora. ACL 2008. http://anthology.aclweb.org//P/P08/P08-1088.pdf
+    - Extract bilingual lexicons (pairs) from (possibly unrelated) bilingual lexicons, (possibly) without seed data
+    - Hard EM-like algorithm iterates between (E) find the maximum weighted bipartite matching and (M) Update model parameters by CCA (Canonical Correlation Analysis)
+    - Bootstrapping - increase the number of edges gradually
+    - Precision at 0.33 89.0% (compared with 61.1% edit distance baseline) for ES-EN
+    - Lower precision for other languages, e.g., EN-CH 26.8% @ p0.33 and EN-AR @ 31.1 @ p0.33
+
 * Pascale Fung and Lo Yuan Yee. An IR Approach for Translating New Words from Nonparallel Comparable Texts, COLING 1998. http://acl.ldc.upenn.edu/P/P98/P98-1069.pdf
     - Assumption: words which appear in the context of a word and its translation should be similar to each other
     - Used word pairs from bilingual lexicon as seed words to "bridge" words in context
@@ -45,14 +52,14 @@ Bilingual Term Extraction
     - Assumption ``If, in a text of one language two words A and B co-occur more often than expected by chance, then in a text of another language those words that are translations of A and B should also co-occur more frequently than expected.``
     - Create word vector of context words considering relative positions (window size of 3), used log likelihood ratio for weighting, and city-block (Manhattan distance) as the similarity measure
     - Experiment: finding English translations for an English input word, from two unrelated corpora of news articles
-    - Achieved top1 accuracy of 72%. Ambiguity (e.g., "weiß" for "know" and "white") is an issue. 
+    - Achieved top1 accuracy of 72%. Ambiguity (e.g., "weiß" for "know" and "white") is an issue.
 
 Pivot Approaches
 ----------------
 * Hua Wu and Haifeng Wang. Pivot Language Approach for Phrase-Based Statistical Machine Translation. ACL 2007. http://acl.ldc.upenn.edu/P/P07/P07-1108.pdf
     - Improve (or build from scratch) Lf-Le translation model using language pairs Lf-Lp and Lp-Le, where bilingual corpora exist
     - Calculate phrase translation prob. of Lf-Le from Lf-Lp and Lp-Le by summing over possible p. Lexical weight from induced alignment between Lf-Le and co-occurrence counts in phrases.
-    - Interpolate phrase translation prob. and lexical weights. 
+    - Interpolate phrase translation prob. and lexical weights.
     - 22.13% BLEU improvement over standard model with 5K parallel sentences, when using two pivots (En+De). (Lf-En, En-Le, Lf-De, De-Le each has ~700K sents)
 
 * Masao Utiyama and Hitoshi Isahara. A Comparison of Pivot Methods for Phrase-based Statistical Machine Translation. NAACL 2007. http://acl.ldc.upenn.edu/N/N07/N07-1061.pdf
