@@ -73,6 +73,11 @@ Multilingual NER
     - Source side noise model by confusion matrix
     - Outperforms project-then-train CRF training scheme. F1 of 60-64% without training data (equivalent to 12K labeled sentences).
 
+* Mengqiu Wang, Wanxiang Che, Christopher D. Manning. Effective Bilingual Constraints for Semi-supervised Learning of Named Entity Recognizers. AAACI 2013 http://www-nlp.stanford.edu/mengqiu/publication/aaai13.pdf
+    - Bilingual NER Constraints: Hard agreement constraints (indicator function if labels match), Soft agreement constraints (replace by PMI of automatically tagged bitext), alignment uncertainty (raising to the power of alignment prob.), global constraint as in (Finkel, Grenager, Manning 2005) + enhansing recall
+    - Gibbs sampling with monolingual Viterbi initialization and simulated annealing
+    - Relative error reduction of 10.8% (CN) and 4.5% (EN), with huge increase by "rewards" parameter for the global constraints
+
 
 * Fei Huang and Stephan Vogel. Improved Named Entity Translation and Bilingual Named Entity Extraction. 2002. http://isl.anthropomatik.kit.edu/downloads/icmi2002_huang.pdf
     - Iteration between NE alignment and NE dictionary updates
