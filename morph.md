@@ -69,6 +69,13 @@ Multi-Word Expressions
 Word Embeddings
 ---------------
 
+Joseph Turian, Lev Ratinov, and Yoshua Bengio. Word representations: A simple and general method for semi-supervised learning. ACL 2010. http://www.newdesign.aclweb.org/anthology/P/P10/P10-1040.pdf
+    - Comprehensive review of distributuional word representation methods, including: distributional similarity, SOM, LSA, LDA, Hyperspace Analogue to Language (HAL), random projection
+    - Distributed representation (aka word embeddings; not to confused with distributional representation) - Collobert and Weston (2008) embeddings and hierarchical log-bilinear (HLBL) model (Mnih and Hinton 2007)
+    - Tasks: Chunking (CoNLL-2000 shared task) and NER (CoNLL 2003 and MUC7), following Ratinov and Roth (2009)
+    - Scaling of word embeddings: reasonable choice of scale factor is such that the embeddings have a standard deviation of 0.1.
+    - Performance increase by combining different types of word representations, Brown clustering tops (good representation for rare words). C&W embeddings better than HLBL.
+
 Alexandre Klementiev and et al. Inducing Crosslingual Distributed Representations of Words. COLING 2012. http://ivan-titov.org/papers/coling12distr.pdf
     - Treat as a multitask learning problem (Cavallanti et al. 2010) where each task corresponds to a single word, with prior knowledge encoded in matrix A
     - Neural language models of Bengio et al. (2003) predicting P(w | history), trained by maximizing likelihood by stochasitc gradient descent.
