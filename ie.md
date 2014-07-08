@@ -80,13 +80,14 @@ Multilingual NER
 
 * Mengqiu Wang, Wanxiang Che, and Christopher D. Manning. Joint Word Alignment and Bilingual Named Entity Recognition Using Dual Decomposition. ACL 2013. http://www-nlp.stanford.edu/mengqiu/publication/acl13.pdf
     - Bilingual NER by Agreement - minimize CRF prob. while agreeing on the labels y(e) and y(f), solved by dual decomposition. Soft agreement - introduce a factor between word positions (i, j), raised to the power of PMI(i, j)
-    -
+    - Joint alignment and NER decoding: joint optimization of alignment variable (both en->cn and cn->en) and edge potential (i, j)
+    - Absolute F1 improvement of 6.7% in Chinese over monolingual baselines. Joint alignment and NER: 10.8% error reduction in AER (word alignemnt) and better NER performance.
 
 * Fei Huang and Stephan Vogel. Improved Named Entity Translation and Bilingual Named Entity Extraction. 2002. http://isl.anthropomatik.kit.edu/downloads/icmi2002_huang.pdf
     - Iteration between NE alignment and NE dictionary updates
     - Translation prob. of NE pair = IBM model1. Sentence level NE alignment = minimum of the sum of the translation cost of aligned NEs (using competitive linking algorithm)
     - NE dictionary probability = normalized alignment frequencies over a corpus
-    - Augmented NE alignment cost = linear interpolation between translation probl and alignment prob.
+    - Augmented NE alignment cost = linear interpolation between translation prob. and alignment prob.
     - F-value (and the NE dictionary) improved over iterations
 
 
