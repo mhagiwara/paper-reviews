@@ -30,3 +30,10 @@ Finance
     - Kalman filter for time-series prediction: "Log-linear trend model with regression" (level + trend + regressors + error)
     - Spike and slab variable selection (for the details, better to follow George and McCulloch 1997: http://www3.stat.sinica.edu.tw/statistica/oldpdf/A7n26.pdf) + Bayesian model averaging
     - Experiments: Nowcasting consumer sentiment based on 151 Google Search Insights (inclusion prob. Financial.Planning, Investing, etc.), one step ahead prediction MAE = 4.5% + gun sales
+
+* Heeyoung Lee, et al. On the Importance of Text Analysis for Stock Price Prediction. LREC 2014. http://web.stanford.edu/~jurafsky/pubs/lrec2014_stocks.pdf
+    - 8-K financial report (filled by public company when major events occur) (corpus is public: http://nlp.stanford.edu/pubs/stock-event.html), from 2002 to 2012
+    - Stock price: relative change from S&P500 index during the time period (between the document release and market open), three class (UP/DOWN/STAY) classification
+    - Features: Earnings surprise (diff. of consensus EPS and actual EPS), recent movements, VIX, event category, unigram, NMF vector of unigrams
+    - Classified by RandomForest. Earnings suprise the single most effective feature.
+    - "Stock market is highly sensitive to company reports in the short term, but more sensitive to third-party perspectives in the longer term."
