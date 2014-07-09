@@ -31,6 +31,10 @@ Named Entity Recognition (General)
     - Local knowledge: large context window led to worse F1 measure
     - External knowledge: PoS tags (even high-quality POS tags lead to decreased F1), word/phrase clustering, Encyclopedic knowledge (Wikipedia/DBPedia are still useful, especially with disambiguation info.)
 
+* Vijay Krishnan and Christopher D. Manning. An Effective Two-Stage Model for Exploiting Non-Local Dependencies in Named Entity Recognition. ACL 2006. http://nlp.stanford.edu/manning/papers/Vijay-NER-2pass.pdf
+    - Global soft constraint - encourage all the occurrences of the token sequence to the same entity type (with actual stats from CoNLL 2003 data), not so strong for subsequence case (e.g., The China Daily and China)
+    - Additional features for the second stage CRF (trained on the training data with 10-fold cross validation): token-majority features, Entity-majority features, Superentity-majority features
+    - CoNLL 2003 English data - 12.6% relative error reduction, with inter-document non-local features helped
 
 * Jenny Rose Finkel, et al. Incorporating Non-local Information into Information Extraction Systems by Gibbs Sampling. ACL 2005. http://nlp.stanford.edu/manning/papers/gibbscrf3.pdf
     - Enforce (non-local) label consistency in NER
