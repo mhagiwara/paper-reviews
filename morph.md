@@ -3,6 +3,15 @@ Morphology (Word Segmentation & PoS Tagging)
 
 Word Segmentation
 -----------------
+* Nobuhiro Kaji et al. Efficient Staggered Decoding for Sequence Labeling. ACL 2010. http://anthology.aclweb.org//P/P10/P10-1050.pdf
+    - Viterbi decoding slow - O(NL^2) where L is the # of labels
+    - Staggererd decoding: group labels into degenerate labels, activate labels by their relative frequency, continues until the best path doesn't go through degenerate nodes, transition scores = max of degenerate nodes
+    - Pruning based on score lower bound and maximum for each label
+    - PoS tagging, PoS tagging and chunking, and supertagging: several order of magnitute faster than Viterbi, CarpeDiem, comparable with beam search with similar performance.
+
+* Manabu Sassano. Deterministic Word Segmentation Using Maximum Matching with Fully Lexicalized Rules. EACL 2014. http://anthology.aclweb.org//E/E14/E14-4016.pdf
+    -
+
 * Hai Zhao and Chunyu Kit. An Empirical Comparison of Goodness Measures for Unsupervised Chinese Word Segmentation with a Uniﬁed Framework. ICJNLP 2008. http://www.aclweb.org/anthology/I/I08/I08-1002.pdf
     - Comparison of unsupervised WS based on word goodness scores (FSR, DLG, AV, BE) and decoding algorithms (viterbi optimization / maximal forward matching)
     - Experiments on Bakeoff-3 (AS, CityU, CTB, MSRA corpora), DLG outperforms on 2-chars and AV/BE on 3+-chars (because two-character words are dominant in Chinese), viterbi optimization wins
