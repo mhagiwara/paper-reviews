@@ -10,7 +10,9 @@ Word Segmentation
     - PoS tagging, PoS tagging and chunking, and supertagging: several order of magnitute faster than Viterbi, CarpeDiem, comparable with beam search with similar performance.
 
 * Manabu Sassano. Deterministic Word Segmentation Using Maximum Matching with Fully Lexicalized Rules. EACL 2014. http://anthology.aclweb.org//E/E14/E14-4016.pdf
-    -
+    - Maximum algorithm with transformation rules (sequence of characters -> sequences of morphemes)
+    - Learning transformation rules - by transformation-based learning (TBL; Brill 1995) - if system makes an error, learn a rule [word sequence with error] -> [correct sequence]. Sort the rules by scores and accept the rule if it gives positive
+    - F measure almost 0.96 after training on Web corpus, 4 times faster than MeCab. Higher performance by post-processing.
 
 * Hai Zhao and Chunyu Kit. An Empirical Comparison of Goodness Measures for Unsupervised Chinese Word Segmentation with a Uniﬁed Framework. ICJNLP 2008. http://www.aclweb.org/anthology/I/I08/I08-1002.pdf
     - Comparison of unsupervised WS based on word goodness scores (FSR, DLG, AV, BE) and decoding algorithms (viterbi optimization / maximal forward matching)
@@ -78,20 +80,20 @@ Multi-Word Expressions
 Word Embeddings
 ---------------
 
-Joseph Turian, Lev Ratinov, and Yoshua Bengio. Word representations: A simple and general method for semi-supervised learning. ACL 2010. http://www.newdesign.aclweb.org/anthology/P/P10/P10-1040.pdf
+* Joseph Turian, Lev Ratinov, and Yoshua Bengio. Word representations: A simple and general method for semi-supervised learning. ACL 2010. http://www.newdesign.aclweb.org/anthology/P/P10/P10-1040.pdf
     - Comprehensive review of distributuional word representation methods, including: distributional similarity, SOM, LSA, LDA, Hyperspace Analogue to Language (HAL), random projection
     - Distributed representation (aka word embeddings; not to confused with distributional representation) - Collobert and Weston (2008) embeddings and hierarchical log-bilinear (HLBL) model (Mnih and Hinton 2007)
     - Tasks: Chunking (CoNLL-2000 shared task) and NER (CoNLL 2003 and MUC7), following Ratinov and Roth (2009)
     - Scaling of word embeddings: reasonable choice of scale factor is such that the embeddings have a standard deviation of 0.1.
     - Performance increase by combining different types of word representations, Brown clustering tops (good representation for rare words). C&W embeddings better than HLBL.
 
-Alexandre Klementiev and et al. Inducing Crosslingual Distributed Representations of Words. COLING 2012. http://ivan-titov.org/papers/coling12distr.pdf
+* Alexandre Klementiev and et al. Inducing Crosslingual Distributed Representations of Words. COLING 2012. http://ivan-titov.org/papers/coling12distr.pdf
     - Treat as a multitask learning problem (Cavallanti et al. 2010) where each task corresponds to a single word, with prior knowledge encoded in matrix A
     - Neural language models of Bengio et al. (2003) predicting P(w | history), trained by maximizing likelihood by stochasitc gradient descent.
     - Document classification between English-German. Beat baselines (glossing, MT). 70-80 classification accuracy.
 
 
-Karl Moritz Hermann and Phil Blunson. Multilingual Models for Compositional Distributed Semantics. ACL 2014. http://arxiv.org/pdf/1404.4641.pdf
+* Karl Moritz Hermann and Phil Blunson. Multilingual Models for Compositional Distributed Semantics. ACL 2014. http://arxiv.org/pdf/1404.4641.pdf
     - Only requires sentence aligned parallel corpus (no word alignment)
     - CVM (compositional vector model): compute semantic representations of sentences and documents. Vector Addition (ADD) and bigram (BI), recursive application to documents
     - Minimize the difference between aligned sentences while ensures the margins between non-aligned sentences
