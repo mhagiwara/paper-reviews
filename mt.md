@@ -27,6 +27,9 @@ Transliteration
 Bilingual Term Extraction
 -------------------------
 
+* Philipp Koehn and Kevin Knight. Learning a Translation Lexicon from Monolingual Corpora. ACL 2002. http://homepages.inf.ed.ac.uk/pkoehn/publications/learnlex2002.pdf
+    - Identical words - exact same spelling between English and German, 976 such words with 88% accuracy. The longer the words, the more accurate. German->English conversion rule, extra 363 pairs.
+
 * Haghighi et al. Learning Bilingual Lexicons from Monolingual Corpora. ACL 2008. http://anthology.aclweb.org//P/P08/P08-1088.pdf
     - Extract bilingual lexicons (pairs) from (possibly unrelated) bilingual lexicons, (possibly) without seed data
     - Hard EM-like algorithm iterates between (E) find the maximum weighted bipartite matching and (M) Update model parameters by CCA (Canonical Correlation Analysis)
