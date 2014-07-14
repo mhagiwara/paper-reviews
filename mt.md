@@ -75,6 +75,14 @@ Pivot Approaches
     - Experiment on Europarl (Es, De, Fr): Direct > PhraseTrans > SntTrans15 (with n = 15) ~ SntTrans1
     - Phrase table size of PhraseTrans x10 times bigger than Direct, recall of phrases is more important
 
+System Combination
+------------------
+* Antti-Veikko I. Rosti et al. Combining Outputs from Multiple Machine Translation Systems. NAACL 2007. http://www.mt-archive.info/NAACL-HLT-2007-Rosti.pdf
+    - Sentence-level combination - select the best hypothesis out of the merged N-best lists, estimating system confidence by the logit model based on several features, aggregate over systems, then rerank (by interpolating with 5-gram langauge model)
+    - Phrase-level combination - extract a new phrase translation table from each system's target-to-source alignments and re-decoding the source sentence
+    - Word-level combination - built confusion network after choosing a skeleton (the hypothesis that best agrees with the other hypotheses), with system weights
+    - Slight gain on the tuning set, very small gain on the test set.
+
 Optimization
 ------------
 
