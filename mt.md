@@ -83,6 +83,9 @@ System Combination
     - Word-level combination - built confusion network after choosing a skeleton (the hypothesis that best agrees with the other hypotheses), with system weights
     - Slight gain on the tuning set, very small gain on the test set.
 
+* Evgeny Matusov, et al. Computing Consensus Translation from Multiple Machine Translation Systems Using Enhanced Hypotheses Alignment. EACL 2006. http://www.mt-archive.info/EACL-2006-Matusov.pdf
+    - ROVER approach of (Fiscus 1997) - edit distance alignment and time information to create confusion network + voting of several ASR systems
+
 Optimization
 ------------
 
