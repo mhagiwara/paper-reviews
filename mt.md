@@ -85,6 +85,9 @@ System Combination
 
 * Evgeny Matusov, et al. Computing Consensus Translation from Multiple Machine Translation Systems Using Enhanced Hypotheses Alignment. EACL 2006. http://www.mt-archive.info/EACL-2006-Matusov.pdf
     - ROVER approach of (Fiscus 1997) - edit distance alignment and time information to create confusion network + voting of several ASR systems
+    - Word alignment between primary hypothesis and other hypothesis - IBM Model 1 + HMM (between the same language), training corpus created by translating a test corpus
+    - Word reordering - new word order is obtained by sorting words by their aligned word id (in the primary hypothesis)
+    - Confusion decoding - done as in the ROVER system (sum up the probabilities of the arcs which are labeled with the same word and have the same start and the same end state)
 
 Optimization
 ------------
