@@ -80,6 +80,13 @@ Multi-Word Expressions
 Word Embeddings
 ---------------
 
+* Tomas Mikolov, et al. Distributed Representations of Words and Phrases and their Compositionality NIPS 2013. http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf
+    - Skip-gram model: predict the surrounding words from the center word. Objective = maximize the average of log prob of p (w_context|c_center), defined by SoftMax
+    - Improvements: Hierarchical Softmax, Negative sampling (distinguish the target word from draws from the noise distribution, unigram distribution raised to the 3/4rd power)
+    - Subsampling of the frequent words improves the training speed several times and maek the word representations significantly more accurate
+    - Phrase identification: bigram_count(wi, wj) / (unigram_count(wi) x unigram_count(wj)), 2-4 passes over the training data to allow phrases 2+ word long
+    - Why additive compositionality? the sum of two word vectors is related to the product of the two context distributions
+
 * Joseph Turian, Lev Ratinov, and Yoshua Bengio. Word representations: A simple and general method for semi-supervised learning. ACL 2010. http://www.newdesign.aclweb.org/anthology/P/P10/P10-1040.pdf
     - Comprehensive review of distributuional word representation methods, including: distributional similarity, SOM, LSA, LDA, Hyperspace Analogue to Language (HAL), random projection
     - Distributed representation (aka word embeddings; not to confused with distributional representation) - Collobert and Weston (2008) embeddings and hierarchical log-bilinear (HLBL) model (Mnih and Hinton 2007)
