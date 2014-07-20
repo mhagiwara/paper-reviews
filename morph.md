@@ -87,6 +87,13 @@ Word Embeddings
     - Phrase identification: bigram_count(wi, wj) / (unigram_count(wi) x unigram_count(wj)), 2-4 passes over the training data to allow phrases 2+ word long
     - Why additive compositionality? the sum of two word vectors is related to the product of the two context distributions
 
+* Tomas Mikolov, et al. ICLR 2013. Efficient Estimation of Word Representations in Vector Space. http://arxiv.org/pdf/1301.3781.pdf
+    - Comparison of four models: Feedforward Neural Net Language Model (NNLM), Recurrent Neural Net Language Model (RNNLM), Continuous Bag-of-Words Model, and Continuous Skip-gram Model
+    - Experiment on word similarity task (e.g., What is the word that is similar to "small" in the same sense as "biggest" is similar to "big"?)
+    - Have to increase both vector dimensionality and the amount of the training data (e.g. 600 dim for 783M training words)
+    - NNLM better than RNNLM, CBOW and Skip-gram better than the other two
+    - Microsoft Research Sentence Completion Challenge: Skip-gram + RNNLMs (weighted combination) the best
+
 * Joseph Turian, Lev Ratinov, and Yoshua Bengio. Word representations: A simple and general method for semi-supervised learning. ACL 2010. http://www.newdesign.aclweb.org/anthology/P/P10/P10-1040.pdf
     - Comprehensive review of distributuional word representation methods, including: distributional similarity, SOM, LSA, LDA, Hyperspace Analogue to Language (HAL), random projection
     - Distributed representation (aka word embeddings; not to confused with distributional representation) - Collobert and Weston (2008) embeddings and hierarchical log-bilinear (HLBL) model (Mnih and Hinton 2007)
