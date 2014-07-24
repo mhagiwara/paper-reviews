@@ -80,6 +80,14 @@ Multi-Word Expressions
 Word Embeddings
 ---------------
 
+* Tomas Mikolov, et al. Exploiting Similarities among Languages for Machine Translation. arXiv 2013. http://arxiv.org/pdf/1309.4168v1.pdf
+    - Word representation (Skip-gram) with a linear projection between the languages
+    - "In practice, Skip-gram gives better word representations when the monolingual data is small. CBOW [Continuous Bag-of-Words] however is faster and more suitable for larger datasets"
+    - Translation matrix - linear transform Wxi -> z. Train by stochastic gradient descent so as to minimize the sum of L2 error between the two.
+    - Used Google Translate to create gold dictionaries (for training and testing). En<->En 90% precision @ 5.
+    - Weighted combination of edit distance based similarity and matrix based similarity
+    - Thresholding on the confidence score, defined by the maximum cosine similarity over possible candidates in the target language
+
 * Tomas Mikolov, et al. Distributed Representations of Words and Phrases and their Compositionality NIPS 2013. http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf
     - Skip-gram model: predict the surrounding words from the center word. Objective = maximize the average of log prob of p (w_context|c_center), defined by SoftMax
     - Improvements: Hierarchical Softmax, Negative sampling (distinguish the target word from draws from the noise distribution, unigram distribution raised to the 3/4rd power)
