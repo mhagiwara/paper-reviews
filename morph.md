@@ -80,6 +80,13 @@ Multi-Word Expressions
 Word Embeddings
 ---------------
 
+* Richard Socher et al. Parsing Natural Scenes and Natural Language with Recursive Neural Networks. ICML 2011. http://machinelearning.wustl.edu/mlpapers/paper_files/ICML2011Socher_125.pdf
+    - RNN computes (i) a score that is higher when neighboring regions should be merged into a larger region, (ii) a new semantic feature representation for this larger region, and (iii) its class label.
+    - Input for sentence parsing: word representation from neural language models
+    - We want the score of the highest scoring correct tree to be larger up to a margin defined by the loss (for sentence, is the sum over incorrect spans in the treee)
+    - Training by subgradient method, calculate the derivative by using backpropagation through structure
+    - Final F measure 90.29% (Berkley Parser 91.63%), but found interesting sentence level paraphrases
+
 * Tomas Mikolov, et al. Exploiting Similarities among Languages for Machine Translation. arXiv 2013. http://arxiv.org/pdf/1309.4168v1.pdf
     - Word representation (Skip-gram) with a linear projection between the languages
     - "In practice, Skip-gram gives better word representations when the monolingual data is small. CBOW [Continuous Bag-of-Words] however is faster and more suitable for larger datasets"
