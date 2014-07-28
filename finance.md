@@ -1,6 +1,13 @@
 Finance
 =======
 
+* Allan Borodin et al. Can We Learn to Beat the Best Stock. Journal of Artificial Intelligence Research. 2004. http://arxiv.org/pdf/1107.0036.pdf
+    - (Borodin et al. 2000) prediction component of Lempel-Ziv (LZ) losless compression algorithm
+    - ANTICOR: money i->i if the growth rate for stock i exceeds that of stock j, and stock j will start to emulate the past growth of stock i in the near future
+    - For most of the window sizes and buy-and-hold(ANTICORE_w), it beats the best stocks and markets
+    - Using ANTICORE to actively trade ANTICORE_w's (better performance), clearly beats the market when the transaction fee is less than 0.4%
+
+
 * Helen Susannah Moat et al. Quantifying Wikipedia Usage Patterns Before Stock Market Moves, Scientific Reports, 2013. http://www.nature.com/srep/2013/130508/srep01801/pdf/srep01801.pdf
     - Used views and edits on financially related Wikipedia pages, weekly changes over past N week average
     - Sell (DJIA) on the first trading day of a week if the change is negative, buy oterwise, and close the position on the following week.
@@ -23,7 +30,7 @@ Finance
     - Ford sales: seasonal autoregressive (AR) model, including the sales 12 months ago, with query index for 'Ford.' -> MAE reduction 3%
     - Automotive sales: included Google trends category index, makes
     - Home sales: "Real Estate Agencies" -> best predictor of house sales
-    - Travel: Visits to Hong Kong from other countreis, based on 'Hong Kong' subcategory under Vacation Destinations. A dummy variable to explain Beijing Olympics negative effect.
+    - Travel: Visits to Hong Kong from other countries, based on 'Hong Kong' subcategory under Vacation Destinations. A dummy variable to explain Beijing Olympics negative effect.
 
 * Steven L. Scott, Hal Varian. Bayesian Variable Selection for Nowcasting Economic Time Series. 2012. http://people.ischool.berkeley.edu/~hal/Papers/2012/fat.pdf
     - "Fat regressio" - the number of possible predictors exceeds the number of observations

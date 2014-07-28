@@ -22,3 +22,8 @@ Machine Learning
 ----------------
 
 https://github.com/mhagiwara/paper-reviews/blob/master/ml.md
+
+Finance
+----------------
+
+https://github.com/mhagiwara/paper-reviews/blob/master/finance.md
