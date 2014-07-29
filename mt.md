@@ -61,6 +61,12 @@ Bilingual Term Extraction
     - Experiment: finding English translations for an English input word, from two unrelated corpora of news articles
     - Achieved top1 accuracy of 72%. Ambiguity (e.g., "weiß" for "know" and "white") is an issue.
 
+* Jiajun Zhang, et al. Bilingually-constrained Phrase Embeddings for Machine Translation. ACL 2014. http://nlpr-web.ia.ac.cn/cip/ZongPublications/2014/2014_ACL_Regular_Oral,ZhangJJ,PP111-121.pdf
+    - Minimie the semantic distance of translation equivalents and maximizes the semantic distance of non-translation (by randomly replacing words) pairs simultaneously
+    - Co-training style algorithm: pre-training with standard recursive auto-encoder, fine-tuning with bilingual constraint
+    - Tries to minimize the weighted sum of reconstruction error and sematic error (by linear mapping s->t and t->s)
+    - Experiments on phrase table pruning and decoding with phrasal semantic similarities, can remove 72% of the phrase table with only 0.06 BLEU loss
+
 Pivot Approaches
 ----------------
 * Hua Wu and Haifeng Wang. Pivot Language Approach for Phrase-Based Statistical Machine Translation. ACL 2007. http://acl.ldc.upenn.edu/P/P07/P07-1108.pdf
