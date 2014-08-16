@@ -50,9 +50,18 @@ Finance
 Economics
 =========
 
+* Archak et al. Show me the Money! Deriving the Pricing Power of Product Features by Mining Consumer Reviews. KDD 2007. http://pages.stern.nyu.edu/~aghose/kdd2007.pdf
+  - Incorporate qualitative features in a hedonic (aggregation of individual characteristics)-like framework
+  - Collect adjectives (good, amazing, bad) + nouns (lens, image quality)
+  - Tensor product of evaluation and feature spaces. Linear regression of log of demand = product factor + log of price + error
+  - Reduce the dimensionality of by rank-1 approximation of the above product
+  - Collected reviews and ranking data from Amazon, converted ranking to demand levels
+  - Seemingly positive evaluations like "decent quality" "nice/fine camera" hurt sales -> positive reviews are superlatives. Product got bad reviews disappear quickly.
+  - "In general, the reviews that appear on Amazon are positive, especially for products with large number of posted reviews."
+
 * Clinton P. McCully et al. Comparing the Consumer Price Index and the Personal Consumption Expenditures Price Index. 2007. http://www.bea.gov/scb/pdf/2007/11%20November/1107_cpipce.pdf
-    - Comparison of CPI (by BLS - Bureau of Labor Statistics) and PCE (by BEA - Bureau of Economic Analysis). CPI grew 0.4 point / year than PCE
-    - Formula effect: CPI (modified Laspeyres formula) vs PCE (Fisher-Ideal formula)
-    - Weight effect: CPI (based on household survey) vs PCE (business survey)
-    - Scope effect: Difference in scope items: CPI (out-of-pocket expenditures of all urban households) vs PCE (services purchased by households and nonprofit institutions)
-    - Other effect
+  - Comparison of CPI (by BLS - Bureau of Labor Statistics) and PCE (by BEA - Bureau of Economic Analysis). CPI grew 0.4 point / year than PCE
+  - Formula effect: CPI (modified Laspeyres formula) vs PCE (Fisher-Ideal formula)
+  - Weight effect: CPI (based on household survey) vs PCE (business survey)
+  - Scope effect: Difference in scope items: CPI (out-of-pocket expenditures of all urban households) vs PCE (services purchased by households and nonprofit institutions)
+  - Other effect
