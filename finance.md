@@ -18,13 +18,6 @@ Finance
     - Used weekly relative search volume change, sell DJIA if the change is positive and cloase the position one week later. Buy otherwise.
     - Strategy using the term "debt" -> 326% return (2.31 std. dev. of random strategy), "stocks" (2.21 std. dev.), portfolio (1.69) (mean of delta = 1..6 weeks to average). The more finacially related, the better the performance (compared with relative frequency to Financial Times)
 
-* Clinton P. McCully et al. Comparing the Consumer Price Index and the Personal Consumption Expenditures Price Index. 2007. http://www.bea.gov/scb/pdf/2007/11%20November/1107_cpipce.pdf
-    - Comparison of CPI (by BLS - Bureau of Labor Statistics) and PCE (by BEA - Bureau of Economic Analysis). CPI grew 0.4 point / year than PCE
-    - Formula effect: CPI (modified Laspeyres formula) vs PCE (Fisher-Ideal formula)
-    - Weight effect: CPI (based on household survey) vs PCE (business survey)
-    - Scope effect: Difference in scope items: CPI (out-of-pocket expenditures of all urban households) vs PCE (services purchased by households and nonprofit institutions)
-    - Other effect
-
 * Hyunyoung Choi and Hal Varian. Predicting the Present with Google Trends. 2009. http://static.googleusercontent.com/media/www.google.com/en/us/googleblogs/pdfs/google_predicting_the_present.pdf
     - Predict the present (metrics which have delays until announcements) using Google Trends (Index: percentage deviation from January 1 2004)
     - Ford sales: seasonal autoregressive (AR) model, including the sales 12 months ago, with query index for 'Ford.' -> MAE reduction 3%
@@ -44,3 +37,22 @@ Finance
     - Features: Earnings surprise (diff. of consensus EPS and actual EPS), recent movements, VIX, event category, unigram, NMF vector of unigrams
     - Classified by RandomForest. Earnings suprise the single most effective feature.
     - "Stock market is highly sensitive to company reports in the short term, but more sensitive to third-party perspectives in the longer term."
+
+* Kogan et al. Predicting Risk from Financial Reports with Regression. NAACL 2009. http://www.cs.cmu.edu/~nasmith/papers/kogan+levin+routledge+sagi+smith.naacl09.pdf
+  - Simple bag of ngrams representation can (when combined) beat baseline (prior volatility is a very good predictor of future volatility)
+  - "It is, by now, received wisdom in the field of economics that predicting a stock's performance, based on easily accessible public information, is difficult."
+  - Support Vector Regression (SVR)
+  - Form 10-K from SEC Website. "Management's discussion and analysis of financial conditions and results of operations (MD&A)"
+  - Feature: LOG1P (log of 1+tf)
+  - Temporal changes in financial reporting make training data selection non-trivial. (More accurate after 2002 Sarbanes-Oxley Act)
+  - Company delisting prediction from 10-K report: 75% precision and 10% recall.
+
+Economics
+=========
+
+* Clinton P. McCully et al. Comparing the Consumer Price Index and the Personal Consumption Expenditures Price Index. 2007. http://www.bea.gov/scb/pdf/2007/11%20November/1107_cpipce.pdf
+    - Comparison of CPI (by BLS - Bureau of Labor Statistics) and PCE (by BEA - Bureau of Economic Analysis). CPI grew 0.4 point / year than PCE
+    - Formula effect: CPI (modified Laspeyres formula) vs PCE (Fisher-Ideal formula)
+    - Weight effect: CPI (based on household survey) vs PCE (business survey)
+    - Scope effect: Difference in scope items: CPI (out-of-pocket expenditures of all urban households) vs PCE (services purchased by households and nonprofit institutions)
+    - Other effect
