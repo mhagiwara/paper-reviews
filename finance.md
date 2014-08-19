@@ -50,6 +50,13 @@ Finance
 Economics
 =========
 
+* Judith Chevalier and Austan Goolsbee. Measuring prices and price competition online: Amazon and Barnes and Noble. Quantitative Marketing and Economics, 2003. http://www.hss.caltech.edu/~mshum/ec106/chevaliergoolsbee.pdf
+  - Demand at BN is much more price-elastic than is demand at Amazon
+  - CPI mis-states the true inflation rate by almost a factor of three (online book vendors are not sampled),  Fisher-ideal price index
+  - Sales quantities estimate: assume a Pareto distribution (Zipf's law is a special case of Pareto's law), regress from WSJ book sales index
+  - Price dispersion across sites: competition has been diminishing (price dispersion rising)
+  - Price elasticity = -2.5 and -3 -> notably large, suggesting the importance of competition.
+
 * Archak et al. Show me the Money! Deriving the Pricing Power of Product Features by Mining Consumer Reviews. KDD 2007. http://pages.stern.nyu.edu/~aghose/kdd2007.pdf
   - Incorporate qualitative features in a hedonic (aggregation of individual characteristics)-like framework
   - Collect adjectives (good, amazing, bad) + nouns (lens, image quality)
