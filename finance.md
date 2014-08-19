@@ -65,3 +65,12 @@ Economics
   - Weight effect: CPI (based on household survey) vs PCE (business survey)
   - Scope effect: Difference in scope items: CPI (out-of-pocket expenditures of all urban households) vs PCE (services purchased by households and nonprofit institutions)
   - Other effect
+
+* Anindya Ghose and Arun Sundararajan. Evaluating Pricing Strategy Using e-Commerce Data: Evidence and Estimation Challenges. http://arxiv.org/pdf/math/0609170.pdf Statistical Science 2006
+  - Price-discriminate strategies: nonlinear pricing, bundling, mixed bundling, versioning, succeesive generations, ...
+  - Data: 330 products on Amazon randomly selected from busines and productivity, security and utilities, graphics and development and operation systems
+  - Demand estimation from rank - ranks follow Pareto distribution (i.e., power law) log[Q] = \alpha + \beta log[rank] -> detect "spikes" of hourly sales rank
+  - Own-price elasticity = diff demand per diff own price, cross-price elasticity = diff demand per diff another product's price.
+  - Cost estimation using Hausman (1994)
+  - Optimality of pricing = partial derivative of profit wrt price = 0
+  - Consumer demand for Microsoft Office Professional is very sensitive to the price of Microsoft Office Standard
