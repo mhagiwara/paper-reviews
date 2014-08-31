@@ -179,3 +179,10 @@ Product Information Extraction
     - Products are described by sets of attributes. Candidate record pairs share the same set of attributes. Assume one-to-one mapping between databases.
     - Confidence defined: product of (score for positive pair) and (negative score for negative pairs in conflicting links) -> self training
     - Experiments: linking Jingdong with eTao: group based self training achieved best F1 value compared with simpler classifier and self training
+
+* Michael Wiegand and Dietrich Klakow. Separating Brands from Types: an Investigation of Different Features for the Food Domain. COLING 2014. http://aclweb.org/anthology/C/C14/C14-1216.pdf
+    - Distinction between brands and food types (sometimes blurred e.g., sprite)
+    - Simple baseline: use of coordination starting from a few seeds
+    - Intrinsic property: desirable brand name characteristics (e.g., onomatopoeia, word-initial plosives, word length, etc.) -> not effective excpt for length (brands tend to be shorter)
+    - Ranking problem directly using features: length, NER, diversification (e.g., affix "light"), commerce cues (e.g., buy, purchase, customer), graph clustering, Food Guide Pyramid, Wikipedia classification, vector space model
+    - Data: German food domain. Proposed F1-value ~73%
