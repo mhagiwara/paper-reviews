@@ -173,3 +173,9 @@ Product Information Extraction
     - Attribute synonym discovery: pairs sharing popular values and never appear in the same structured data
     - Annotate product pages using KB (from the same genre) values, calculate the ratio MF (in desc.) and MF (in structured data) and removed high score sents.
     - Correct attribute labels = 77.6%, synonym detection purity/inv. purity = 0.920 and 0.813, extraction model (CRF) micro-averaged F = 58.15%
+
+* Wayne Xin Zhao, et al. Group based Self Training for E-Commerce Product Record Linkage. COLING 2014. http://aclweb.org/anthology/C/C14/C14-1124.pdf
+    - Usually recast as the record pair classification problem -> correlation (one product is only linked to one another)
+    - Products are described by sets of attributes. Candidate record pairs share the same set of attributes. Assume one-to-one mapping between databases.
+    - Confidence defined: product of (score for positive pair) and (negative score for negative pairs in conflicting links) -> self training
+    - Experiments: linking Jingdong with eTao: group based self training achieved best F1 value compared with simpler classifier and self training
