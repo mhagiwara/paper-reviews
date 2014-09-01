@@ -63,3 +63,13 @@ Clustering
     - DBSCAN: starts with an arbitrary object p and retrieve all objects density-reachable from p, create a cluster. then visit the next object
     - Incremental DBSCAN: affected objects: Eps-neighborhood and all the objects density reachable from objects in the neighborhood
     - It is sufficient to reapply DBSCAN to the set of affected objects
+
+Classification
+--------------
+
+* Naoki Yoshinaga and Masaru Kitsuregawa. A Self-adaptive Classifier for Efficient Text-stream Processing. COLING 2014. http://aclweb.org/anthology/C/C14/C14-1103.pdf
+    - Tweets data from 2011 Great East Japan Earthquake using base-phrase chunker (Sassano, 2008) and dependency parser (Sassano, 2004)
+    - Reuse the past classification results and their scores. Pre-compute common classification problems and reuse them.
+    - Proposed: keep updating common classification problems (with limited number) online
+    - Defined two functions for trimming useless problems: least frequently used and least recently used (cf caching)
+    - Experiments on chunking and parsing, achieved 3.2 and 5.7 speed-up, respectively.
