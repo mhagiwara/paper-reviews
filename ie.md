@@ -9,6 +9,12 @@ General
     - Shrinkage: build a HMM node hierarchy (sth like fallback e.g., suffix -> context -> uniform), estimate the interpolation weight by an EM-like algorithm
     - Experiments: seminar announcements and corporate acquisitions. "Global" shrinkage model performs the best (50% to 90%, depending on NE types)
 
+* Tim Dawborn and James R. Curran. docrep: A lightweight and efficient document representation framework. http://aclweb.org/anthology/C/C14/C14-1072.pdf
+    - Cf. heavy-weight DRF (Document representation framework), such as GATE or UIMA. Cf. Stanford NLP Pipeline and CURATOR
+    - Support APIs for Python (2.7, 3.3), C++ (C++11), Java (Java 6)
+    - Serialization: BSON, MessagePack, ProtocolBuffers, Thrift. BSON worse, MessagePack good in terms of speed and size, and self-describing.
+    - Case Study using OntoNote 5 corpus: compared conversion+serialization time and size on disk using UIMA and docrep. 
+
 Set Expansion
 -------------
 
