@@ -13,7 +13,7 @@ General
     - Cf. heavy-weight DRF (Document representation framework), such as GATE or UIMA. Cf. Stanford NLP Pipeline and CURATOR
     - Support APIs for Python (2.7, 3.3), C++ (C++11), Java (Java 6)
     - Serialization: BSON, MessagePack, ProtocolBuffers, Thrift. BSON worse, MessagePack good in terms of speed and size, and self-describing.
-    - Case Study using OntoNote 5 corpus: compared conversion+serialization time and size on disk using UIMA and docrep. 
+    - Case Study using OntoNote 5 corpus: compared conversion+serialization time and size on disk using UIMA and docrep.
 
 Set Expansion
 -------------
@@ -125,7 +125,16 @@ Multilingual NER
     - Supervised monolingual models -> improve using bilingual parallel corpus
     - Multiview bilingual model: parametrize using one-to-one matching between nodes (named entities, node in parse tree). Example: ambiguous PP attachement in EN but not in ZH
     - Introduce the output of deliberately weakened monolingual models as features in the bilingual view
-    - Retrain monolingual model -> useful when lacking anotated data but bitexts are plentiful
+    - Retrain monolingual model -> useful when lacking annotated data but bitexts are plentiful
+
+* Ryan McDonald et al. Multi-Source Transfer of Delexicalizaed Dependency Parsers. EMNLP 2011. http://www.petrovi.de/data/emnlp11a.pdf
+  - Delexicalized dep parser trained in English (only rely on PoS tags, universal PoS tagset). Romance languages tend to transfer to one another.
+  - Seed a perceptron learner (direct transfer, "re-lexialize", parse parallel sentences on both sides, choose a parse which aligns best with Englishs)
+  - Arc-eager transition parser trained with Averaged perceptron with beam search (used MSTParser with similar results)
+  - Direct transfer UAS ~ 55% with gold-PoS (target langs.: Indo-European languages with significant parallel data), after projection ~ 60%
+  - Multi-source languages (concatination of the all the training data) -> 63.8% UAS
+  - Comparison with USR (universal syntactic rules; Naseem et al. 2010), PGI (phylogenetic grammar induction; Berg-Kirkpatrick 2010), PR (posterior regularization; Ganchev et al. 2009)
+  - UAS 39.9/41.7/43.3% for Arabic, Chinese, and Japanese using multi-source direct transfer
 
 Unsupervised NER
 ----------------
