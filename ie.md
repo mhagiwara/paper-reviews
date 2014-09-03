@@ -136,6 +136,15 @@ Multilingual NER
   - Comparison with USR (universal syntactic rules; Naseem et al. 2010), PGI (phylogenetic grammar induction; Berg-Kirkpatrick 2010), PR (posterior regularization; Ganchev et al. 2009)
   - UAS 39.9/41.7/43.3% for Arabic, Chinese, and Japanese using multi-source direct transfer
 
+
+* Oscar Täckström et al. Target Language Adaptation of Discriminative Transfer Parsers. NAACL 2013. http://soda.swedish-ict.se/5501/1/paper.pdf
+  - Ambiguity-aware self-training - consider arc marginals and cut by a threshold
+  - Graph-based parser (discriminative model, trained by L-BFGS, decoded by Eisner's algorithm)
+  - Bare features -> delexicalized features minus direction dependent ones -> works better for Basque, Hungarian, and Japanese
+  - Shared directional features conjoined with WALS (World Atlas of Language Structures) feature
+  - "Family" model shares features among the same language families (UAS 57.4% -> 62.0%)
+  - Ambiguity-aware ensemble-training: union of NBG parser (Naseem et al 2012) and base parser ambiguity sets
+
 Unsupervised NER
 ----------------
 
