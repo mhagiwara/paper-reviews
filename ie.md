@@ -145,6 +145,12 @@ Multilingual NER
   - "Family" model shares features among the same language families (UAS 57.4% -> 62.0%)
   - Ambiguity-aware ensemble-training: union of NBG parser (Naseem et al 2012) and base parser ambiguity sets
 
+* Mo Yu et al. Cross-lingual Projections between Languages from Different Families. ACL 2013. http://www.asiteof.me/acl2013.pdf
+   - Direct projection, or projection based on word alignment?
+   - Brown clusters based word representations on the target side and noise removal (re-implementation of cluster projectino of Tackstrom 2012)
+   - Noise removal: based on the whole corpus marginals on words, brown clusters, and bigrams
+   - Experiments: NER En->Zh: F = 33.91 (baseline - direct projection), 56.60 (word alignment projection), 62.53 (after noise removal)
+
 Unsupervised NER
 ----------------
 
