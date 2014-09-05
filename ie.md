@@ -151,6 +151,12 @@ Multilingual NER
    - Noise removal: based on the whole corpus marginals on words, brown clusters, and bigrams
    - Experiments: NER En->Zh: F = 33.91 (baseline - direct projection), 56.60 (word alignment projection), 62.53 (after noise removal)
 
+* Greg Durett et al. Syntactic Transfer Using a Bilingual Lexicon. EMNLP 2012 http://www.eecs.berkeley.edu/~gdurrett/DurPauKle_emnlp12.pdf
+   - Dependency parsing (MSTParser): UAS increase of ~2 points
+   - Transfer type-level information (instead of token level) -> Proj. features: queries (parent word -> child word, direction, distance), signature (pos -> pos, a flag specifying if they are lexicalized)
+   - Query value estimation: using (probabilistic) bilingual lexicon (weights for marginalizing out target translation)
+   - AUTOMATIC lexicon (collected from word alignment) better than MANUAL lexicon (because of lower coverage)
+
 Unsupervised NER
 ----------------
 
