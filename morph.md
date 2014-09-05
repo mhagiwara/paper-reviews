@@ -136,3 +136,10 @@ Word Embeddings
     - 3CosAdd model: arg max sim(b*, b - a + a*) = arg max (cos (b*, b) - cos(b*, a) + cos(b*, a*))
     - 3CosMul model: arg max cos(b*, b) cos(b*, a*) / (cos(b*, a) + eps) -> performing better than state-of-the-art
     - Most common error cause: "default behavior" -> some very frequent words act as "hubs" and confuse the model
+
+* Quoc Le and Tomas Mikolov. Distributed Representations of Sentences and Documents. ICML 2014. http://cs.stanford.edu/~quocle/paragraph_vector.pdf
+  - Paragraph vector PV-DM (distributed memory) version -> shared by all contexts generated from the same paragraph but not across paragraphs.
+  - PV-DBOW (distributed bag-of-words) -> predict words randomly sampled from the paragraph in the output.
+  - Usually PV-DM performs better, but combining PV-DM and PV-DBOW performed even better
+  - Prediction: fix the word vectors and infer paragraph vectors
+  - The proposed PV performed better than recursive networks even though they don't use parsing
