@@ -128,3 +128,11 @@ Word Embeddings
     - Minimize the difference between aligned sentences while ensures the margins between non-aligned sentences
     - Trained on Europerl corpus v7 and TED corpus for IWSLT 2013, evaluated for multilingual document classification using Reuters corpora
     - Compared with MT baseline (slightly better), BI performing better than ADD
+
+* Omer Levy and Yoav Goldberg. Linguistic Regularities in Sparse and Explicit Word Representations. CoNLL 2014 http://levyomer.files.wordpress.com/2014/04/linguistic-regularities-in-sparse-and-explicit-word-representations-conll-2014.pdf
+    - Improved method of recovering relational similarities (aka linguistic regularities)
+    - "Neural embedding process is not discovering novel patterns, but rather is doing a remarkable job at preserving the patterns inherent in the word-context co-occurrence matrix."
+    - Compared with context based sparse vector representation (PMI weighting + distinguishing different positions)
+    - 3CosAdd model: arg max sim(b*, b - a + a*) = arg max (cos (b*, b) - cos(b*, a) + cos(b*, a*))
+    - 3CosMul model: arg max cos(b*, b) cos(b*, a*) / (cos(b*, a) + eps) -> performing better than state-of-the-art
+    - Most common error cause: "default behavior" -> some very frequent words act as "hubs" and confuse the model
