@@ -157,6 +157,13 @@ Multilingual NER
    - Query value estimation: using (probabilistic) bilingual lexicon (weights for marginalizing out target translation)
    - AUTOMATIC lexicon (collected from word alignment) better than MANUAL lexicon (because of lower coverage)
 
+* Daniel Zeman and Philip Resnik. Cross-Language Parser Adaptation between Related Languages. IJCNLP 2008. http://www.aclweb.org/anthology/I08-3008
+   - Building a parser of a language without a treebank
+   - Danish -> Swedish (closely related, almost dialects). Result: 1,500 Swedish parse trees would be required for training
+   - Treebank normalization (normalizing two different sets of annotation schemes), mapping tags
+   - Bridging the gap between languages: glossing (word alignments), delexialization (by only using PoS tags),
+   - Evaluated by evalb http://nlp.cs.nyu.edu/evalb/ (by Sekine and Collins)
+
 Unsupervised NER
 ----------------
 
