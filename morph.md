@@ -149,3 +149,9 @@ Word Embeddings
   - Trained word representations in 100+ languages using their Wikipedias
   - Train PoS taggers using only word embeddings model
   - Avoid excessive normalization, e.g., "Apple" (IT company) vs "apple" (fruits)
+
+* Marco Baroni et al. Don't count, predict! A systematic comparison of context-counting vs. context-predicting semantic vectors. ACL 2014 http://clic.cimec.unitn.it/marco/publications/acl2014/baroni-etal-countpredict-acl2014.pdf
+  - Empirical comparison of context-counting (DistSim) and contex-predicting (word embeddings) methods
+  - Most effective parameter set for count-based vectors: narrow context window, positive PMI, SVD reduction -> no compression was better
+  - Predict-based models are a clear winner
+  - Collobert and Weston out-of-the-box embeddings didn't work so well
