@@ -143,3 +143,9 @@ Word Embeddings
   - Usually PV-DM performs better, but combining PV-DM and PV-DBOW performed even better
   - Prediction: fix the word vectors and infer paragraph vectors
   - The proposed PV performed better than recursive networks even though they don't use parsing
+
+* Rami Al-Rfou et al. Polyglot: Distributed Word Representations for Multilingual NLP. CoNLL 2013 http://arxiv.org/pdf/1307.1662.pdf
+  - Used neural language model (SENNA; Collobert and Weston 2008) - state-of-the-art performance in Danish, Enlish, Swedish
+  - Trained word representations in 100+ languages using their Wikipedias
+  - Train PoS taggers using only word embeddings model
+  - Avoid excessive normalization, e.g., "Apple" (IT company) vs "apple" (fruits)
