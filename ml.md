@@ -1,6 +1,9 @@
 Machine Learning
 ================
 
+General
+-------
+
 * Pedro Domingos. A Few Useful Things to Know about Machine Learning. CACM 2012. http://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf
     - Explaining and communicating "black art" "folk knowledge" of machine learning
     - Learning = Representation + Evaluation (distinguish good classifiers from bad ones) + Optimization (search among the classifiers). The latter two are often overlooked
@@ -19,6 +22,12 @@ Machine Learning
     - Time update: update covariance prediction, and state prediction
     - Measurement update: Compute Kalman gain K_t, estimate a posteriori state, update error covariance
     - Parameter estimation via EM-like algorithm
+
+* Yucheng Low et al. Distributed GraphLab: A Framework for Machine Learning and Data Mining in the Cloud. VLDB 2012  http://vldb.org/pvldb/vol5/p716_yuchenglow_vldb2012.pdf
+    - Sequential shared memory abstraction - user defined functions read & write the data in the "scope" - current node + adjacent edges and nodes
+    - Optimization: often a large number of parameters converge quickly while others very slowly
+    - Users can associate data with nodes AND edges
+    - NER example: bipartite graph of noun phrases and context - propagate labels from seeds
 
 Domain Adaptation & Transfer Learning
 -------------------------------------
