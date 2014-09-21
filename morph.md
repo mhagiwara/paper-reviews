@@ -155,3 +155,10 @@ Word Embeddings
   - Most effective parameter set for count-based vectors: narrow context window, positive PMI, SVD reduction -> no compression was better
   - Predict-based models are a clear winner
   - Collobert and Weston out-of-the-box embeddings didn't work so well
+
+* Lauly et al. Learning Multilingual Word Representations using a Bag-of-Words Autoencoder. NIPS 2013 workshop on deep learning.
+  - learning multilingual auto-encoder with bitext (without word alignment)
+  - autoencoder - input bag-of-words -> sum of embeddings -> non-linear decoder -> bag of words (hierachical softmax-like encoding)
+  - 1) lang x -> lang y 2) lang y -> lang x 3) x -> x 4) y -> y
+  - Experiments: crosslingual classification (classifier trained in lang x to classify lang y based on sum of word representations)
+  - Competitive performance compared with Klementiev embeddings
