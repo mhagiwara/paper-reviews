@@ -55,7 +55,12 @@ Finance
   - securities that have performed unusually well or poorly are more likely to be discussed in the media, more likely to be considered by individual investors and, ultimately, more likely to be purchased.
   - investors sell nearly twice as many previous winners as previous losers
   - for many investors the decision to sell a security is more influenced by what that security has done than by what it is likely to do
-  
+
+* Brad M. Barber and Terrance Odean. Trading Is Hazardous to Your Wealth: The Common Stock Investment Performance of Individual Investors. Journal of Finance, 2000.
+  - Common stocks held by households - little difference in gross performance but large in net performance, between "active" account and passive accounts, and market average.
+  - trading costs - three percent in commissions and one percent in bid-ask spread.
+  - the investors would have earned higher returns from following a buy-and-hold strategy; they hurt their gross performance by trading.
+  - mutual funds trade often and underperform simple market indices, but individual incur higher proportional commission costs than mutual funds.
 
 Economics
 =========
