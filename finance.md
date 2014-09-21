@@ -47,6 +47,16 @@ Finance
   - Temporal changes in financial reporting make training data selection non-trivial. (More accurate after 2002 Sarbanes-Oxley Act)
   - Company delisting prediction from 10-K report: 75% precision and 10% recall.
 
+* Terrance Odean "Do Investors Trade Too Much?" American Economic Review, 1999. http://faculty.haas.berkeley.edu/odean/papers%20current%20versions/DoInvestors.pdf
+  - On average, the securities they (investors with discount brokers) buy underperform those they sell.
+  - After subtracting transactions costs and adjusting for risk, these accounts underperform the market. Accounts that trade most actively earn the lowest average net returns.
+  - Not only do the investors pay transactions costs to switch securities, but the securities they buy underperform the ones they sell
+  - investors tend to focus on securities that have experienced abnormally good or bad performance
+  - securities that have performed unusually well or poorly are more likely to be discussed in the media, more likely to be considered by individual investors and, ultimately, more likely to be purchased.
+  - investors sell nearly twice as many previous winners as previous losers
+  - for many investors the decision to sell a security is more influenced by what that security has done than by what it is likely to do
+  
+
 Economics
 =========
 
