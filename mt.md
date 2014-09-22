@@ -27,6 +27,14 @@ Transliteration
 Bilingual Term Extraction
 -------------------------
 
+* Audrey Laroche and Philippe Langlais. Revisiting Context-based Projection Methods for Term-Translation Spotting in Comparable Corpora. COLING 2010. http://olst.ling.umontreal.ca/pdf/LarocheLanglais2010.pdf
+    - Significant gains can be obtained by using (that is rarely used in practice), compared to likelihood score (most popular)
+    - Projection-based variants: context - translate - similarity
+    - Cognate heuristics - e.g., orthographic features in (Haghighi et al. 2008). In this paper, two words are cognates <=> first four letters are identical
+    - LO (log-odds ratio) is significantly superior to the others in every variant
+    - Sntence-wide context is more appropriate for autoatic bilingual lexicon construction
+
+
 * Philipp Koehn and Kevin Knight. Learning a Translation Lexicon from Monolingual Corpora. ACL 2002. http://homepages.inf.ed.ac.uk/pkoehn/publications/learnlex2002.pdf
     - Identical words - exact same spelling between English and German, 976 such words with 88% accuracy. The longer the words, the more accurate. German->English conversion rule, extra 363 pairs.
     - Similar spelling (cognates) - longest common subsequence ratio (24% accuracy)
