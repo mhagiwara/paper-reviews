@@ -4,76 +4,82 @@ Machine Translation
 General (Translation Model)
 ---------------------------
 * Christopher Dyer, et al. Generalizing Word Lattice Translation. ACL 2008. http://aclweb.org/anthology//P/P08/P08-1115.pdf
-    - Word lattice on the source side (e.g., morph analysis for Arabic, word segmentation for Chinese) and decode through noisier channel (maximum entropy model over (e, f', o))
-    - SCFG based decoder - parser over word lattice on deductive proof system
-    - phrase-based decoder - keep track of nodes translated, use the length of the shortest path between nodes for distortion models
-    - Experiments on Chinese (NIST MT06), and Arabic (NIST MT 08) both improved BLEU scores
+  - Word lattice on the source side (e.g., morph analysis for Arabic, word segmentation for Chinese) and decode through noisier channel (maximum entropy model over (e, f', o))
+  - SCFG based decoder - parser over word lattice on deductive proof system
+  - phrase-based decoder - keep track of nodes translated, use the length of the shortest path between nodes for distortion models
+  - Experiments on Chinese (NIST MT06), and Arabic (NIST MT 08) both improved BLEU scores
 
 Transliteration
 ---------------
 
 * Tarek Sherif and Grzegorz Kondrak. Substring-Based Transliteration. ACL 2007. http://aclweb.org/anthology//P/P07/P07-1119.pdf
-    - Apply phrase-based translation methods to transliteration
-    - Two searches 1) Viterbi dynamic programming approach (monotone decoding) and 2) substring-based transducer (can incorporate word unigram model)
-    - Evaluation: seen (test set in the LM) and unseen (not in the LM). Substring trans. good for seen test set (70% top-1 accuracy) while Viterbi substring good for unseen test sets
+  - Apply phrase-based translation methods to transliteration
+  - Two searches 1) Viterbi dynamic programming approach (monotone decoding) and 2) substring-based transducer (can incorporate word unigram model)
+  - Evaluation: seen (test set in the LM) and unseen (not in the LM). Substring trans. good for seen test set (70% top-1 accuracy) while Viterbi substring good for unseen test sets
 
 * Ulf Hermjakob et al. Name Translation in Statistical Machine Translation Learning When to Transliterate. ACL 2008. http://aclweb.org/anthology//P/P08/P08-1045.pdf
-    - "BLEU do not encourage researchers to improve name translation ... names are vastly outnumbered by prepositions, articles, adjectives, common nouns etc."
-    - NEWA (named entity weak accuracy): what percentage of source-language named entities are translated correctly? -> Result: even better than some human translation
-    - Transliteration model: find in an English candidate list based on scoring. (include "style flags" for e.g., French words
-    - Train "transliterate-me" tagger by word alignment and transliteration detection (Prec 92%, Rec 96%)
+  - "BLEU do not encourage researchers to improve name translation ... names are vastly outnumbered by prepositions, articles, adjectives, common nouns etc."
+  - NEWA (named entity weak accuracy): what percentage of source-language named entities are translated correctly? -> Result: even better than some human translation
+  - Transliteration model: find in an English candidate list based on scoring. (include "style flags" for e.g., French words
+  - Train "transliterate-me" tagger by word alignment and transliteration detection (Prec 92%, Rec 96%)
 
 
 Bilingual Term Extraction
 -------------------------
 
 * Audrey Laroche and Philippe Langlais. Revisiting Context-based Projection Methods for Term-Translation Spotting in Comparable Corpora. COLING 2010. http://olst.ling.umontreal.ca/pdf/LarocheLanglais2010.pdf
-    - Significant gains can be obtained by using (that is rarely used in practice), compared to likelihood score (most popular)
-    - Projection-based variants: context - translate - similarity
-    - Cognate heuristics - e.g., orthographic features in (Haghighi et al. 2008). In this paper, two words are cognates <=> first four letters are identical
-    - LO (log-odds ratio) is significantly superior to the others in every variant
-    - Sntence-wide context is more appropriate for autoatic bilingual lexicon construction
+  - Significant gains can be obtained by using (that is rarely used in practice), compared to likelihood score (most popular)
+  - Projection-based variants: context - translate - similarity
+  - Cognate heuristics - e.g., orthographic features in (Haghighi et al. 2008). In this paper, two words are cognates <=> first four letters are identical
+  - LO (log-odds ratio) is significantly superior to the others in every variant
+  - Sntence-wide context is more appropriate for autoatic bilingual lexicon construction
 
+* Yun-Chuang Chiao and Pierre Zweigenbaum. Looking for candidate translational equivalents in specialized, comparable corpora. COLING 2002. http://www.aclweb.org/anthology/C02-2020
+  - French-English translation candidates from medical domain
+  - Seed lexicon: French-English medical lexicon
+  - Find the target words that have the most similar distributions with a given source word
+  - Weighting = raw, tf.idf, log likelihood, similarity measure = Jaccard, cos
+  - Precision boost by applying the same model in the reverse direction
 
 * Philipp Koehn and Kevin Knight. Learning a Translation Lexicon from Monolingual Corpora. ACL 2002. http://homepages.inf.ed.ac.uk/pkoehn/publications/learnlex2002.pdf
-    - Identical words - exact same spelling between English and German, 976 such words with 88% accuracy. The longer the words, the more accurate. German->English conversion rule, extra 363 pairs.
-    - Similar spelling (cognates) - longest common subsequence ratio (24% accuracy)
-    - Similar context - context vector translated (bootstrapped) by previously extracted translations
-    - Preserving word similarity - peripheral tokens
-    - Frequency - the same concepts should be used with similar frequencies in comparable corpora. Combining clues yields significantly better resutls
+  - Identical words - exact same spelling between English and German, 976 such words with 88% accuracy. The longer the words, the more accurate. German->English conversion rule, extra 363 pairs.
+  - Similar spelling (cognates) - longest common subsequence ratio (24% accuracy)
+  - Similar context - context vector translated (bootstrapped) by previously extracted translations
+  - Preserving word similarity - peripheral tokens
+  - Frequency - the same concepts should be used with similar frequencies in comparable corpora. Combining clues yields significantly better resutls
 
 * Haghighi et al. Learning Bilingual Lexicons from Monolingual Corpora. ACL 2008. http://anthology.aclweb.org//P/P08/P08-1088.pdf
-    - Extract bilingual lexicons (pairs) from (possibly unrelated) bilingual lexicons, (possibly) without seed data
-    - Hard EM-like algorithm iterates between (E) find the maximum weighted bipartite matching and (M) Update model parameters by CCA (Canonical Correlation Analysis)
-    - Bootstrapping - increase the number of edges gradually
-    - Precision at 0.33 89.0% (compared with 61.1% edit distance baseline) for ES-EN
-    - Lower precision for other languages, e.g., EN-CH 26.8% @ p0.33 and EN-AR @ 31.1 @ p0.33
+  - Extract bilingual lexicons (pairs) from (possibly unrelated) bilingual lexicons, (possibly) without seed data
+  - Hard EM-like algorithm iterates between (E) find the maximum weighted bipartite matching and (M) Update model parameters by CCA (Canonical Correlation Analysis)
+  - Bootstrapping - increase the number of edges gradually
+  - Precision at 0.33 89.0% (compared with 61.1% edit distance baseline) for ES-EN
+  - Lower precision for other languages, e.g., EN-CH 26.8% @ p0.33 and EN-AR @ 31.1 @ p0.33
 
 * Pascale Fung and Lo Yuan Yee. An IR Approach for Translating New Words from Nonparallel Comparable Texts, COLING 1998. http://acl.ldc.upenn.edu/P/P98/P98-1069.pdf
-    - Assumption: words which appear in the context of a word and its translation should be similar to each other
-    - Used word pairs from bilingual lexicon as seed words to "bridge" words in context
-    - Used tf.idf and confidence (rank in a lexicon) weighting and cosine-like and Dice coefficient similarity measures for ranking translation candidates
-    - High precision in the top ranked candidates. Similarity combination (Cosine times weighted Dice) performed the best
+  - Assumption: words which appear in the context of a word and its translation should be similar to each other
+  - Used word pairs from bilingual lexicon as seed words to "bridge" words in context
+  - Used tf.idf and confidence (rank in a lexicon) weighting and cosine-like and Dice coefficient similarity measures for ranking translation candidates
+  - High precision in the top ranked candidates. Similarity combination (Cosine times weighted Dice) performed the best
 
 * Robert C. Moore. Learning Translations of Named-Entity Phrases from Parallel Corpora. EACL 2003. http://www.aclweb.org/anthology-new/E/E03/E03-1035.pdf
-    - Learning translations of multiword phrases (phrases already identified in the source side)
-    - Heuristic: exploit exactly the same phrases in the target language -> 17% identical (En-Fr)
-    - Model 1: log-likelihood-ratio of sentence-level co-occurrence, and combination of inside + ouside scores, supplemented with capitalization scores
-    - Model 2: whole-phrase-based inside scores, interpolated with word-based ones
-    - Model 3: counting co-occurrence of the source phrase and its highest scoring candidate translation in a sentence
-    - Result: over 80% up to 99% coverage
+  - Learning translations of multiword phrases (phrases already identified in the source side)
+  - Heuristic: exploit exactly the same phrases in the target language -> 17% identical (En-Fr)
+  - Model 1: log-likelihood-ratio of sentence-level co-occurrence, and combination of inside + ouside scores, supplemented with capitalization scores
+  - Model 2: whole-phrase-based inside scores, interpolated with word-based ones
+  - Model 3: counting co-occurrence of the source phrase and its highest scoring candidate translation in a sentence
+  - Result: over 80% up to 99% coverage
 
 * Reinhard Rapp. Automatic identification of word translations from unrelated English and German corpora, ACL 1999. http://acl.ldc.upenn.edu/P/P99/P99-1067.pdf
-    - Assumption ``If, in a text of one language two words A and B co-occur more often than expected by chance, then in a text of another language those words that are translations of A and B should also co-occur more frequently than expected.``
-    - Create word vector of context words considering relative positions (window size of 3), used log likelihood ratio for weighting, and city-block (Manhattan distance) as the similarity measure
-    - Experiment: finding English translations for an English input word, from two unrelated corpora of news articles
-    - Achieved top1 accuracy of 72%. Ambiguity (e.g., "weiß" for "know" and "white") is an issue.
+  - Assumption ``If, in a text of one language two words A and B co-occur more often than expected by chance, then in a text of another language those words that are translations of A and B should also co-occur more frequently than expected.``
+  - Create word vector of context words considering relative positions (window size of 3), used log likelihood ratio for weighting, and city-block (Manhattan distance) as the similarity measure
+  - Experiment: finding English translations for an English input word, from two unrelated corpora of news articles
+  - Achieved top1 accuracy of 72%. Ambiguity (e.g., "weiß" for "know" and "white") is an issue.
 
 * Jiajun Zhang, et al. Bilingually-constrained Phrase Embeddings for Machine Translation. ACL 2014. http://nlpr-web.ia.ac.cn/cip/ZongPublications/2014/2014_ACL_Regular_Oral,ZhangJJ,PP111-121.pdf
-    - Minimie the semantic distance of translation equivalents and maximizes the semantic distance of non-translation (by randomly replacing words) pairs simultaneously
-    - Co-training style algorithm: pre-training with standard recursive auto-encoder, fine-tuning with bilingual constraint
-    - Tries to minimize the weighted sum of reconstruction error and sematic error (by linear mapping s->t and t->s)
-    - Experiments on phrase table pruning and decoding with phrasal semantic similarities, can remove 72% of the phrase table with only 0.06 BLEU loss
+  - Minimie the semantic distance of translation equivalents and maximizes the semantic distance of non-translation (by randomly replacing words) pairs simultaneously
+  - Co-training style algorithm: pre-training with standard recursive auto-encoder, fine-tuning with bilingual constraint
+  - Tries to minimize the weighted sum of reconstruction error and sematic error (by linear mapping s->t and t->s)
+  - Experiments on phrase table pruning and decoding with phrasal semantic similarities, can remove 72% of the phrase table with only 0.06 BLEU loss
 
 Pivot Approaches
 ----------------
