@@ -162,3 +162,11 @@ Word Embeddings
   - 1) lang x -> lang y 2) lang y -> lang x 3) x -> x 4) y -> y
   - Experiments: crosslingual classification (classifier trained in lang x to classify lang y based on sum of word representations)
   - Competitive performance compared with Klementiev embeddings
+
+* Richard Socher, et al. Semantic Compositionality through Recursive Matrix-Vector Spaces. EMNLP 2012 http://ai.stanford.edu/~ang/papers/emnlp12-SemanticCompositionalityRecursiveMatrixVectorSpaces.pdf
+  - Vector - inherent meanng of word and constituent, matrix - how it changes the meaning of neighboring words and phrases
+  - e.g., if a word lacks operator semantics, matrix -> identity matrix; if word acts as an operator -> vector close to zero
+  - initialize all word vectors x with representation of Collobert and Weston (2008)
+  - add softmax classifier on top of each parent node to predict a class distribution
+  - Experiment 1 : adverb-adjective pairs from movie review, predict number of starts, evaluate in terms of KL-divergence (multinomial over stars)
+  - Accuracy of movie review polarity classification: higher than Tree-CRF, RAE, Linear MVR
