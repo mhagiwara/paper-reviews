@@ -81,6 +81,13 @@ Bilingual Term Extraction
   - Tries to minimize the weighted sum of reconstruction error and sematic error (by linear mapping s->t and t->s)
   - Experiments on phrase table pruning and decoding with phrasal semantic similarities, can remove 72% of the phrase table with only 0.06 BLEU loss
 
+* Dragos Munteanu and Daniel Marcu. Improving Machine Translation Performance by Exploiting Non-Parallel Corpora. Computational Linguistics 2005. http://dl.acm.org/citation.cfm?id=1110828
+  - Parallel sentence discovery from comparable corpora. Good quality MT system can be built from very little parallel data and a large amount of comparable, non-parallel data
+  - Maximum entropy classifier (given a sentence, output if the sentence is parallel or not): length, word overlap, alignment features (fertility) etc.
+  - Bilingual dictionary (for filtering) + training classifiers -> from parallel sentences
+  - Article selection: sentence overlap + date window overlap, sentence selection: length, half the words have translation in the other sentence
+
+
 Pivot Approaches
 ----------------
 * Hua Wu and Haifeng Wang. Pivot Language Approach for Phrase-Based Statistical Machine Translation. ACL 2007. http://acl.ldc.upenn.edu/P/P07/P07-1108.pdf
