@@ -29,6 +29,12 @@ General
     - Users can associate data with nodes AND edges
     - NER example: bipartite graph of noun phrases and context - propagate labels from seeds
 
+* Oren Anava et al. Online Learning for Time Series Prediction. JMLR 2013. http://jmlr.org/proceedings/papers/v30/Anava13.pdf
+  - An online learning approach that allows the noise to be arbitrarily or even adversarially generated
+  - Goal: minimize the sum of losses over a predefined number of iterations T
+  - Applied to loss function (squared loss) and achieved regret (hindersight difference of loss and optimal case loss) bound of O(log^2 (T))
+  - We can have a regret as low as the best ARMA(k, q) movel, using only an AR(m+k) model.
+
 Domain Adaptation & Transfer Learning
 -------------------------------------
 
