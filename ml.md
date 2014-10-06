@@ -88,3 +88,13 @@ Classification
     - Proposed: keep updating common classification problems (with limited number) online
     - Defined two functions for trimming useless problems: least frequently used and least recently used (cf caching)
     - Experiments on chunking and parsing, achieved 3.2 and 5.7 speed-up, respectively.
+
+Neural Networks
+---------------
+
+* Lei Jimmy Ba and Rich Caruana. Do Deep Nets Really Need to be Deep? ICLR 2014. http://arxiv.org/pdf/1312.6184v5.pdf
+  - Shallow networks (using model compression to mimic) can learn the complex functions previously learned by deep nets and achieve accuracies previously only achievable with deep models.
+  - Raw shallow neural net with the same number of parameters 2% less accurate than the DNN
+  - SSN-MIMIC - directly trained on the log probability values before the softmax activation.
+  - Introducing a bottleneck linear layer with k hidden units between the input and the hidden layer sped up learning
+  - Model compression usually works best when the unlabeled data set is much larger than the original train set
