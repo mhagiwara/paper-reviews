@@ -170,3 +170,10 @@ Word Embeddings
   - add softmax classifier on top of each parent node to predict a class distribution
   - Experiment 1 : adverb-adjective pairs from movie review, predict number of starts, evaluate in terms of KL-divergence (multinomial over stars)
   - Accuracy of movie review polarity classification: higher than Tree-CRF, RAE, Linear MVR
+
+* Richard Socher, et al. Parsing with Compositional Vector Grammars. ACL 2013. http://nlp.stanford.edu/pubs/SocherBauerManningNg_ACL2013.pdf
+  - Jointly learns how to parse and how to represent phrases (as both discrete categories and continuous vectors)
+  - Structured margin loss -> the number of nodes with an incorrect span, max-margin, structure prediction objective (highest scoring tree -> correct tree)
+  - Parent vector = f (W [b c]) (f: non-linear mapping, W: conditioned on the syntactic categories). Final score: sum of vector based score and log of PCFG score.
+  - Two pass decoding: 1) CKY DP for PCFG (for top k = 200) and 2) beam search with the full CVG model.
+  - best performance boost comes from PP attachement, vectors learn a soft notion of head words
