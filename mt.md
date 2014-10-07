@@ -87,6 +87,12 @@ Bilingual Term Extraction
   - Bilingual dictionary (for filtering) + training classifiers -> from parallel sentences
   - Article selection: sentence overlap + date window overlap, sentence selection: length, half the words have translation in the other sentence
 
+* Pacale Fung and Percy Cheung: Mining Very-Non-Parallel Corpora: Parallel Sentence and Lexicon Extraction via Bootstrapping and EM. EMNLP 2004 http://www.aclweb.org/anthology/W04-3208
+  - Very-Non-Parallel Corpora - even including off-topic sentences
+  - "find-one-get-more" - document found to contain one pair of parallel sentences must contain others even if the documents are judged to be of low similarity
+  - cf. "find-topic-exact-sentence" - find similar document pairs then look for exact parallel sentences
+  - IBM Model 4 EM to learn to find bilingual lexicon, EM initialized by parallel corpora
+  - Bilingual lexical matching score (bilingual pair co-occurrence normalized by each word) for parallel, comparable, and quasi-comparable corpora
 
 Pivot Approaches
 ----------------
@@ -128,7 +134,7 @@ Post Editing
 ------------
 
 * Michael Denkowski et al. Learning from Post-Editing: Online Model Adaptation for Statistical Machine Translation. EACL 2014 http://anthology.aclweb.org//E/E14/E14-1042.pdf
-    - ``human translators are more productive and accurate when post-editing MT output than when translating from scratch
+    - ``human translators are more productive and accurate when post-editing MT output than when translating from scratch``
     - Difficulty: update MT models after every sentence corrected -> can't wait for the full model udpate
     - Simulated post-editing: use pre-generated reference as a stand-in for actual post editing.
     - Grammar Adaptation: Lopez 2008's sampling-based pattern match grammar extraction, after forced alignment
