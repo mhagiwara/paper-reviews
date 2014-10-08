@@ -177,3 +177,10 @@ Word Embeddings
   - Parent vector = f (W [b c]) (f: non-linear mapping, W: conditioned on the syntactic categories). Final score: sum of vector based score and log of PCFG score.
   - Two pass decoding: 1) CKY DP for PCFG (for top k = 200) and 2) beam search with the full CVG model.
   - best performance boost comes from PP attachement, vectors learn a soft notion of head words
+
+* Will Y. Zou et al. Bilingual Word Embeddings for Phrase-Based Machine Translation. EMNLP 2013. http://nlp.stanford.edu/pubs/emnlp2013_ZouSocherCerManning.pdf
+  - Objective function with monolingual semantics and bilingual translation equivalence -> map in the same vector space
+  - Translation equivalent objective: minimize the L2 distance between Zh vectors and En vectors converted by alignment matrix, curriculum leraning (Bengio et al. 2009).
+  - Evaluation on SemEval 2012 Task 4 (Chinese similarity estimation task), Spearman correlation and Kendall's tau, higher than monolingual models and other tf.idf.
+  - NER evaluation (OntoNotes v4.0) 0.11 F-value increase, Alignment Error Rates (AER) based on naive word alignment by cosine similarity
+  - Phrase-based SMT - add one feature (average of word representation vectors) -> 0.48 BLEU increase over baseline
