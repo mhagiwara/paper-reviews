@@ -168,22 +168,28 @@ Unsupervised NER
 ----------------
 
 * Oren Etzioni et al. Unsupervised named-entity extraction from the web: An experimental study. Artificial Intelligence, 2005. http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.124.8829&rep=rep1&type=pdf
-    - Extraction of unary and binary relation using Hearst-style lexico-syntactic patterns (LSPs; e.g., NP1 such as NPList2) generated from class names. Then validation by PMI co-occurence on the Web.
-    - Recall improvement: Learning patterns from seeds and use them as discriminators, subclass extraction (chemists or bilologists as opposed to scientists) again by LSPs, and list extractor (exactly as in SEAL)
-    - list extractor's extraction rate was the greatest (more than x40 increase)
+  - Extraction of unary and binary relation using Hearst-style lexico-syntactic patterns (LSPs; e.g., NP1 such as NPList2) generated from class names. Then validation by PMI co-occurence on the Web.
+  - Recall improvement: Learning patterns from seeds and use them as discriminators, subclass extraction (chemists or bilologists as opposed to scientists) again by LSPs, and list extractor (exactly as in SEAL)
+  - list extractor's extraction rate was the greatest (more than x40 increase)
 
 
 * Alessandro Cucchiarelli and Paola Velardi. Unsupervised named entity recognition using syntactic and semantic contextual evidence. Computational Linguistics, 2001. http://acl.ldc.upenn.edu/J/J01/J01-1005.pdf
-    - Learn typical syntax/semantic context from a corpus to expand gazetteers
-    - Syntactic info: elementary syntactic link (esl): Subject-Object, Noun-Preposition-Noun, etc.
-    - Unknown proper noun classification: to the maximum evidence, defined by the relative plausibility of each detected esl., augmented by WordNet similarity
-    - Test on Italian (Sole 24Ore) corpus and WSJ corpus: Prec and Recall both up by ~10%, 5 point increase on F-measure by WordNet context generalization
+  - Learn typical syntax/semantic context from a corpus to expand gazetteers
+  - Syntactic info: elementary syntactic link (esl): Subject-Object, Noun-Preposition-Noun, etc.
+  - Unknown proper noun classification: to the maximum evidence, defined by the relative plausibility of each detected esl., augmented by WordNet similarity
+  - Test on Italian (Sole 24Ore) corpus and WSJ corpus: Prec and Recall both up by ~10%, 5 point increase on F-measure by WordNet context generalization
 
 * D Nadeau et al. Unsupervised Named-Entity Recognition: Generating Gazetteers and Resolving Ambiguity. 2006. http://brown.cl.uni-heidelberg.de/~sourjiko/NER_Literatur/NER_Turney.pdf
-    - Extraction (generating gazetteers): Wrapper based set expansion from few seeds, repeat retrieving Web pages and applying Web wrapper
-    - Disambiguation: entity-noun ambiguity (capitalization heuristics), entity boundary detection (longest match, merge consecutive entries), entity type ambiguity (use clues in the same document, alias clues)
-    - MUC 7 evaluation: Generated lists provide higher recall but lower precision.
-    - Car brand evaluation: generated a list of 5,701 brands and recognition F ~ 86
+  - Extraction (generating gazetteers): Wrapper based set expansion from few seeds, repeat retrieving Web pages and applying Web wrapper
+  - Disambiguation: entity-noun ambiguity (capitalization heuristics), entity boundary detection (longest match, merge consecutive entries), entity type ambiguity (use clues in the same document, alias clues)
+  - MUC 7 evaluation: Generated lists provide higher recall but lower precision.
+  - Car brand evaluation: generated a list of 5,701 brands and recognition F ~ 86
+
+* Winston Lin et al. Bootstrapped Learning of Semantic Classes from Positive and Negative Examples. ICML 2003. http://www.cs.nyu.edu/roman/Papers/2003-icml-nomen.pdf
+  - Thelen and Rillof (2002) and Yangarber et al. (2002) found that performance was improved when multiple semantic clases were learned simultaneously.
+  - Process: generate patterns -> evaluate pattens (positive / negative / unknown examples) -> acquire patterns (scoring by accuracy and confidence) -> apply patterns -> acquire names.
+  - Experiments (lexicon generation) specialized corpus (ProMED) based on a recall list and a precision list.
+  - Target classes < + Other category < split the other category into six competing categories.
 
 Product Information Extraction
 ------------------------------
