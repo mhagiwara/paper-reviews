@@ -15,6 +15,14 @@ General
     - Serialization: BSON, MessagePack, ProtocolBuffers, Thrift. BSON worse, MessagePack good in terms of speed and size, and self-describing.
     - Case Study using OntoNote 5 corpus: compared conversion+serialization time and size on disk using UIMA and docrep.
 
+* Denny Vrandečić and Markus Krötzsch. Wikidata: A Free Collaborative Knowledge Base. CACM 2014. http://korrekt.org/papers/Wikidata-CACM-2014.pdf
+  - Issues on FreeBase: Einstein is classified as musician (to have his voice recordings)
+  - Lua was introduced as a scripting language to Wikipedia (March 2013)
+  - First task: move interwiki links from Wikipedia to Wikidata (now they are served from Wikidata)
+  - Simple Data: properties (with types) and values (the item Rome has a property population with value 2,777,979).
+  - Qualifiers: Rome - has_population - 2.7M (subordinate property-values: as of 2010, method: estimation) DataModel: https://www.mediawiki.org/wiki/Wikibase/DataModel
+  - 
+
 Set Expansion
 -------------
 
