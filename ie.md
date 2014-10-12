@@ -21,7 +21,8 @@ General
   - First task: move interwiki links from Wikipedia to Wikidata (now they are served from Wikidata)
   - Simple Data: properties (with types) and values (the item Rome has a property population with value 2,777,979).
   - Qualifiers: Rome - has_population - 2.7M (subordinate property-values: as of 2010, method: estimation) DataModel: https://www.mediawiki.org/wiki/Wikibase/DataModel
-  - 
+  - Launched October 2012, the most edited Wikipedia project, 14M items as of Feb 2014, reconciling external IDs
+  - Prettify browser: http://tools.wmflabs.org/reasonator/
 
 Set Expansion
 -------------
