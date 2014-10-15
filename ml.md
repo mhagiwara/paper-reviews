@@ -89,6 +89,13 @@ Classification
     - Defined two functions for trimming useless problems: least frequently used and least recently used (cf caching)
     - Experiments on chunking and parsing, achieved 3.2 and 5.7 speed-up, respectively.
 
+* Ofer Dekel et al. Large Margin Hierarchical Classification. ICML 2004. http://u.cs.biu.ac.il/~jkeshet/papers/DekelKeSi04.pdf
+  - Associate a prototype (vector) to each label, and classify instances according to their similarity (argmax of inner product) to the various prototypes
+  - Decompose prototype vector into differences between the parent and the current nodes
+  - We require that the margin between the correct and each incorrect labels to be at least the sqrt(dist between them) -> instead minimize convex hinge loss function
+  - Batch version: selecting y (system output) to be the label which maximize the hinge loss function + take the average of prototypes.
+  - Experiments: Web pages (ODP/DMOZ) speech phoneme classification: always achieved better tree induced errors than "flattened" counterparts.
+
 Neural Networks
 ---------------
 
