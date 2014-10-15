@@ -14,3 +14,9 @@ Logic
   - MLN - (formula, weight)+constants
   - One binary node for each possible grounding of each predict in MLN. One binary feature for each possible grounding of each formula in MLN.
   - Inference: What is the probability that formula F1 holds given that formula F2 does? -> Gibbs sampling with rejection
+
+* Dan Garrette et al. Integrating Logical Representations with Probabilistic Information using Markov Logic. IWCS 2011 http://www.cs.utexas.edu/~dhg/papers/garrette_iwcs_2011.pdf
+  - First order logical forms: high precision at the cost of low recall.
+  - Implicativity and factivity, word meaning, and coreference.
+  - MLN: weights for word mianing rules are computed from the distributional model -> injected into MLN. Rules -> given infinite weight (hard constraints)
+  - Boxer output (nested DRS) -> flattened (introducing new labels to sub-DRSs)
