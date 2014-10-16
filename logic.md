@@ -20,3 +20,6 @@ Logic
   - Implicativity and factivity, word meaning, and coreference.
   - MLN: weights for word mianing rules are computed from the distributional model -> injected into MLN. Rules -> given infinite weight (hard constraints)
   - Boxer output (nested DRS) -> flattened (introducing new labels to sub-DRSs)
+  - Assign similarity-based probability compuated by (Erk and Pado 2010) to MLN rules (with context)
+  - "bat" -> animal or artifact? Check whether it's close to "club" (instead of "artifact")
+  - Evaluation based on small examples
