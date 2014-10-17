@@ -94,6 +94,13 @@ Bilingual Term Extraction
   - IBM Model 4 EM to learn to find bilingual lexicon, EM initialized by parallel corpora
   - Bilingual lexical matching score (bilingual pair co-occurrence normalized by each word) for parallel, comparable, and quasi-comparable corpora
 
+* Georgios Kontonatsios et al. Combining String and Context Similarity for Bilingual Term Alignment from Comparable Corpora. EMNLP 2014. http://emnlp2014.org/papers/pdf/EMNLP2014177.pdf
+  - Compositional clue -> a term translation pair consist of corresponding lexical or sub-lexical units (prefix, n-gram, etc.)
+  - Corpus comparability (Li and Gaussier 2010) - the higher, the higher of the performance is.
+  - Compositional clue -> binary classification by Random Forest using first-order (raw) character ngrams and second-order (co-occurrence) of ngrams
+  - Hybrid model: combines both scores by a linear classifier
+  - Experiments: Wikipedia comparable corpora, with 1K term testset, the performance depends on the distance of languages, hybrid a lot better
+
 Pivot Approaches
 ----------------
 * Hua Wu and Haifeng Wang. Pivot Language Approach for Phrase-Based Statistical Machine Translation. ACL 2007. http://acl.ldc.upenn.edu/P/P07/P07-1108.pdf
