@@ -179,3 +179,13 @@ Confidence Estimation
     - Document level, regression model (using Weka, e.g., M5P regression trees) using evaluation measure (BLEU) scores as training labels, rank translations such that the top one is better than the average?
     - Features: no model internal features. text-based (length), LM-based, Pseudo-reference-based (reference from different systems, reverse translation), example-based (using source similarity), training-data-based
     - PBSMT, WMT 09 data, En-Es: rAcc (ranking accuracy) = 45%, BLUE change = +5.9
+
+ESL (English as a Second Language)
+----------------------------------
+
+* Longkai Zhang and Houfeng Wang. Go Climb a Dependency Tree and Correct the Grammatical Errors. EMNLP 2014. http://emnlp2014.org/papers/pdf/EMNLP2014033.pdf
+  - The general model (correction on dependency tree, replacement model) and the special model (classification for determiners and prepositions, more suitable for insertion and deletion)
+  - Long distance dependency (e.g., The book of the boy is) ...TreeNode language Model for the correctness measure - interpolated trigram LM on dep. parse paths + bottom-up decoding using DP
+  - CoNLL 2013 shared task, five types of errors of non-native English speakers (determiner, preposition, noun number, subject-verb agreement, verb form)
+  - Reliability: 99% of the time noun/verb replacement doesn't change the dependency tree structure.
+  - Experiments: used parsed Gigaword as training data, LM->TNLM +2.1% F1 value, Local classifier -> tree classifier +4.1 F1
