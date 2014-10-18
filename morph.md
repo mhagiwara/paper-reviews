@@ -43,6 +43,13 @@ Word Segmentation
     - Feature set augmentation, utilizing unsupervised segmentation algorithms: 1) Morfessor model (Creutz and Lagus 2007, see above), 2) LSV (letter successor variery, Coltekin 2007)
     - Experiments: Morph Challenge 2009/2010, English, Finnish, Turkish. F - upper 80s (CRF + Morphessor CatMAP+Harris) or even 90s (with 1,000 training instances)
 
+Synonyms & Variations
+---------------------
+* Longkai Zhang, Houfeng Wang and Xu Sun. Coarse-grained Candidate Generation and Fine-grained Re-ranking for Chinese Abbreviation Prediction. EMNLP 2014. http://emnlp2014.org/papers/pdf/EMNLP2014202.pdf
+  - Previous works on Chinese abbr. generation -> sequential labeling problem. -> heavily rely on character-based features.
+  - Candidate generation: find subsequence from newspaper article, bipartite graph of original forms and candidates, and context (nouns and verbs)
+  - Similarity Sensitive Re-ranking: loss between character-based F1 and linear scoring model based on features (character ngrams, length, adjacent variety, etc.), optimized by relaxed gradient descent.
+  - Top-5 accuracy of graph random walk -> 73.60%, far from enough. 2~10% better than CRF-based baselines. 
 
 PoS Tagging
 -----------
