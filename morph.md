@@ -49,7 +49,7 @@ Synonyms & Variations
   - Previous works on Chinese abbr. generation -> sequential labeling problem. -> heavily rely on character-based features.
   - Candidate generation: find subsequence from newspaper article, bipartite graph of original forms and candidates, and context (nouns and verbs)
   - Similarity Sensitive Re-ranking: loss between character-based F1 and linear scoring model based on features (character ngrams, length, adjacent variety, etc.), optimized by relaxed gradient descent.
-  - Top-5 accuracy of graph random walk -> 73.60%, far from enough. 2~10% better than CRF-based baselines. 
+  - Top-5 accuracy of graph random walk -> 73.60%, far from enough. 2~10% better than CRF-based baselines.
 
 PoS Tagging
 -----------
@@ -191,3 +191,10 @@ Word Embeddings
   - Evaluation on SemEval 2012 Task 4 (Chinese similarity estimation task), Spearman correlation and Kendall's tau, higher than monolingual models and other tf.idf.
   - NER evaluation (OntoNotes v4.0) 0.11 F-value increase, Alignment Error Rates (AER) based on naive word alignment by cosine similarity
   - Phrase-based SMT - add one feature (average of word representation vectors) -> 0.48 BLEU increase over baseline
+
+* Eric H. Huang, et al. Improving Word Representations via Global Context and Multiple Word Prototypes. ACL 2012. http://nlp.stanford.edu/pubs/HuangACL12.pdf
+  - Local context (discriminate the correct word from other random words) + Global context (weighted average of all word vectors in the document + one layer NN)
+  - Vectors learned faster when using mini-batch L-BFGS compared to stochastic gradient descent
+  - multi-prototype neutral language model: represent context by a weighted average of the context words' vectors, then use spherical k-means to cluster (k = 10) evaluated by new dataset (word similarity in context)
+  - Normalization: dictionary of 30K frequent words in Wikipedia. Infrequent number tokens are replaced to "DG" -> rare number tokens are mapped to NUMBER token. other tokens are mapped to UNKNOWN token
+  - Model less constrained by syntax and is more semantic.
