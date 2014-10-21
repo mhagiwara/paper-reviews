@@ -43,6 +43,12 @@ Word Segmentation
     - Feature set augmentation, utilizing unsupervised segmentation algorithms: 1) Morfessor model (Creutz and Lagus 2007, see above), 2) LSV (letter successor variery, Coltekin 2007)
     - Experiments: Morph Challenge 2009/2010, English, Finnish, Turkish. F - upper 80s (CRF + Morphessor CatMAP+Harris) or even 90s (with 1,000 training instances)
 
+* Aobo Wang and Min-Yen Kan. Mining Informal Language from Chinese Microtext: Joint Word Recognition and Segmentation. ACL 2013. https://www.comp.nus.edu.sg/~kanmy/papers/acl2013.pdf
+  - Lack of word segmentation in Chinese: 不要_剧透_了 (Don't tell spoilers.)
+  - Word segmentation (BIES) and informal word recognition (I/IF) -> Factorial CRF (special case of Dynamic CRF) -> smaller training data
+  - Useful Chinese data and dictionaries: http://www.sogou.com/labs/resources.html
+  - Extra features: pinyin abbreviation flag, PMI scores of character bigrams.
+
 Synonyms & Variations
 ---------------------
 * Longkai Zhang, Houfeng Wang and Xu Sun. Coarse-grained Candidate Generation and Fine-grained Re-ranking for Chinese Abbreviation Prediction. EMNLP 2014. http://emnlp2014.org/papers/pdf/EMNLP2014202.pdf
