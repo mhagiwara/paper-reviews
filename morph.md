@@ -48,6 +48,8 @@ Word Segmentation
   - Word segmentation (BIES) and informal word recognition (I/IF) -> Factorial CRF (special case of Dynamic CRF) -> smaller training data
   - Useful Chinese data and dictionaries: http://www.sogou.com/labs/resources.html
   - Extra features: pinyin abbreviation flag, PMI scores of character bigrams.
+  - Weibo corpus, informal words crowdsourcing by Zhubajie, SVM/DT baseline, two-stage pipeline systems, SVM joint model.
+  - For CWS and IWR (informal word recogniton), FCRF (proposal) was the best. Joint SVM outperforms baseline SVM, but not FCRF.
 
 Synonyms & Variations
 ---------------------
