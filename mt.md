@@ -9,6 +9,13 @@ General (Translation Model)
   - phrase-based decoder - keep track of nodes translated, use the length of the shortest path between nodes for distortion models
   - Experiments on Chinese (NIST MT06), and Arabic (NIST MT 08) both improved BLEU scores
 
+Word Alignment
+--------------
+* Graham Neubig et al. An Unsupervised Model for Joint Phrase Alignment and Extraction. ACL 2011. http://www.phontron.com/paper/neubig11acl.pdf
+  - Competitive with word alignment/phrase extraction approach with smaller phrase table
+  - Use of ITGs to learn phrase alignment -> calculate probabilities of phrasal alignments in polynomial time
+  - Assign Pitman-Yor prior over phrase table parameters 
+
 Transliteration
 ---------------
 

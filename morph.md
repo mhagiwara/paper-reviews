@@ -206,3 +206,10 @@ Word Embeddings
   - multi-prototype neutral language model: represent context by a weighted average of the context words' vectors, then use spherical k-means to cluster (k = 10) evaluated by new dataset (word similarity in context)
   - Normalization: dictionary of 30K frequent words in Wikipedia. Infrequent number tokens are replaced to "DG" -> rare number tokens are mapped to NUMBER token. other tokens are mapped to UNKNOWN token
   - Model less constrained by syntax and is more semantic.
+
+* Andriy Mnih and Geoffrey Hinton. A Scalable Hierarchical Distributed Language Model. NIPS 2009. https://www.cs.toronto.edu/~amnih/papers/hlbl_final.pdf
+  - NPLM - normalizing over vocabulary O(W) - binary tree hierarchical clustering of words, one N-way normalization is replaced by a sequence of O(log N) local normalizations
+  - LBL (log-bilinear model) -> feature vector of previous n words -> similarity with the current word -> softmax classification
+  - HLBL (Hierarchical LBL) -> binary tree with words at leaf nodes, represented by codes (e.g., "10") -> prob = product of (normalized) prob. of binary decisions
+  - How to construct the tree -> IS-A taxonomy fron WordNet, clustering based on HLBL distributed representation (recursive gaussian mixture via EM) - BALANCED, ADAPTIVE, ADAPTIVE(eps)
+  - Experiments: using non-random tree -> high performance (perplexity) but slower 
