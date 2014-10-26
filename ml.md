@@ -35,6 +35,16 @@ General
   - Applied to loss function (squared loss) and achieved regret (hindersight difference of loss and optimal case loss) bound of O(log^2 (T))
   - We can have a regret as low as the best ARMA(k, q) movel, using only an AR(m+k) model.
 
+* Kiri L. Wagstaff. Machine Learning that Matters. ICML 2012. http://arxiv.org/pdf/1206.4656.pdf
+  - Quantitative improvements in performance are rarely accompanied by an assessment of whether those gains matter to the world
+  - what is the [machine learning] field's objective function?
+  - Most of the papers evaluate only on synthetic or UCI dataset, provide no meaningful interpretation in the field.
+  - Performance metrics such as F-measure tell nothing about real world impact (e.g., 99% for poisonous mushroom classification?)
+  - Meaningful evaluation metric - dollars saved, lives preserved, time conserved, effort reduced, quality of life increased
+  - Ambitious and meaningful challenges (Carbonell 1992) e.g., Outperforming a hand-built NLP system on a task such as translation.
+  - Impact Challenges - e.g., A conflict between nations averted through high-quality translation provided by an ML system
+  - Obstacles: jargons (e.g., feature extraction -> representation), risks (e.g., concern when relying on machines for decision), complexity (e.g., "ML solutions come packaged in a PhD")
+
 Domain Adaptation & Transfer Learning
 -------------------------------------
 
