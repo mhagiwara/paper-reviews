@@ -51,6 +51,12 @@ Word Segmentation
   - Weibo corpus, informal words crowdsourcing by Zhubajie, SVM/DT baseline, two-stage pipeline systems, SVM joint model.
   - For CWS and IWR (informal word recogniton), FCRF (proposal) was the best. Joint SVM outperforms baseline SVM, but not FCRF.
 
+* Aobo Wang et al. Chinese Informal Word Normalization: an Experimental Study. IJCNLP 2013. https://www.comp.nus.edu.sg/~wangaobo/papers/IJCNLP-2013.pdf
+  - Informal word normalization -> classification problem over a pair of (informal word, correction candidate) e.g. 河蟹社会 -> 和谐社会
+  - Classification of Chinese informal words: Phonetic substitutions, Abbreviations, Paraphrase.
+  - Candidate generation: the inforal word and its formal equivalents share similar contextual collocations.
+  - Classification features: pinyin similarity, noisy-channel model, also included synonym expansion.
+
 Synonyms & Variations
 ---------------------
 * Longkai Zhang, Houfeng Wang and Xu Sun. Coarse-grained Candidate Generation and Fine-grained Re-ranking for Chinese Abbreviation Prediction. EMNLP 2014. http://emnlp2014.org/papers/pdf/EMNLP2014202.pdf
@@ -212,4 +218,4 @@ Word Embeddings
   - LBL (log-bilinear model) -> feature vector of previous n words -> similarity with the current word -> softmax classification
   - HLBL (Hierarchical LBL) -> binary tree with words at leaf nodes, represented by codes (e.g., "10") -> prob = product of (normalized) prob. of binary decisions
   - How to construct the tree -> IS-A taxonomy fron WordNet, clustering based on HLBL distributed representation (recursive gaussian mixture via EM) - BALANCED, ADAPTIVE, ADAPTIVE(eps)
-  - Experiments: using non-random tree -> high performance (perplexity) but slower 
+  - Experiments: using non-random tree -> high performance (perplexity) but slower
