@@ -27,5 +27,7 @@ Logic
 * Xin Luna Dong et al. Knowledge Vault: A Web-Scale Approach to Probabilistic Knowledge Fusion. KDD 2014. https://www.cs.cmu.edu/~nlao/publication/2014.kdd.pdf
   - 71% of people in Freebase have no known place of birth.
   - Knowledge vault (KV) - separates facts about the world from their lexical representation.
-  - Extract facts from a large variety of sources of Web data, including free text, HTML DOM trees, HTML Web tables, and human annotations of Web pages.
+  - Extract facts from a large variety of sources of Web data, including free text, HTML DOM trees (this one has the highest AUC score), HTML Web tables, and human annotations of Web pages. -> classifier per predicate
   - Evaluation: random separation of (s, p, o) (edge) from a graph into train/test, and how well KV can predict missing edges.
+  - Graph-based priors: path ranking algorithm (use random-walk paths to predict prediates) and neural network model (Socher et al. NIPS 2012)
+  - Future work: modelling mutual exclusion between facts (but simple exclusion doesn't work e.g., Honolulu -> Hawaii), numerical correlation (DoB of a person and DoB of children)
