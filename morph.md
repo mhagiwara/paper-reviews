@@ -57,6 +57,15 @@ Word Segmentation
   - Candidate generation: the inforal word and its formal equivalents share similar contextual collocations.
   - Classification features: pinyin similarity, noisy-channel model, also included synonym expansion.
 
+* Nobuhiro Kaji and Masaru Kitsuregawa. Accurate Word Segmentation and POS Tagging for Japanese Microblogs: Corpus Annotation and Joint Modeling with Lexical Normalization. EMNLP 2014. http://emnlp2014.org/papers/pdf/EMNLP2014011.pdf
+  - Joint model with lexical normalization handles the orthographic diversity of microblog texts.
+  - Surface POS and normal POS (e.g., contracted verb and verb)
+  - 92.9% of ill-spelled words -> informal phonological variation. (51.8% of surface forms are not registered in the JUMAN dictionary.)
+  - Normalization dictionary -> word surface form, surface POS tag, normal form, and normal POS tag.
+  - Latent perceptron algorithm (diff of non-constrained decoding and constrained decoding)
+  - 91.4% / 83.7% segmentation / seg+pos accuracy
+
+
 Synonyms & Variations
 ---------------------
 * Longkai Zhang, Houfeng Wang and Xu Sun. Coarse-grained Candidate Generation and Fine-grained Re-ranking for Chinese Abbreviation Prediction. EMNLP 2014. http://emnlp2014.org/papers/pdf/EMNLP2014202.pdf
