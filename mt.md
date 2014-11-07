@@ -121,6 +121,13 @@ Bilingual Term Extraction
   - Contextual, temporal, topical, orthographic (normalized edit distance), and frequency (|log P(w1) - log P(w2)|), similarities.
   - Evaluation: Foreign  -> English, wikipedia topic sores most informative feature. Performance was stable after 300 training instances.
 
+* Akihiro Tamura et al. Bilingual Lexicon Extraction from Comparable Corpora Using Label Propagation. EMNLP 2012. http://www.aclweb.org/anthology/D12-1003
+  - A co-occurrence graph in src/tgt languages representing PMI (first degree of similarity) and context similarities (second degree of similarity)
+  - Represent every word as a seed translation distribution
+  - Evaluation: English and Japanese patent documents (1.4M docs and 438K docs, respectively), with functional words removed.
+  - Top1/20 Accuracy almost doubled compared with Rapp/Andrade baselines.
+  - Similarity graphs are effective for clustering synonyms into the same translation equivalents.
+  - Source of error: compound nouns (e.g., 掌紋 <=> palm print)
 
 Pivot Approaches
 ----------------
