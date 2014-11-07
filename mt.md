@@ -14,7 +14,7 @@ Word Alignment
 * Graham Neubig et al. An Unsupervised Model for Joint Phrase Alignment and Extraction. ACL 2011. http://www.phontron.com/paper/neubig11acl.pdf
   - Competitive with word alignment/phrase extraction approach with smaller phrase table
   - Use of ITGs to learn phrase alignment -> calculate probabilities of phrasal alignments in polynomial time
-  - Assign Pitman-Yor prior over phrase table parameters 
+  - Assign Pitman-Yor prior over phrase table parameters
 
 Transliteration
 ---------------
@@ -107,6 +107,12 @@ Bilingual Term Extraction
   - Compositional clue -> binary classification by Random Forest using first-order (raw) character ngrams and second-order (co-occurrence) of ngrams
   - Hybrid model: combines both scores by a linear classifier
   - Experiments: Wikipedia comparable corpora, with 1K term testset, the performance depends on the distance of languages, hybrid a lot better
+
+* Ann Irvine and Chris Callison-Burch. Supervised Bilingual Lexicon Induction with Multiple Monolingual Signals. NAACL 2013. https://www.cs.jhu.edu/~ccb/publications/supervised-bilingual-lexicon-induction.pdf
+  - Supervised learning to combine a diverse set of signals derived from a pair of monolingual corpora
+  - Contextual, temporal, topical, orthographic (normalized edit distance), and frequency (|log P(w1) - log P(w2)|), similarities.
+  - Evaluation: Foreign  -> English, wikipedia topic sores most informative feature. Performance was stable after 300 training instances.
+
 
 Pivot Approaches
 ----------------
