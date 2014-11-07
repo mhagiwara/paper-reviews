@@ -219,3 +219,8 @@ Word Embeddings
   - HLBL (Hierarchical LBL) -> binary tree with words at leaf nodes, represented by codes (e.g., "10") -> prob = product of (normalized) prob. of binary decisions
   - How to construct the tree -> IS-A taxonomy fron WordNet, clustering based on HLBL distributed representation (recursive gaussian mixture via EM) - BALANCED, ADAPTIVE, ADAPTIVE(eps)
   - Experiments: using non-random tree -> high performance (perplexity) but slower
+
+* Karl Moritz Hermann and Phil Blunsom. Multilingual Distributed Representations without Word Alignment. ICLR 2014 http://arxiv.org/pdf/1312.6173v4.pdf
+  - CVM (compositional sentence model) -> simplification of recursive matrix-vector space -> simple addition of all the word representations in a sentence.
+  - Objective function: minimization of parallel sentences, while maximization of non-parallel sentences, trained by AdaGrad.
+  - Evaluation: cross-lingual document classification task. 5% to 10% increase on en ->de, de->en classification task.
