@@ -9,6 +9,14 @@ General (Translation Model)
   - phrase-based decoder - keep track of nodes translated, use the length of the shortest path between nodes for distortion models
   - Experiments on Chinese (NIST MT06), and Arabic (NIST MT 08) both improved BLEU scores
 
+* Adam Lopez. Tera-Scale Translation Models via Pattern Matching. COLING 2008. http://www.aclweb.org/anthology/C08-1064.pdf
+  - When unique rules, file size, model size are 6 billion and almost a terabyte.
+  - Training text (w/ word alignment) reside in memory. 1) Find phrase occurrence in text -> 2) aligned target phrase -> 3) Decode as usual. Rules and parameters are computed only as needed.
+  - Extract (via suffix array) only a sample of found source phrases. Use the maximum likelihood estimation.
+  - Decoding time was about 2 second slower (because of rule & parameter computation)
+  - Effect of maximum phrase length (5) and maximum phrase span (10) -> saturated after that.
+  - Hierarchical phrase-based model comparable with Moses with lexicalized reordering
+
 Word Alignment
 --------------
 * Graham Neubig et al. An Unsupervised Model for Joint Phrase Alignment and Extraction. ACL 2011. http://www.phontron.com/paper/neubig11acl.pdf
