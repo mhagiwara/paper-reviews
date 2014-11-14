@@ -31,3 +31,10 @@ Logic
   - Evaluation: random separation of (s, p, o) (edge) from a graph into train/test, and how well KV can predict missing edges.
   - Graph-based priors: path ranking algorithm (use random-walk paths to predict prediates) and neural network model (Socher et al. NIPS 2012)
   - Future work: modelling mutual exclusion between facts (but simple exclusion doesn't work e.g., Honolulu -> Hawaii), numerical correlation (DoB of a person and DoB of children)
+
+* Shangpu Jiang et al. Learning to Refine an Automatically Extracted Knowledge Base using Markov Logic. ICDM 2012 http://ix.cs.uoregon.edu/~lowd/icdm12jiang.pdf
+  - Ontological constraints from the original IE system serve as hard constraints (e.g., subsumption among categories, mutually exclusive categories and relations, domain range)
+  - IE: simple logistic regression model for each category or relation to predict the truth (features: co-occurrence with patterns)
+  - Use of logistic regression to approximate weight learning (MLN is equivalent to logistic regression without hard constraint)
+  - MLN forms clusters of "domains"
+  - Evaluation using AUC, P/R/F on randomly sampled 4,511 relations -> Models with patterns, human label training, and ontological constraints performed better
