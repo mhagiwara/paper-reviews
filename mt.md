@@ -143,6 +143,12 @@ Bilingual Term Extraction
   - Similarity graphs are effective for clustering synonyms into the same translation equivalents.
   - Source of error: compound nouns (e.g., 掌紋 <=> palm print)
 
+* Gintarė Grigonytė and Timothy Baldwin. Automatic Detection of Multilingual Dictionaries on the Web. ACL 2014. http://aclweb.org/anthology/P14-2016
+  - Identification of terms which are likely to occur in bilingual dictionaries (documents with lists of multilingual dictionaries) but not in general web documents.
+  - First intuition: "language-discriminating" words (e.g., "anti-discriminatory" > "sushi")
+  - Second intuition: words that only cooccur in dictionaries (e.g., cruiser, gospel, noodle) (reject any combinations of words which are found to co-occur in Wikipedia documents)
+  - Evaluation MAP = 0.88 (over synthetic data) and 0.63 (over the open web) (baseline: simply langauge name + "dictionary")
+
 Pivot Approaches
 ----------------
 * Hua Wu and Haifeng Wang. Pivot Language Approach for Phrase-Based Statistical Machine Translation. ACL 2007. http://acl.ldc.upenn.edu/P/P07/P07-1108.pdf
