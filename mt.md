@@ -24,6 +24,13 @@ Word Alignment
   - Use of ITGs to learn phrase alignment -> calculate probabilities of phrasal alignments in polynomial time
   - Assign Pitman-Yor prior over phrase table parameters
 
+* Philip Resnik and Noah A. Smith. The Web as a Parallel Corpus. CL 2003. http://www.aclweb.org/anthology/J/J03/J03-3002.pdf
+  - Approach 1. structural similarity locating&generating candidate pages (by URL matching) -> DP matching on linearized pages -> compute matching statistics -> tuning by machine learning (C 5.0)
+  - Approach 2. content similarity (orthogonal) - maximum-weighted bipartite matching problem given a (scored) translation dictionary (competitive lining)
+  - Benefit of combining structural and content-based approaches.
+  - STRAND on the Internet Archive - generate "handle" of URLs (by subtracting language-dependent substrings) - Prec 0.9326 Rec. 0.9324
+  - Distribute URLs of matched documents 
+
 Transliteration
 ---------------
 
