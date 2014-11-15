@@ -29,7 +29,14 @@ Word Alignment
   - Approach 2. content similarity (orthogonal) - maximum-weighted bipartite matching problem given a (scored) translation dictionary (competitive lining)
   - Benefit of combining structural and content-based approaches.
   - STRAND on the Internet Archive - generate "handle" of URLs (by subtracting language-dependent substrings) - Prec 0.9326 Rec. 0.9324
-  - Distribute URLs of matched documents 
+  - Distribute URLs of matched documents
+
+* Masao Utiyama and Hitoshi Isahara. Reliable Measures for Aligning Japanese-English News Articles and Sentences. ACL 2003. http://www.aclweb.org/anthology/P03-1010
+  - Article alignment -> translate Japanese articles word by word, find English articles by information retrieval.
+  - Sentence alignment by DP matching and co-efficient of matched words.
+  - AVSIM(pair of articles) -> average similarity of matched sentences in Ja and En. SntScore = AVSIM * SIM. -> prefers the sentence alignment with more similar article alignment
+  - Evaluation on random sampled article: AVSIM better than simple BM25. SntScore ranks appropriate one-to-one alignments highly. Precision @ Top 150,000 aligned sentences -> 0.982.
+  - Data made public at Utiyama-san's page. http://www2.nict.go.jp/univ-com/multi_trans/member/mutiyama/
 
 Transliteration
 ---------------
