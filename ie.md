@@ -24,6 +24,12 @@ General
   - Launched October 2012, the most edited Wikipedia project, 14M items as of Feb 2014, reconciling external IDs
   - Prettify browser: http://tools.wmflabs.org/reasonator/
 
+* Heng Ji and Ralph Grishman. Knowledge Base Population: Successful Approaches and Challenges. ACL 2011. http://nlp.cs.rpi.edu/paper/kbp_acl11.pdf
+  - Entity linking - query: a name string with a background document -> ID in the KB.
+  - Slot filling - query: name of the entity, type, background document, the attribute -> value. (hybrid of traditional IE and QA)
+  - Challenge for slot filling: paucity of training data. Use of filed Wikipedia infoboxes for distant learning.
+  - Benefit from recursive reasoning (org:subsidiaries <-> org:parents), system combination.
+
 Set Expansion
 -------------
 
