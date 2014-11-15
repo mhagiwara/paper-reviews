@@ -78,18 +78,24 @@ PoS Tagging
 -----------
 
 * Dipanjan Das and Slav Petrov. Unsupervised Part-of-Speech Tagging with Bilingual Graph-Based Projections. ACL 2011. http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/37071.pdf
-    - Build a PoS tagger (on universal PoS tag set) for resource scarce languages (using parallel data and English supervised PoS tagger)
-    - Projection and label propagation on a bilingual graph of trigrams (in foreign language) and word types (in English), using similarity statistics and word alignment
-    - PoS tagger was trained on feature-based HMM (Berg-Kirkpatrick et al. 2010) using tag distributions as features
-    - Experiment: used 8 Indo-European languages from Europarl and ODS UN dataset
-    - Full model achieved 10.4 point increase from the state-of-the art and 16.7% from vanilla HMM
+  - Build a PoS tagger (on universal PoS tag set) for resource scarce languages (using parallel data and English supervised PoS tagger)
+  - Projection and label propagation on a bilingual graph of trigrams (in foreign language) and word types (in English), using similarity statistics and word alignment
+  - PoS tagger was trained on feature-based HMM (Berg-Kirkpatrick et al. 2010) using tag distributions as features
+  - Experiment: used 8 Indo-European languages from Europarl and ODS UN dataset
+  - Full model achieved 10.4 point increase from the state-of-the art and 16.7% from vanilla HMM
 
 * Shay B. Cohen, et al. Unsupervised Structure Prediction with Non-Parallel Multilingual Guidance. EMNLP 2011. http://www.cs.columbia.edu/~scohen/emnlp11multilingual.pdf
-    - Learn models of the target language using annotated data from helper languages, without any form of parallel data.
-    - Probabilisitc models based on multinomial distributions (maximum likelihood in each helper language), such as HMM and DMV (dependency model with valence)
-    - Use helper languages for initialization, then unsupervised learning to learn the each contribution
-    - Mixture coefficient \beta learnd via EM algorithm
-    - Re-parametrize \theta by feature-rich unsupervised model (Berg-Kirkpatrick et al. 2011) and beta (to ignore simplex constaints)
+  - Learn models of the target language using annotated data from helper languages, without any form of parallel data.
+  - Probabilisitc models based on multinomial distributions (maximum likelihood in each helper language), such as HMM and DMV (dependency model with valence)
+  - Use helper languages for initialization, then unsupervised learning to learn the each contribution
+  - Mixture coefficient \beta learnd via EM algorithm
+  - Re-parametrize \theta by feature-rich unsupervised model (Berg-Kirkpatrick et al. 2011) and beta (to ignore simplex constaints)
+
+* Andrei Alexandrescu and Katrin Kirchhoff. Data-Driven Graph Construction for Semi-Supervised Graph-Based Learning in NLP. HLT 2007 http://erdani.com/research/hlt2007.pdf
+  - Supervised classifier trained on the labeled subset -> output posterior probability distribution over target labels -> use this vector to construct graph
+  - Label propagation (Zhu and Ghahramani 2002) -> Edge weights are exp(-c * distance)
+  - Lexicon acquisition task for POS tagging (using WSJ corpus)
+  - Learner: multi-layered perceptron (with 12 hidden units and relatively high regularization)
 
 Multi-Word Expressions
 ----------------------
