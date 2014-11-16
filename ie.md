@@ -87,6 +87,12 @@ Named Entity Recognition (General)
     - Features for skip chan: combine information (disjunction/or) from the neighborhood of both words
     - Experiments on CMU seminar announcement data. Dramatic decrease in inconsistently mislabeled tokens from 30.2 to 4.8 on the "speaker" field (but no improvement on other fields)
 
+* Lev Ratinov and Dan Roth. Design Challenges and Misconceptions in Named Entity Recognition. CoNLL 2009. http://www.aclweb.org/anthology/W09-1119
+  - BILOU (beginning/inside/last/outside/unit token) representation significantly outperforms BIO
+  - Greedy decoding performs comparably to beamsearch or Viterbi, while very fast
+  - Non-local features: e.g., context aggregation, relative frequency of the tags in a 1000 token window, prediction history (named entity in the beginning of the documents tend to be more easily identifiable)
+  - Gazetteers (collected from Wikipedia categories) are critical for NER
+  - Final evaluation: 90.8 F1 score, better than Stanford NER, best reported result for this dataset. 
 
 Multilingual NER
 ----------------
