@@ -17,6 +17,12 @@ General (Translation Model)
   - Effect of maximum phrase length (5) and maximum phrase span (10) -> saturated after that.
   - Hierarchical phrase-based model comparable with Moses with lexicalized reordering
 
+* Ilya Sutskever et al. Sequence to Sequence Learning with Neural Networks.  2014. http://arxiv.org/pdf/1409.3215v2.pdf
+  - Multilayered Long Short-Term Memory (LSTM) input -> [vector] -> output. LSTM: estimate P(output sequence | input sequence) where the length may differ
+  - Beat strong PBSMT by 1.5 BLUE score. Simple left-to-right beam search decoder.
+  - Idea: question answering -> map the question to the answer
+  - Reversed the order of words in the source sentence -> first few words in the source language are now closer to the target language. 
+
 Word Alignment
 --------------
 * Graham Neubig et al. An Unsupervised Model for Joint Phrase Alignment and Extraction. ACL 2011. http://www.phontron.com/paper/neubig11acl.pdf
