@@ -45,6 +45,13 @@ General
   - Impact Challenges - e.g., A conflict between nations averted through high-quality translation provided by an ML system
   - Obstacles: jargons (e.g., feature extraction -> representation), risks (e.g., concern when relying on machines for decision), complexity (e.g., "ML solutions come packaged in a PhD")
 
+* John Duchi et al. Adaptive Subgradient Methods for Online Learning and Stochastic Optimization. JMLR 2011.
+  - Stochastic optimization which employ proximal functions to control the gradient steps of the algorithm.
+  - Infrequent features are highly informative -> give frequently occurring features very low learning rates and infrequent features high learning rates.
+  - Specialize to the diagonal case (in the update)
+  - Guranteed to suffer asymptotically sub-linear regret
+  - Composite mirror descent -> tradeoff between current gradient, regularization, and staying close to the current parameter -> use time-dependent Mahalanobis distance
+
 Domain Adaptation & Transfer Learning
 -------------------------------------
 
