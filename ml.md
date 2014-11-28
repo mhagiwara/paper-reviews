@@ -122,3 +122,14 @@ Neural Networks
   - SSN-MIMIC - directly trained on the log probability values before the softmax activation.
   - Introducing a bottleneck linear layer with k hidden units between the input and the hidden layer sped up learning
   - Model compression usually works best when the unlabeled data set is much larger than the original train set
+
+Crowdsourcing
+-------------
+
+* Rion Snow et al. Cheap and Fast --- But is it Good? Evaluating Non-Expert Annotations for Natural Language Tasks. EMNLP 2008. http://web.stanford.edu/~jurafsky/amt.pdf
+  - Affect recognition (given a headline, give numeric judgement for six emotions), word similarity, recognizing textual entailment, event temporal ordering, and word sense disambiguatin.
+  - AMT allows a requester to restrict which workers are allowed to annotate a task by requiring set of qualifications
+  - ITA (inter annotator aggreement) is quite close between experts and turks. Minimum of 4 turks averaging required to beat expert.
+  - word similarity: achieved correlation = 0.952 with 10 turns averaging   RTE: achieved 89.7% accuracy by majority vote (expert = 91%)
+  - Turk accuracies vary, and a few turks do a large portion of the task. -> bias correction using a small gold standard labels (like weighted voting by each workers log likelihood ratio)
+  - bias correction -> RTE +4.0% accuracy increase
