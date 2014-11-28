@@ -133,3 +133,12 @@ Crowdsourcing
   - word similarity: achieved correlation = 0.952 with 10 turns averaging   RTE: achieved 89.7% accuracy by majority vote (expert = 91%)
   - Turk accuracies vary, and a few turks do a large portion of the task. -> bias correction using a small gold standard labels (like weighted voting by each workers log likelihood ratio)
   - bias correction -> RTE +4.0% accuracy increase
+
+* Chris Callison-Burch. Fast, Cheap, and Creative: Evaluating Translation Quality Using Amazon's Mechanical Turk. EMNLP 2009. https://www.cs.jhu.edu/~ccb/publications/mechanical-turk-for-machine-translation-evaluation.pdf
+  - Automatic metrics criticized for various reasons -> loose approximation of human judgements
+  - Turks' judgements are very similar to experts and have a stronger correlation than BLEU
+  - Combined ranking of up to 5 turks using (Schulze 2003)'s method. 53% when unweighted voting of 5 turks, weighted (by agreement with gold standard, with other turks) -> same as expert level
+  - Experts: WMT data, created by computational linguistis who develop machine translation systems.
+  - Creating reference translation: first translate, then next HITs filter out machine translation -> quality higher than MT but lower than experts
+  - HTER evaluation, using simplified GALE post-editing guidelines -> HTER decreases as the number of editors goes 0 -> 5 (each can help minimize the edits)
+  - Reading comprehension (reading passage translated from English and answers 5W1H questions) -> using MT evaluation (% of correct answers)
