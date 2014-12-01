@@ -239,3 +239,10 @@ Word Embeddings
   - CVM (compositional sentence model) -> simplification of recursive matrix-vector space -> simple addition of all the word representations in a sentence.
   - Objective function: minimization of parallel sentences, while maximization of non-parallel sentences, trained by AdaGrad.
   - Evaluation: cross-lingual document classification task. 5% to 10% increase on en ->de, de->en classification task.
+
+* Manaal Faruqui et al. Retrofitting Word Vectors to Semantic Lexicons. NIPS-DLRLW 2014 http://arxiv.org/pdf/1411.4166v1.pdf
+  - Retrofitting: post-processing to word vectors using belief propagation on a graph constructed from lexicon
+  - MRF with retrofitted vectors (hidden) and learned vectors (observed) -> graph distance convex objective -> iterative updating
+  - Regularized approach: formulates the relationship between words found in the semantic lexicon as a structured regularizer on the original training objective (using lazy updates)
+  - Lexicon: PPDB, WordNet, FrameNet, evaluated on word similarity (WS-353, RG-65, MEN), syntactic relations, TOEFL, sentiment analysis
+  - PPDB the best, union works well, FrameNet worse. Retrofitting >= Regularization. Works in German, French, and Spanish, too.
