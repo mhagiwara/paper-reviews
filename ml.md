@@ -52,6 +52,18 @@ General
   - Guranteed to suffer asymptotically sub-linear regret
   - Composite mirror descent -> tradeoff between current gradient, regularization, and staying close to the current parameter -> use time-dependent Mahalanobis distance
 
+* D. Sculley et al. Machine Learning: The High-Interest Credit Card of Technical Debt. SE4ML: Software Engineering for Machine Learning http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/43146.pdf
+  - Machine learning packages have a larger system-level complexity that can create hidden debt. Paying down tecnical debt is critical for long-term system health and enables cutting-edge improvements.
+  - Entanglement: CACE principle -> changing anything changes everything. Shipping ML system version 1.0 is eacy but making subsequent improvements is unexpectedly difficult.
+  - Hidden feedback loops -> past data (features) (e.g., CTR prediction) depends on the result
+  - Unstable data dependencies -> mitigation strategy: create a versioned copy of a given signal (e.g., frozen version of semantic mapping of words to clusters)
+  - Underutilized data dependencies (legacy features, bundled features, ε-features) -> features that give only marginal gain to the model accuracy
+  - Correction cascades, creating a model a' for a problem A' using a for a problem A. This is low-cost but creates dependencies.
+  - Glue code for self-contained packages -> tends to freeze a system to the peculiarities of a specific package. Solution: re-implement specific algorithms within the broader system architecture.
+  - Pipeline jungles -> preparing data from information sources, e.g., scrapes, joins, sampling, detecting erors and recovering from failures are costly. Solution: a hybrid research approach where engineers and researchers are embedded together
+  - Dead experimental codepaths. Solution: periodically re-examine each experimental branch
+  - Configuration debt. Configuration should be treated with the same level of seriousness as code changes, taking diffs of two configurations is useful
+
 Domain Adaptation & Transfer Learning
 -------------------------------------
 
