@@ -4,39 +4,44 @@ Morphology (Word Segmentation & PoS Tagging)
 Word Segmentation
 -----------------
 * Nobuhiro Kaji et al. Efficient Staggered Decoding for Sequence Labeling. ACL 2010. http://anthology.aclweb.org//P/P10/P10-1050.pdf
-    - Viterbi decoding slow - O(NL^2) where L is the # of labels
-    - Staggererd decoding: group labels into degenerate labels, activate labels by their relative frequency, continues until the best path doesn't go through degenerate nodes, transition scores = max of degenerate nodes
-    - Pruning based on score lower bound and maximum for each label
-    - PoS tagging, PoS tagging and chunking, and supertagging: several order of magnitute faster than Viterbi, CarpeDiem, comparable with beam search with similar performance.
+  - Viterbi decoding slow - O(NL^2) where L is the # of labels
+  - Staggererd decoding: group labels into degenerate labels, activate labels by their relative frequency, continues until the best path doesn't go through degenerate nodes, transition scores = max of degenerate nodes
+  - Pruning based on score lower bound and maximum for each label
+  - PoS tagging, PoS tagging and chunking, and supertagging: several order of magnitute faster than Viterbi, CarpeDiem, comparable with beam search with similar performance.
 
 * Manabu Sassano. Deterministic Word Segmentation Using Maximum Matching with Fully Lexicalized Rules. EACL 2014. http://anthology.aclweb.org//E/E14/E14-4016.pdf
-    - Maximum algorithm with transformation rules (sequence of characters -> sequences of morphemes)
-    - Learning transformation rules - by transformation-based learning (TBL; Brill 1995) - if system makes an error, learn a rule [word sequence with error] -> [correct sequence]. Sort the rules by scores and accept the rule if it gives positive
-    - F measure almost 0.96 after training on Web corpus, 4 times faster than MeCab. Higher performance by post-processing.
+  - Maximum algorithm with transformation rules (sequence of characters -> sequences of morphemes)
+  - Learning transformation rules - by transformation-based learning (TBL; Brill 1995) - if system makes an error, learn a rule [word sequence with error] -> [correct sequence]. Sort the rules by scores and accept the rule if it gives positive
+  - F measure almost 0.96 after training on Web corpus, 4 times faster than MeCab. Higher performance by post-processing.
 
 * Hai Zhao and Chunyu Kit. An Empirical Comparison of Goodness Measures for Unsupervised Chinese Word Segmentation with a Uniﬁed Framework. ICJNLP 2008. http://www.aclweb.org/anthology/I/I08/I08-1002.pdf
-    - Comparison of unsupervised WS based on word goodness scores (FSR, DLG, AV, BE) and decoding algorithms (viterbi optimization / maximal forward matching)
-    - Experiments on Bakeoff-3 (AS, CityU, CTB, MSRA corpora), DLG outperforms on 2-chars and AV/BE on 3+-chars (because two-character words are dominant in Chinese), viterbi optimization wins
-    - Word candidate pruning, ensemble segmentation (taking intersection of word candidates) effective, F range 0.65 - 0.7.
+  - Comparison of unsupervised WS based on word goodness scores (FSR, DLG, AV, BE) and decoding algorithms (viterbi optimization / maximal forward matching)
+  - Experiments on Bakeoff-3 (AS, CityU, CTB, MSRA corpora), DLG outperforms on 2-chars and AV/BE on 3+-chars (because two-character words are dominant in Chinese), viterbi optimization wins
+  - Word candidate pruning, ensemble segmentation (taking intersection of word candidates) effective, F range 0.65 - 0.7.
 
 * Chunyu Kit and Yorick Wilks. Unsupervised Learning of Word Boundary with Description Length Gain. CoNLL 1999. https://aclweb.org/anthology/W/W99/W99-0701.pdf
-    - DLG (description length gain), following MDL (minimum description length)
-    - DL = the Shannon-Fano code length of the corpus (over "tokens", characters, words, etc.), gain = difference of DL when substituting token seqs with another symbol
-    - Decoding: Viterbi algorithm to maximize the sum of average DLGs over chunks
-    - Experiment on the entire Brown corpus: Prec = 79%, Rec = 63%
+  - DLG (description length gain), following MDL (minimum description length)
+  - DL = the Shannon-Fano code length of the corpus (over "tokens", characters, words, etc.), gain = difference of DL when substituting token seqs with another symbol
+  - Decoding: Viterbi algorithm to maximize the sum of average DLGs over chunks
+  - Experiment on the entire Brown corpus: Prec = 79%, Rec = 63%
 
 
 * Mathias Creutz. Unsupervised Segmentation of Words Using Prior Distributions of Morph Length and Frequency. ACL 2003. http://acl.ldc.upenn.edu/acl2003/main/pdfs/Creutz.pdf
-    - Divide words into morphs (smaller segments) from corpus assuming a generative model
-    - Generate lexicon (size = uniform), morph types (gamma distribution over length), morph strings (multinomial over characters), morph frequencies (refined Zipf's formula)
-    - Algorithm: greedy split until the probability converges
-    - Evaluation: percentage of (aligned in the training data) recognized morphemes: approx. 40% in Finnish and 45% in English (approx. linear vs log of corpus size)
+  - Divide words into morphs (smaller segments) from corpus assuming a generative model
+  - Generate lexicon (size = uniform), morph types (gamma distribution over length), morph strings (multinomial over characters), morph frequencies (refined Zipf's formula)
+  - Algorithm: greedy split until the probability converges
+  - Evaluation: percentage of (aligned in the training data) recognized morphemes: approx. 40% in Finnish and 45% in English (approx. linear vs log of corpus size)
 
 * Sharon Goldwater et al. Contextual Dependencies in Unsupervised Word Segmentation. ACL-COLING 2006. http://cocosci.berkeley.edu/tom/papers/wordseg1.pdf
-    - Comparison with MBDP (Model-Based Dynamic Programming; Brent 1999) and NGS (n-gram Seggmentation; Venkataraman 2001)
-    - Unigram: Dirichlet process with \alpha_0 (acts like the parameter of an infinite-dimensional symetric Dirichlet distribution) and P_0 (base distribution; unigram phoneme dist.) + Gibbs sampling + annealing (raising the probabilities of h1 and h2 to the power of 1/\gamma)
-    - Bigram: hierarchical Dirichlet process, where each word w is associated with its own restaurant, which represents the distribution over words that follow w.
-    - Experiments unigram -> lexicon accuracy higher but token F (~ 53.8) lower. bigram: both lexicon and token accuracy are higher than unigram (esp. tokens, F ~ 76.6)
+  - Comparison with MBDP (Model-Based Dynamic Programming; Brent 1999) and NGS (n-gram Seggmentation; Venkataraman 2001)
+  - Unigram: Dirichlet process with \alpha_0 (acts like the parameter of an infinite-dimensional symetric Dirichlet distribution) and P_0 (base distribution; unigram phoneme dist.) + Gibbs sampling + annealing (raising the probabilities of h1 and h2 to the power of 1/\gamma)
+  - Bigram: hierarchical Dirichlet process, where each word w is associated with its own restaurant, which represents the distribution over words that follow w.
+  - Experiments unigram -> lexicon accuracy higher but token F (~ 53.8) lower. bigram: both lexicon and token accuracy are higher than unigram (esp. tokens, F ~ 76.6)
+
+* Sharon Goldwater et al. A Bayesian framework for word segmentation: Exploring the effects of context. Cognition 112 (2009) 21-54.
+  - What assumptions do learners hae to make about the nature of language in order to segment it?
+  - Mathematical analysis shows that undersegmentation is the optimal solution when assuming statistical independence between words.
+  - 
 
 * Teemu Ruokolainen et al. Painless Semi-Supervised Morphological Segmentation using Conditional Random Fields. EACL 2014. http://aclweb.org/anthology//E/E14/E14-4017.pdf
     - Linear chain CRF, IOB2 model on characters, with standard emission and transition features
