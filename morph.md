@@ -25,6 +25,9 @@ Word Segmentation
   - Decoding: Viterbi algorithm to maximize the sum of average DLGs over chunks
   - Experiment on the entire Brown corpus: Prec = 79%, Rec = 63%
 
+* Xueqiang Lü et al. Statistical Substring Reduction in Linear Time. IJCNLP 2004 http://homepages.inf.ed.ac.uk/lzhang10/paper/linearssr.pdf
+  - Efficiently (O(n)) removing n-gram substrings from an n-gram list
+  - 
 
 * Mathias Creutz. Unsupervised Segmentation of Words Using Prior Distributions of Morph Length and Frequency. ACL 2003. http://acl.ldc.upenn.edu/acl2003/main/pdfs/Creutz.pdf
   - Divide words into morphs (smaller segments) from corpus assuming a generative model
@@ -38,10 +41,14 @@ Word Segmentation
   - Bigram: hierarchical Dirichlet process, where each word w is associated with its own restaurant, which represents the distribution over words that follow w.
   - Experiments unigram -> lexicon accuracy higher but token F (~ 53.8) lower. bigram: both lexicon and token accuracy are higher than unigram (esp. tokens, F ~ 76.6)
 
-* Sharon Goldwater et al. A Bayesian framework for word segmentation: Exploring the effects of context. Cognition 112 (2009) 21-54.
+* Sharon Goldwater et al. A Bayesian framework for word segmentation: Exploring the effects of context. Cognition 112 (2009) 21-54. http://cocosci.berkeley.edu/tom/papers/wordseg3.pdf
   - What assumptions do learners hae to make about the nature of language in order to segment it?
   - Mathematical analysis shows that undersegmentation is the optimal solution when assuming statistical independence between words.
-  - 
+  - Maximum-likelihood overfits the training data (just memorize the whole sequence) unless there is explicit constraint
+  - Unigram model: (1) If w_i is novel or not (2) If so, generate a phonetic form phoneme unigram, if not, generate proportional to its word frequency
+
+* Michael Brent. An Efficient, Probabilistically Sound Algorithm for Segmentation and Word Discovery. 1999 http://arxiv.org/pdf/cs/9905007.pdf
+  -
 
 * Teemu Ruokolainen et al. Painless Semi-Supervised Morphological Segmentation using Conditional Random Fields. EACL 2014. http://aclweb.org/anthology//E/E14/E14-4017.pdf
     - Linear chain CRF, IOB2 model on characters, with standard emission and transition features
