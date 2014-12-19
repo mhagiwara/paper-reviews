@@ -26,8 +26,9 @@ Word Segmentation
   - Experiment on the entire Brown corpus: Prec = 79%, Rec = 63%
 
 * Xueqiang Lü et al. Statistical Substring Reduction in Linear Time. IJCNLP 2004 http://homepages.inf.ed.ac.uk/lzhang10/paper/linearssr.pdf
-  - Efficiently (O(n)) removing n-gram substrings from an n-gram list
-  - 
+  - Efficiently (O(n)) removing equal frequency n-gram substrings from an n-gram list (e.g., 中华人民共和国 vs 华人民共和国)
+  - Linear algorithm: restrict the search to potential substrings. 1. sort substrings 2. compare adjacent ones and if freq is the same and forms substrings 3. do the same by sorting by suffix
+  
 
 * Mathias Creutz. Unsupervised Segmentation of Words Using Prior Distributions of Morph Length and Frequency. ACL 2003. http://acl.ldc.upenn.edu/acl2003/main/pdfs/Creutz.pdf
   - Divide words into morphs (smaller segments) from corpus assuming a generative model
