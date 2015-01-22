@@ -28,7 +28,7 @@ Word Segmentation
 * Xueqiang Lü et al. Statistical Substring Reduction in Linear Time. IJCNLP 2004 http://homepages.inf.ed.ac.uk/lzhang10/paper/linearssr.pdf
   - Efficiently (O(n)) removing equal frequency n-gram substrings from an n-gram list (e.g., 中华人民共和国 vs 华人民共和国)
   - Linear algorithm: restrict the search to potential substrings. 1. sort substrings 2. compare adjacent ones and if freq is the same and forms substrings 3. do the same by sorting by suffix
-  
+
 
 * Mathias Creutz. Unsupervised Segmentation of Words Using Prior Distributions of Morph Length and Frequency. ACL 2003. http://acl.ldc.upenn.edu/acl2003/main/pdfs/Creutz.pdf
   - Divide words into morphs (smaller segments) from corpus assuming a generative model
@@ -47,6 +47,8 @@ Word Segmentation
   - Mathematical analysis shows that undersegmentation is the optimal solution when assuming statistical independence between words.
   - Maximum-likelihood overfits the training data (just memorize the whole sequence) unless there is explicit constraint
   - Unigram model: (1) If w_i is novel or not (2) If so, generate a phonetic form phoneme unigram, if not, generate proportional to its word frequency
+  - Evaluate on CHILDES database, P/R/F or token, type, and boundary. Unigram model leads to undersegmentation (boundary precision high, recall low)
+  - 
 
 * Michael Brent. An Efficient, Probabilistically Sound Algorithm for Segmentation and Word Discovery. 1999 http://arxiv.org/pdf/cs/9905007.pdf
   -

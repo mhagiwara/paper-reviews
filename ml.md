@@ -154,3 +154,14 @@ Crowdsourcing
   - Creating reference translation: first translate, then next HITs filter out machine translation -> quality higher than MT but lower than experts
   - HTER evaluation, using simplified GALE post-editing guidelines -> HTER decreases as the number of editors goes 0 -> 5 (each can help minimize the edits)
   - Reading comprehension (reading passage translated from English and answers 5W1H questions) -> using MT evaluation (% of correct answers)
+
+Nonparametric Bayesian
+----------------------
+
+* Kevin Knight. Bayesian Inference with Tears. 2009.
+  - EM -> tend to memorize the entire training data (rule -> the whole corpus)
+  - Recommend: Sharon Goldwater's reading list on the web http://homepages.inf.ed.ac.uk/sgwater/reading_list.html
+  - Probabilistic CFGs assign bad structure -> TSG with context
+  - P(rule | root(rule)) = (alpha * P0 + count(rule)) / (alpha + total count)
+  - Add-one smoothing = a special case of dirichlet process (with specific choice of alpha and P)
+  - Chinese word segmentation -> we can't enumerate all the exponential number of derivations
