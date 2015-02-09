@@ -64,6 +64,14 @@ General
   - Dead experimental codepaths. Solution: periodically re-examine each experimental branch
   - Configuration debt. Configuration should be treated with the same level of seriousness as code changes, taking diffs of two configurations is useful
 
+Learning
+--------
+
+* Allen Newell and Paul S. Rosenbloom. Mechanisms of skill acquisition and the law of practice. Cognitive skills and their acquisition (pp. 1-55), 1980. http://repository.cmu.edu/cgi/viewcontent.cgi?article=3420&context=compsci
+  - the power law of practice (log-log linear learning law)
+  - e.g., Snoddy (1926) mirror-tracing, number of trials vs time (with fixed precision)
+
+
 Domain Adaptation & Transfer Learning
 -------------------------------------
 
