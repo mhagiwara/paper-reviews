@@ -23,6 +23,11 @@ Machine Learning
 
 https://github.com/mhagiwara/paper-reviews/blob/master/ml.md
 
+Human Learning
+----------------
+
+https://github.com/mhagiwara/paper-reviews/blob/master/learning.md
+
 Logic
 -----
 
