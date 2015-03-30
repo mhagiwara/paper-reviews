@@ -17,3 +17,10 @@ General
   - Power law, exponential, and generalized curves (T = B*exp(-alpha * N ^ (1 - beta)))
   - The chunking theory of learning (e.g., Seibel's light-button resopnse task, chunk = span of multiple lights) -> larger chunks are exponentially less frequent
   - Data fits the family of generalized power law (not the simple power law)
+
+- Kenneth Koedinger et al. Using data-driven discovery of better student models to improve student learning. AIED 2013 http://www.learnlab.org/research/wiki/images/e/eb/Koedinger-et-al-aied2013.pdf
+  - Use learning curves (flat and rigged) to identify poorly taught KCs (e.g., "compose-by-addition" -> +decompose, +subtract)
+  - Added scafolding questions 
+
+- Tanja Täsker, et al. Different parameters - same prediction: An analysis of learning curves. EDM 2014 http://educationaldatamining.org/EDM2014/uploads/procs2014/long%20papers/52_EDM-2014-Full.pdf
+  -
