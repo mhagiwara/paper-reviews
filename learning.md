@@ -13,6 +13,7 @@ General
 
 * Allen Newell and Paul S. Rosenbloom. Machanisms of Skill Acquisition and the Law of Practice. Cognitive Skills and their Acquisition. 1980 http://repository.cmu.edu/cgi/viewcontent.cgi?article=3420&context=compsci&sei-redir=1&referer=http%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttp%253A%252F%252Frepository.cmu.edu%252Fcgi%252Fviewcontent.cgi%253Farticle%253D3420%2526context%253Dcompsci%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNEIrb1-kozWZZnflhBUQsjFa_1lVw#search=%22http%3A%2F%2Frepository.cmu.edu%2Fcgi%2Fviewcontent.cgi%3Farticle%3D3420%26context%3Dcompsci%22
   - The ubiquitous "power law of practice" (log-log linear learning law) - holds for practice learning of all kinds
-    - Show 12 examples, including mirror-tracing (Snoddy 1926) - time + errors decrease as trials increase ( T = BN^(-alpha) where alpha is the learning rate)
-  - the chunking theory of learning
-  -
+    - Show 12 examples, e.g., including mirror-tracing (Snoddy 1926) - time + errors decrease as trials increase ( T = BN^(-alpha) where alpha < 1 is the learning rate)
+  - Power law, exponential, and generalized curves (T = B*exp(-alpha * N ^ (1 - beta)))
+  - The chunking theory of learning (e.g., Seibel's light-button resopnse task, chunk = span of multiple lights) -> larger chunks are exponentially less frequent
+  - Data fits the family of generalized power law (not the simple power law)
