@@ -8,6 +8,12 @@ Morphology (Word Segmentation & PoS Tagging)
 
 https://github.com/mhagiwara/paper-reviews/blob/master/morph.md
 
+Parsing
+--------------------------------------------
+
+https://github.com/mhagiwara/paper-reviews/blob/master/parsing.md
+
+
 Information Extraction (Named Entity Recognition)
 -------------------------------------------------
 
