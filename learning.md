@@ -35,7 +35,9 @@ General
 
 - Tanja Täsker, et al. Different parameters - same prediction: An analysis of learning curves. EDM 2014 http://educationaldatamining.org/EDM2014/uploads/procs2014/long%20papers/52_EDM-2014-Full.pdf
   - AFM (additive factor model) - a logistic regression model to fit student proficiency, skill difficulty, learning rate - suffers from student attrition (well performing students need few opportunities to master a skill, while weaker students remain)
-  - LG (learning gain model) - normalizes trial to [0, 1]
+  - LG (learning gain model) - normalizes trial to [0, 1] (mastery)
+  - DIS (disaggregated model) - group students by the number of opportunities needed to first master a skill.
   - BKT (Bayesian knowledge tracing) - HMM (hidden state = mastery, emission = correct/incorrect)
   - Experiment with Calcularis (ITS) - residual analysis: overestimate the outcome of badly performing student and underestimate the outcome for well performing students
   - Re-test prediction - AFM and LG comparable in terms of RMSE and AUC
+  - Generalization to new students - LG > AFM - prediction accuracy is quite similar
