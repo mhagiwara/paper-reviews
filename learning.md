@@ -41,3 +41,10 @@ General
   - Experiment with Calcularis (ITS) - residual analysis: overestimate the outcome of badly performing student and underestimate the outcome for well performing students
   - Re-test prediction - AFM and LG comparable in terms of RMSE and AUC
   - Generalization to new students - LG > AFM - prediction accuracy is quite similar
+
+Language Learning
+-----------------
+- Sze-Meng Jojo Wong and Mark Dras. Parser Features for Sentence Grammaticality Classification. 2010 http://www.aclweb.org/anthology/U10-1011
+  - Existing approach: parser byproduct (probability, number of partial parse trees, parsing duration)
+  - Ungrammatical corpora obtained from noisy version of WSJ created by Foster (2007) (Noisy WSJ and Nosier WSJ)
+  - Trained three Stanford Parser models - PureParser, NoisyParser, and MixedParser (mixing Pure WSJ and Noisy WSJ)
