@@ -13,3 +13,11 @@ Constituency Parsing
   - Unlexicailzed grammar - e.g., functional words and content words - PP[to] -> OK, NP[stocks] -> NG
   - Annotations already in the treebank - PP-LOC or ADVP-TMP have negative utility, TMP-NP positive
   - Head annotation e.g., SPLIT-VP annotates all VP nodes with their head tag.
+
+* Mi Haitao and Liang Huang. Shift-Reduce Constituency Parsing with Dynamic Programming and POS Tag Lattice. NAACL 2015 http://acl.cs.qc.edu/~lhuang/papers/dp-constituency.pdf
+    - Extension of (Huang and Sagae 2010) to CFG constituency parsing
+    - Introduce odd step: choose from un (apply unary rule) or st (do nothing). At even steps, choose among shift/reduceR/reduceL.
+    - Merge equivalent states:
+    - Tag lattice: for shift action, split states based on the PoS tag of n - k-th token (k is context length)
+    - Experiments: English (PTB) and Chinese (CTB), trained using 'max-violation perceptron', evaluated by labeled precision (LP) and labeled recall (LR) and bracketing F1. Faster convergence and better performance than non-DP parsers. Comparable to Wang (2014)'s joint PoS+parsing model in bracketing F1.
+ 
