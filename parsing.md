@@ -8,7 +8,8 @@ Constituency Parsing
   - Generic linear models for NLP: Given a training instance, decodes the training instance given the current model (features and weights), update the parameters when errors are made.
   - Perceptron guarantee: if training samples are separable, the parameters converge within a finite number of iterations
   - Grammar G include allowable chains (path from a word w to starting symbol S) and allowable triples (allowable non-terminals Z after Y under parent X)
-  - Beam search
+  - Caching past hypothesis and reuse them to update weights (for efficiency), early update (if partial analysis of gold standard doesn't exist in the hypothesis set, exit the decoding and update parameters immediately)
+  - Experiment: 1.5 points lower than generative models, but competitive when including punctuation features in Penn Treebank
 
 * Dan Klein and Chris Manning. Accurate Unlexicalized Parsing. ACL 2003 http://www.cs.berkeley.edu/~klein/papers/unlexicalized-parsing.pdf
   - Success of lexicalized PCFG models (e.g., Charniak 1997, Collins 1999)
