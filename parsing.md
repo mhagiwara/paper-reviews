@@ -4,6 +4,12 @@ Parsing
 Constituency Parsing
 --------------------
 
+* Michael Collins and Brian Roark. Incremental Parsing with the Perceptron Algorithm. ACL 2004. http://www.aclweb.org/anthology/P04-1015
+  - Generic linear models for NLP: Given a training instance, decodes the training instance given the current model (features and weights), update the parameters when errors are made.
+  - Perceptron guarantee: if training samples are separable, the parameters converge within a finite number of iterations
+  - Grammar G include allowable chains (path from a word w to starting symbol S) and allowable triples (allowable non-terminals Z after Y under parent X)
+  - Beam search
+
 * Dan Klein and Chris Manning. Accurate Unlexicalized Parsing. ACL 2003 http://www.cs.berkeley.edu/~klein/papers/unlexicalized-parsing.pdf
   - Success of lexicalized PCFG models (e.g., Charniak 1997, Collins 1999)
   - Johnson (1998) unlexicalized PCFG could be improved by annotating each node by its parent category (e.g., subject NP is 8.7 times more likely than an object NP to expand as just a pronoun)
@@ -20,4 +26,3 @@ Constituency Parsing
     - Merge equivalent states:
     - Tag lattice: for shift action, split states based on the PoS tag of n - k-th token (k is context length)
     - Experiments: English (PTB) and Chinese (CTB), trained using 'max-violation perceptron', evaluated by labeled precision (LP) and labeled recall (LR) and bracketing F1. Faster convergence and better performance than non-DP parsers. Comparable to Wang (2014)'s joint PoS+parsing model in bracketing F1.
- 
