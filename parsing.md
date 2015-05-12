@@ -21,6 +21,13 @@ Constituency Parsing
   - Annotations already in the treebank - PP-LOC or ADVP-TMP have negative utility, TMP-NP positive
   - Head annotation e.g., SPLIT-VP annotates all VP nodes with their head tag.
 
+* Liang Huang and Kenji Sagae. Dynamic Programming for Linear-Time Incremental Parsing. ACL 2010 https://www.aclweb.org/anthology/P/P10/P10-1110.pdf
+  - Greedy search e.g., shift-reduce parsers -> fast (linear) and psychologically motivated, but severe search errors
+  - Can output a forest encoding exponentially many trees
+  - Shift-reduce dependency parsing: shift, reduce(left) and reduce(right)
+  - Graph-structured stack and deduction: two states are equivalent if both agree on features and queue top. Maintain explicit predictor states which work as backpointers in graphs
+  - Experiments: DP with beam=16 achieves the same quality as non-DB with beam=64, while 5x faster
+
 * Mi Haitao and Liang Huang. Shift-Reduce Constituency Parsing with Dynamic Programming and POS Tag Lattice. NAACL 2015 http://acl.cs.qc.edu/~lhuang/papers/dp-constituency.pdf
     - Extension of (Huang and Sagae 2010) to CFG constituency parsing
     - Introduce odd step: choose from un (apply unary rule) or st (do nothing). At even steps, choose among shift/reduceR/reduceL.
