@@ -48,3 +48,9 @@ Language Learning
   - Existing approach: parser byproduct (probability, number of partial parse trees, parsing duration)
   - Ungrammatical corpora obtained from noisy version of WSJ created by Foster (2007) (Noisy WSJ and Nosier WSJ)
   - Trained three Stanford Parser models - PureParser, NoisyParser, and MixedParser (mixing Pure WSJ and Noisy WSJ)
+
+- Gwen Frishkoff et al. A Model-based Approach to Second-Language Learning of Grammatical Constructions. Proceedings of the 30th Annual Meeting of the Cognitive Science Society (2008) http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.490.7689&rep=rep1&type=pdf
+  - Dative alternation (give someone the book vs give the book to someone)
+  - Four factor model (givenness, definiteness, pronominality of the recipient noun phrase, pronominality of the theme), obtained by 14-factor PCA analysis
+  - Examples with easy/prototypical factors are learned faster
+  - Explicit presentation of the linguistic rules boosted performance
