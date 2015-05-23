@@ -4,6 +4,19 @@ Human Learning
 General
 -------
 
+* K. Andres Ericsson et al. The Role of Deliberate Practice in the Acquisition of Expert Performance. Psychological Review. 1993. http://www.mockingbirdeducation.net/uploads/5/4/0/7/5407628/ericsson_1993.pdf
+  - Innate (genetic) influences had been viewed as deterministic and limiting factors for expert performance
+  - Relation of IQ to exceptional performance (music, chess) as well as occupational success, is rather weak (0.19 on average)
+  - unique environmental conditions and parental support, rather than talent, determins the initial onset of training and ultimate performance.
+  - Sports (and other skill) levels improved in the past century e.g., Tchaikovsky's violin concert refused by two violinist but now standard
+  - Maximum level of performance is not attained automatically as function of extended experience, but as a result of deliberate efforts to improve.
+  - condition for improvement: subjects' motivation to attend to the task and exert effort to improve their performance.
+  - in the absence of adequate feedback, efficient learning is impossible and improvement only minimal even for highly motivated subjects
+  - Deliberate practice: (ideally individual) explicit instruction and supervision by a teacher should be given to assure effective learning
+  - work - far from optimal in terms of learning opportunities (discourages learning and acquisition of new and possibly better methods)
+  - Difference between experts and less skilled subject reflects qualitative differences in the organization of knowledge and its representation
+  - Excerpt: https://psy.fsu.edu/faculty/ericsson/ericsson.exp.perf.html
+
 * Jeffrey D Karpicke and Henry L Roediger III. The Critical Importance of Retrieval for Learning. http://learninglab.psych.purdue.edu/downloads/2008_Karpicke_Roediger_Science.pdf
   - Learn foreign language vocabulary pairs (e.g., Swahili-English mashua-boat), -> +study+test, -study+test, +study-test, -study-test -> final test
   - Proportion recalled = +study+test (80%), -study+test (80%), +study-test (36%), -study-test (33%)
