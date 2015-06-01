@@ -67,3 +67,8 @@ Language Learning
   - Four factor model (givenness, definiteness, pronominality of the recipient noun phrase, pronominality of the theme), obtained by 14-factor PCA analysis
   - Examples with easy/prototypical factors are learned faster
   - Explicit presentation of the linguistic rules boosted performance
+
+- Trude Heift and Mathias Shulze. Student Modeling and ab initio Language Learning, System, 2003. http://arts.uwaterloo.ca/~mschulze/papers/system_2003.pdf
+  - German tutoring system with a parser and a grammar to analyzes sentences from students and detects grammatical errors, with error specific messages (e.g., determiner / noun aggreement)
+  - Student model keeps track of performance on "phrase descriptor" - grammatical phenomena (e.g., agreement, modals, verb particles) represented as [descriptor, correct/error/absent]
+  - Show 'groups' of phrase descriptors, strong and weak skills, provide practice for weak skills
