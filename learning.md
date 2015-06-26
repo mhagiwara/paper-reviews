@@ -4,6 +4,10 @@ Human Learning
 General
 -------
 
+* Albert Corbett and John Anderson. Knowledge Tracing: Modeling the Acquisition of Procedural Knowledge http://act-r.psy.cmu.edu/wordpress/wp-content/uploads/2012/12/893CorbettAnderson1995.pdf
+  - ACT programming tutor: short programs to teach Lisp, Prolog, or Pascal, by letting student select
+  - Ideal student model: complete, executable model of procedural knowledge in the domain
+
 * K. Andres Ericsson et al. The Role of Deliberate Practice in the Acquisition of Expert Performance. Psychological Review. 1993. http://www.mockingbirdeducation.net/uploads/5/4/0/7/5407628/ericsson_1993.pdf
   - Innate (genetic) influences had been viewed as deterministic and limiting factors for expert performance
   - Relation of IQ to exceptional performance (music, chess) as well as occupational success, is rather weak (0.19 on average)
@@ -72,3 +76,15 @@ Language Learning
   - German tutoring system with a parser and a grammar to analyzes sentences from students and detects grammatical errors, with error specific messages (e.g., determiner / noun aggreement)
   - Student model keeps track of performance on "phrase descriptor" - grammatical phenomena (e.g., agreement, modals, verb particles) represented as [descriptor, correct/error/absent]
   - Show 'groups' of phrase descriptors, strong and weak skills, provide practice for weak skills
+
+- Lisa N Michaud et al. Modeling the Acquisition of English: an Intelligent CALL Approach. http://www.sfs.uni-tuebingen.de/~dm/papers/amaral-meurers-10.pdf
+
+- David Schneider and Kathleen McCoy. Recognizing Syntactic Errors in the Writing of Second Language Learners. ACL 1998. http://www.aclweb.org/anthology/P98-2196
+  - English writing training system for ASL (totally different grammar from English) native signers
+  - Common errors: drop pronouns, be-verbs, determiner
+  - Model of the acquisition of the language (grammar rules the student has most likely acquired or currently in the process of acquiring are favored)
+  - CFG with features, but with mal-rules (error productions) e.g., VP(error +) -> AdjP, VP(missing ?a) -> V NP NP(missing ?a)
+  - Procedural attachement (attach an arbitrary procedure to the grammar)
+  - Agreement mal-rules: DP(agr ?)(error +) -> Det(agr (?!a)) NP(agr a)
+  - Original grammar: poor recognition of coordination
+
