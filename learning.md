@@ -59,6 +59,14 @@ General
   - Re-test prediction - AFM and LG comparable in terms of RMSE and AUC
   - Generalization to new students - LG > AFM - prediction accuracy is quite similar
 
+- Richard Scheines, et al. Discovering Prerequisite Relationships among Knowledge Components. EDM 2014. http://educationaldatamining.org/EDM2014/uploads/procs2014/posters/31_EDM-2014-Poster.pdf
+    - Extension to causal structure discovery algorithm (BPC), relaxing one skill per test item assumption
+    - Q-matrix (item - skill relationship) is known (can be relaxed)
+    - Given the measurement model (Q-matrix), search for the structural model with the PC causal discovery algorithm (see http://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch25.pdf)
+    - Measure adjacency rate (compares true and obtained graphs)
+    - Limitations: linear relations, Q-matrix is known
+
+
 Language Learning
 -----------------
 - Sze-Meng Jojo Wong and Mark Dras. Parser Features for Sentence Grammaticality Classification. 2010 http://www.aclweb.org/anthology/U10-1011
